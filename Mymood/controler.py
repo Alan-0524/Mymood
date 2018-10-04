@@ -30,6 +30,7 @@ def sign_up(request):
 def select_emoji(request):
     return render(request, 'response/select-emoji.html')
 
+
 @xframe_options_exempt
 def submit_emoji(request):
     return render(request, 'response/response-emoji.html')

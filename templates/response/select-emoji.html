@@ -24,51 +24,54 @@
     <style type="text/css">
         .divForm {
             position: absolute;
-            width: 430px;
+            width: 370px;
             height: 210px;
             border: 1px solid grey;
             text-align: center;
             top: 50%;
             left: 50%;
             margin-top: -200px;
-            margin-left: -250px;
+            margin-left: -190px;
         }
     </style>
 </head>
 <body>
-    <form style="align-content: center">
-        <div class="divForm">
-            <span>personal</span>
-            <div style="margin-bottom: 50px">
-                <input type="radio" name="personal" value="0">🤣
-                <input type="radio" name="personal" value="1">😁
-                <input type="radio" name="personal" value="2">😃
-                <input type="radio" name="personal" value="3">🙂
-                <input type="radio" name="personal" value="4" checked>😐
-                <input type="radio" name="personal" value="5">😔
-                <input type="radio" name="personal" value="6">😞
-                <input type="radio" name="personal" value="7">😭
-                <input type="radio" name="personal" value="8">👿
-            </div>
-            <span>team</span>
-            <div style="margin-bottom: 30px">
-                <input type="radio" name="team" value="0">🤣
-                <input type="radio" name="team" value="1">😁
-                <input type="radio" name="team" value="2">😃
-                <input type="radio" name="team" value="3">🙂
-                <input type="radio" name="team" value="4" checked>😐
-                <input type="radio" name="team" value="5">😔
-                <input type="radio" name="team" value="6">😞
-                <input type="radio" name="team" value="7">😭
-                <input type="radio" name="team" value="8">👿
-            </div>
-            <div>
-                <a href="javascript:void(0)"
-                                       onclick="location.href = '{{ request.session.base_url }}submit_emoji/'"
-                                       class="btn btn-default btn-block">confirm</a>
-            </div>
+<form style="align-content: center">
+    <div class="divForm" id="form_response" style="display: none">
+        <span>Successful, Thanks!</span>
+    </div>
+    <div class="divForm" id="form_select">
+        <span>personal</span>
+        <div style="margin-bottom: 50px">
+            <input type="radio" name="personal" value="0">🤣
+            <input type="radio" name="personal" value="1">😁
+            <input type="radio" name="personal" value="2">😃
+            <input type="radio" name="personal" value="3">🙂
+            <input type="radio" name="personal" value="4" checked>😐
+            <input type="radio" name="personal" value="5">😔
+            <input type="radio" name="personal" value="6">😞
+            <input type="radio" name="personal" value="7">😭
+            <input type="radio" name="personal" value="8">👿
         </div>
-    </form>
+        <span>team</span>
+        <div style="margin-bottom: 30px">
+            <input type="radio" name="team" value="0">🤣
+            <input type="radio" name="team" value="1">😁
+            <input type="radio" name="team" value="2">😃
+            <input type="radio" name="team" value="3">🙂
+            <input type="radio" name="team" value="4" checked>😐
+            <input type="radio" name="team" value="5">😔
+            <input type="radio" name="team" value="6">😞
+            <input type="radio" name="team" value="7">😭
+            <input type="radio" name="team" value="8">👿
+        </div>
+        <div>
+            <a href="javascript:void(0)"
+               onclick="submit_emoji()"
+               class="btn btn-default btn-block">confirm</a>
+        </div>
+    </div>
+</form>
 </body>
 <script>
     (function (d, s, id) {
@@ -81,6 +84,12 @@
         js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'Messenger'));
+
+    function submit_emoji() {
+        document.getElementById("form_select").style.display = "none";
+        document.getElementById("form_response").style.display = "";
+    }
+
     window.extAsyncInit = function () {
         // the Messenger Extensions JS SDK is done loading
 
