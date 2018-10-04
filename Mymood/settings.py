@@ -152,7 +152,7 @@ STATICFILES_DIRS = [
 
 # heroku设置
 cwd = os.getcwd()  # 获取当前的工作目录
-print("---------------------------------------------:", cwd)
+print("cwd---------------------------------------------:", cwd)
 # 确保这个设置文件在本地和在线都能使用，只有部署到kuroku才会执行if
 # if cwd == '/mood/' or cwd[:4] == '/tmp':
 
@@ -160,10 +160,10 @@ print("---------------------------------------------:", cwd)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = ['*']  # 支持所有的主机头
-# 静态资产配置
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/assets/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# # 静态资产配置
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# STATIC_ROOT = 'staticfiles'
+# STATIC_URL = '/static/assets/'
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
