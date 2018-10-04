@@ -24,6 +24,7 @@ urlpatterns = [
     path('sign_in/', sign_in),
     path('redirect_sign_up/', redirect_sign_up),
     path('sign_up/', sign_up),
-    path('select_emoji/', select_emoji)
+    path('select_emoji/', select_emoji),
+    path('submit_emoji/', submit_emoji),
 ]
 # urlpatterns += staticfiles_urlpatterns()

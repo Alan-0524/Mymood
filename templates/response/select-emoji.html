@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NeuBoard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static "/img/favicon.ico" %}" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static "/plugins/bootstrap/css/bootstrap.min.css" %}">
+    <!-- Fonts  -->
+    <link rel="stylesheet" href="{% static "/css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "/css/simple-line-icons.css" %}">
+    <!-- CSS Animate -->
+    <link rel="stylesheet" href="{% static "/css/animate.css" %}">
+    <!-- Custom styles for this theme -->
+    <link rel="stylesheet" href="{% static "/css/main.css" %}">
     <meta charset="UTF-8">
     <title>Title</title>
     <style type="text/css">
         .divForm {
             position: absolute;
-            width: 500px;
-            height: 200px;
-            border: 1px solid red;
+            width: 430px;
+            height: 210px;
+            border: 1px solid grey;
             text-align: center;
             top: 50%;
             left: 50%;
             margin-top: -200px;
-            margin-left: -300px;
+            margin-left: -250px;
         }
     </style>
 </head>
@@ -45,7 +63,9 @@
                 <input type="radio" name="team" value="8">👿
             </div>
             <div>
-                <button>confirm</button>
+                <a href="javascript:void(0)"
+                                       onclick="location.href = '{{ request.session.base_url }}submit_emoji/'"
+                                       class="btn btn-default btn-block">confirm</a>
             </div>
         </div>
     </form>
