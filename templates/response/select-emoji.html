@@ -18,36 +18,54 @@
     </style>
 </head>
 <body>
-<form style="align-content: center">
-    <div class="divForm">
-        <span>personal</span>
-        <div style="margin-bottom: 50px">
-            <input type="radio" name="personal" value="0">🤣
-            <input type="radio" name="personal" value="1">😁
-            <input type="radio" name="personal" value="2">😃
-            <input type="radio" name="personal" value="3">🙂
-            <input type="radio" name="personal" value="4" checked>😐
-            <input type="radio" name="personal" value="5">😔
-            <input type="radio" name="personal" value="6">😞
-            <input type="radio" name="personal" value="7">😭
-            <input type="radio" name="personal" value="8">👿
+<iframe >
+    <form style="align-content: center">
+        <div class="divForm">
+            <span>personal</span>
+            <div style="margin-bottom: 50px">
+                <input type="radio" name="personal" value="0">🤣
+                <input type="radio" name="personal" value="1">😁
+                <input type="radio" name="personal" value="2">😃
+                <input type="radio" name="personal" value="3">🙂
+                <input type="radio" name="personal" value="4" checked>😐
+                <input type="radio" name="personal" value="5">😔
+                <input type="radio" name="personal" value="6">😞
+                <input type="radio" name="personal" value="7">😭
+                <input type="radio" name="personal" value="8">👿
+            </div>
+            <span>team</span>
+            <div style="margin-bottom: 30px">
+                <input type="radio" name="team" value="0">🤣
+                <input type="radio" name="team" value="1">😁
+                <input type="radio" name="team" value="2">😃
+                <input type="radio" name="team" value="3">🙂
+                <input type="radio" name="team" value="4" checked>😐
+                <input type="radio" name="team" value="5">😔
+                <input type="radio" name="team" value="6">😞
+                <input type="radio" name="team" value="7">😭
+                <input type="radio" name="team" value="8">👿
+            </div>
+            <div>
+                <button>confirm</button>
+            </div>
         </div>
-        <span>team</span>
-        <div style="margin-bottom: 30px">
-            <input type="radio" name="team" value="0">🤣
-            <input type="radio" name="team" value="1">😁
-            <input type="radio" name="team" value="2">😃
-            <input type="radio" name="team" value="3">🙂
-            <input type="radio" name="team" value="4" checked>😐
-            <input type="radio" name="team" value="5">😔
-            <input type="radio" name="team" value="6">😞
-            <input type="radio" name="team" value="7">😭
-            <input type="radio" name="team" value="8">👿
-        </div>
-        <div>
-            <button>confirm</button>
-        </div>
-    </div>
-</form>
+    </form>
+</iframe>
 </body>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    window.extAsyncInit = function () {
+        // the Messenger Extensions JS SDK is done loading
+
+    };
+</script>
 </html>

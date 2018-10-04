@@ -10,30 +10,26 @@ def push_notifications():
     recipient = {'id': '2334765856551775'}
     # message = {'text': {'🤣', '😁', '😃','🙂','😐', '😔','😞', '😭','👿'}}
     # message = {'text': 'hello,world'}
-    # message = {'attachment': {'type': 'template', 'payload': {'template_type': 'button', 'text': 'Try the URL button!',
-    #                                                           'buttons': [{"type": "postback",
-    #                                                                        'title': '🤣',
-    #                                                                        "payload": "DEVELOPER_DEFINED_PAYLOAD"},
-    #                                                                       {"type": "postback",
-    #                                                                        'title': '😁',
-    #                                                                        "payload": "DEVELOPER_DEFINED_PAYLOAD"},
-    #                                                                       {"type": "postback",
-    #                                                                        'title': '😃',
-    #                                                                        "payload": "DEVELOPER_DEFINED_PAYLOAD"},
-    #                                                                       {"type": "postback",
-    #                                                                        'title': '😃',
-    #                                                                        "payload": "DEVELOPER_DEFINED_PAYLOAD"},
-    #                                                                       ]}}}
-    message = {"text": "how are you going?", "quick_replies": [
-        {"content_type": "text", "title": "🤣", "payload": "0"},
-        {"content_type": "text", "title": "😁", "payload": "1"},
-        {"content_type": "text", "title": "😃", "payload": "2"},
-        {"content_type": "text", "title": "🙂", "payload": "3"},
-        {"content_type": "text", "title": "😐", "payload": "4"},
-        {"content_type": "text", "title": "😔", "payload": "5"},
-        {"content_type": "text", "title": "😞", "payload": "6"},
-        {"content_type": "text", "title": "😭", "payload": "7"},
-        {"content_type": "text", "title": "👿", "payload": "8"}]}
+    message = {'attachment': {'type': 'template', 'payload': {'template_type': 'button', 'text': 'Try the URL button!',
+                                                              'buttons': [{
+                                                                  "type": "web_url",
+                                                                  "url": "https://mymood-service.herokuapp.com/select_emoji/",
+                                                                  "title": "URL Button",
+                                                                  "webview_height_ratio": "compact",
+                                                                  "messenger_extensions": "true",
+                                                                  # "fallback_url": "https://mymood-service.herokuapp.com/select_emoji/"
+                                                              }]}}}
+    # message = {"text": "how are you going?", "quick_replies": [
+    #     {"content_type": "text", "title": "🤣", "payload": "0"},
+    #     {"content_type": "text", "title": "😁", "payload": "1"},
+    #     {"content_type": "text", "title": "😃", "payload": "2"},
+    #     {"content_type": "text", "title": "🙂", "payload": "3"},
+    #     {"content_type": "text", "title": "😐", "payload": "4"},
+    #     {"content_type": "text", "title": "😔", "payload": "5"},
+    #     {"content_type": "text", "title": "😞", "payload": "6"},
+    #     {"content_type": "text", "title": "😭", "payload": "7"},
+    #     {"content_type": "text", "title": "👿", "payload": "8"}]}
+
     params = {'recipient': recipient, 'message': message}
     data = json.dumps(params)
     headers = {'Content-Type': 'application/json'}  # json pattern
