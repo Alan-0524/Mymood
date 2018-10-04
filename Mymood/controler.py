@@ -23,3 +23,7 @@ def sign_up(request):
     password = make_password(request.POST.get("password"))
     print(email, password)
     return render(request, 'response/index.html')
+
+
+def select_emoji(request):
+    return render(request, 'response/select-emoji.html')

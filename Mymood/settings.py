@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'models_app',
 ]
 
 MIDDLEWARE = [
@@ -77,6 +78,30 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# developing
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'mood',
+#         'USER': 'sdm',
+#         'PASSWORD': '000000',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }
+# product
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'sdm_project',
+#         'USER': 'root',
+#         'PASSWORD': 'sdmproject2018',
+#         'HOST': 'ec2-18-220-82-47.us-east-2.compute.amazonaws.com',
+#         'PORT': '3306',
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
