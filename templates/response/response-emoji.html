@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NeuBoard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static "/img/favicon.ico" %}" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static "/plugins/bootstrap/css/bootstrap.min.css" %}">
+    <!-- Fonts  -->
+    <link rel="stylesheet" href="{% static "/css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "/css/simple-line-icons.css" %}">
+    <!-- CSS Animate -->
+    <link rel="stylesheet" href="{% static "/css/animate.css" %}">
+    <!-- Custom styles for this theme -->
+    <link rel="stylesheet" href="{% static "/css/main.css" %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .divForm {
+            position: absolute;
+            width: 430px;
+            height: 200px;
+
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -250px;
+        }
+    </style>
+</head>
+<body>
+    <form style="align-content: center">
+        <div class="divForm">
+            <span>Successful, Thanks!</span>
+        </div>
+    </form>
+</body>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    window.extAsyncInit = function () {
+        // the Messenger Extensions JS SDK is done loading
+
+    };
+</script>
+</html>
