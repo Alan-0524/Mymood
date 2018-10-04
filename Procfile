@@ -1,1 +1,1 @@
-web: python Mymood.py
+web: gunicorn Mymood.wsgi --log-file -
