@@ -2,6 +2,9 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.hashers import make_password, check_password
 from django.views.decorators.clickjacking import xframe_options_exempt
+from Mymood.biz import process_happiness
+from models_app.models import *
+
 import time
 
 
@@ -34,3 +37,9 @@ def select_emoji(request):
 @xframe_options_exempt
 def submit_emoji(request):
     return render(request, 'response/response-emoji.html')
+
+
+def query_happiness(request):
+    # happiness = process_happiness.query_happiness()
+    # print("--------------",happiness.idvl_hpns)
+    return render(request, 'response/charts-chartjs.html')

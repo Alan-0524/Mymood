@@ -72,12 +72,12 @@ WSGI_APPLICATION = 'Mymood.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # developing
 # DATABASES = {
@@ -91,16 +91,16 @@ DATABASES = {
 #     }
 # }
 # product
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'sdm_project',
-#         'USER': 'root',
-#         'PASSWORD': 'sdmproject2018',
-#         'HOST': 'ec2-18-220-82-47.us-east-2.compute.amazonaws.com',
-#         'PORT': '3306',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sdm_project',
+        'USER': 'sdm',
+        'PASSWORD': '000000',
+        'HOST': 'ec2-18-220-82-47.us-east-2.compute.amazonaws.com',
+        'PORT': '3306',
+    }
+}
 
 
 # Password validation

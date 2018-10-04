@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import *
+
+admin.site.register(TblHappiness)
+admin.site.register(TblReminder)
+admin.site.register(TblTeam)
+admin.site.register(TblUser)
