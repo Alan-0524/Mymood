@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork">
-      <change beforePath="$PROJECT_DIR$/Mymood/messenger_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/messenger_utility.py" afterDir="false" />
-    </list>
+    <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -399,7 +397,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.messenger_utility">
+  <component name="RunManager" selected="Django server.Mymood">
     <configuration name="0001_initial" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mymood" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -598,7 +596,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.27114093" />
