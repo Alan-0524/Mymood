@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.hashers import make_password, check_password
+from django.views.decorators.clickjacking import xframe_options_exempt
 import time
 
 
@@ -25,5 +26,6 @@ def sign_up(request):
     return render(request, 'response/index.html')
 
 
+@xframe_options_exempt
 def select_emoji(request):
     return render(request, 'response/select-emoji.html')
