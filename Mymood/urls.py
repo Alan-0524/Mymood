@@ -20,10 +20,10 @@ from Mymood.controler import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mood/', mood),
-    path('mood/sign_in/', sign_in),
-    path('mood/redirect_sign_up/', redirect_sign_up),
-    path('mood/sign_up/', sign_up),
-    path('mood/select_emoji/', select_emoji)
+    path('/', mood),
+    path('/sign_in/', sign_in),
+    path('/redirect_sign_up/', redirect_sign_up),
+    path('/sign_up/', sign_up),
+    path('/select_emoji/', select_emoji)
 ]
 # urlpatterns += staticfiles_urlpatterns()

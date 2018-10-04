@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork">
       <change beforePath="$PROJECT_DIR$/Mymood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mymood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +77,7 @@
           <entry key="Procfile" value="6" />
           <entry key="html" value="567" />
           <entry key="js" value="5" />
-          <entry key="py" value="1651" />
+          <entry key="py" value="1665" />
           <entry key="txt" value="20" />
           <entry key="yml" value="3" />
         </counts>
@@ -86,7 +87,7 @@
           <entry key="HTML" value="567" />
           <entry key="JavaScript" value="5" />
           <entry key="PLAIN_TEXT" value="26" />
-          <entry key="Python" value="1651" />
+          <entry key="Python" value="1665" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -94,11 +95,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+            <state relative-caret-position="333">
+              <caret line="165" column="29" selection-start-line="165" selection-start-column="29" selection-end-line="165" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -115,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="15" />
+            <state relative-caret-position="262">
+              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -274,13 +275,13 @@
         <option value="$PROJECT_DIR$/Mymood/messenger_utility.py" />
         <option value="$PROJECT_DIR$/models_app/models.py" />
         <option value="$PROJECT_DIR$/Mymood/controler.py" />
-        <option value="$PROJECT_DIR$/Mymood/urls.py" />
         <option value="$PROJECT_DIR$/templates/response/select-emoji.html" />
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/Mymood/wsgi.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Mymood/settings.py" />
+        <option value="$PROJECT_DIR$/Mymood/urls.py" />
       </list>
     </option>
   </component>
@@ -315,6 +316,19 @@
               <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mymood" type="462c0819:PsiDirectoryNode" />
               <item name="Mymood" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
+              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
+              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
@@ -582,10 +596,10 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.27114093" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.27114093" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49932885" visible="true" weight="0.24680851" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49932885" visible="true" weight="0.24680851" />
       <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49932885" weight="0.28085107" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50067115" side_tool="true" weight="0.28085107" />
       <window_info anchor="bottom" id="Python Console" order="4" sideWeight="0.49932885" weight="0.32907802" />
@@ -856,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -872,8 +879,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mymood/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+        <state relative-caret-position="333">
+          <caret line="165" column="29" selection-start-line="165" selection-start-column="29" selection-end-line="165" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
         </state>
       </provider>
     </entry>

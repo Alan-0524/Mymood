@@ -163,7 +163,7 @@ ALLOWED_HOSTS = ['*']  # 支持所有的主机头
 # 静态资产配置
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
+STATIC_URL = '/static/assets/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
