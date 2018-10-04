@@ -153,7 +153,7 @@ STATICFILES_DIRS = [
 # heroku设置
 cwd = os.getcwd()  # 获取当前的工作目录
 # 确保这个设置文件在本地和在线都能使用，只有部署到kuroku才会执行if
-if cwd == '/app' or cwd[:4] == '/tmp':
+if cwd == '/mood/' or cwd[:4] == '/tmp':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',

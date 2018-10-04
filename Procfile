@@ -1,1 +1,1 @@
-web: gunicorn Mymood.wsgi --log-file -
+web: gunicorn Mymood.wsgi
