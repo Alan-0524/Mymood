@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork">
-      <change beforePath="$PROJECT_DIR$/templates/response/response-emoji.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/response-emoji.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/response/select-emoji.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/select-emoji.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mymood$messenger_utility.coverage" NAME="messenger_utility Coverage Results" MODIFIED="1538705165100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
+    <SUITE FILE_PATH="coverage/Mymood$messenger_utility.coverage" NAME="messenger_utility Coverage Results" MODIFIED="1538706478876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
     <SUITE FILE_PATH="coverage/Mymood$email_tool.coverage" NAME="email_tool Coverage Results" MODIFIED="1537312210274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
     <SUITE FILE_PATH="coverage/Mymood$tests.coverage" NAME="tests Coverage Results" MODIFIED="1538653658936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models_app" />
     <SUITE FILE_PATH="coverage/Mymood$settings.coverage" NAME="settings Coverage Results" MODIFIED="1537365226756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
@@ -79,7 +78,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Procfile" value="6" />
-          <entry key="html" value="1158" />
+          <entry key="html" value="1178" />
           <entry key="js" value="5" />
           <entry key="py" value="2200" />
           <entry key="txt" value="20" />
@@ -88,7 +87,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1158" />
+          <entry key="HTML" value="1178" />
           <entry key="JavaScript" value="5" />
           <entry key="PLAIN_TEXT" value="26" />
           <entry key="Python" value="2200" />
@@ -102,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/messenger_utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+            <state relative-caret-position="188">
+              <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <marker date="1538703671938" expanded="true" signature="87:88" ph="..." />
@@ -115,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/response/select-emoji.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+            <state relative-caret-position="304">
+              <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -613,17 +612,17 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2751678" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2751678" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49932885" weight="0.24680851" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49932885" weight="0.47375888" />
       <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49932885" weight="0.28085107" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50067115" side_tool="true" weight="0.3319149" />
       <window_info anchor="bottom" id="Python Console" order="4" sideWeight="0.49932885" weight="0.32907802" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49932885" visible="true" weight="0.3319149" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49932885" visible="true" weight="0.3319149" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.33475178" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -912,17 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mymood/messenger_utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1538703671938" expanded="true" signature="87:88" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Mymood/biz/process_happiness.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -940,10 +928,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Mymood/messenger_utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1538703671938" expanded="true" signature="87:88" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/response/select-emoji.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+        <state relative-caret-position="304">
+          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
