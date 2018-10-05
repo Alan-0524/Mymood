@@ -4,10 +4,10 @@ import json
 import certifi
 
 
-def push_notifications():
+def push_notifications(id):
     http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
     apiUrl = 'https://graph.facebook.com/v2.6/me/messages?access_token=EAAE358wDWxQBANcfxlUa3tfs7DPhsrrtJN8Q8AWvE7tvq3RdErlFyfHDKY8SMZBHR4YTK8fJkxW054ZAKDDfgXVkXzb0VPvj9gg2ZBs7rBI8k6Yt263vaxGMlBmsxks5oWfkiT7w2Uh5LiCeAll3lYfvpT7oFedMTiHaQMp7l60yVjJvhZAc'
-    recipient = {'id': '2334765856551775'}
+    recipient = {'id': id}
     message = {
         'attachment': {'type': 'template', 'payload': {'template_type': 'button', 'text': 'Hi! How are you going?😁',
                                                        'buttons': [{
@@ -36,4 +36,12 @@ def push_notifications():
     print(response.status)  # successful，200 is successful
 
 
-push_notifications()
+# an long
+push_notifications("2334765856551775")
+# xiao ming
+push_notifications("1823636781087934")
+# Karen
+push_notifications("1908572825896416")
+
+# Song di
+push_notifications("2281321371940745")
