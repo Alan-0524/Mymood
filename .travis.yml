@@ -8,3 +8,8 @@ install:
 # command to run tests
 script:
   - pytest
+env:
+  - DJANGO_VERSION=2.1.1
+install:
+  - pip install -q Django==$DJANGO_VERSION
+  - python setup.py -q install
