@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +13,7 @@
     <SUITE FILE_PATH="coverage/Mymood$email_tool.coverage" NAME="email_tool Coverage Results" MODIFIED="1537312210274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
     <SUITE FILE_PATH="coverage/Mymood$tests.coverage" NAME="tests Coverage Results" MODIFIED="1538653658936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models_app" />
     <SUITE FILE_PATH="coverage/Mymood$settings.coverage" NAME="settings Coverage Results" MODIFIED="1537365226756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
+    <SUITE FILE_PATH="coverage/Mymood$test_units.coverage" NAME="test_units Coverage Results" MODIFIED="1538737755625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
     <SUITE FILE_PATH="coverage/Mymood$0001_initial.coverage" NAME="0001_initial Coverage Results" MODIFIED="1537611503958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models_app/migrations" />
     <SUITE FILE_PATH="coverage/Mymood$manage.coverage" NAME="manage Coverage Results" MODIFIED="1537362926047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mymood$controler.coverage" NAME="controler Coverage Results" MODIFIED="1538652653158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
@@ -59,7 +57,7 @@
           <entry key="html" value="46" />
           <entry key="js" value="20" />
           <entry key="models" value="1" />
-          <entry key="py" value="113" />
+          <entry key="py" value="115" />
           <entry key="sql" value="1" />
           <entry key="txt" value="4" />
           <entry key="yml" value="3" />
@@ -71,7 +69,7 @@
           <entry key="HTML" value="46" />
           <entry key="JavaScript" value="20" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="113" />
+          <entry key="Python" value="115" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="3" />
         </counts>
@@ -122,19 +120,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirtments.txt">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="18" lean-forward="true" selection-end-line="44" />
+            <state relative-caret-position="244">
+              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models_app/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+        <entry file="file://$PROJECT_DIR$/Mymood/test_units.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+            <state relative-caret-position="85">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -177,15 +184,6 @@
               <folding>
                 <marker date="1538654839649" expanded="true" signature="56:57" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/response/pages-sign-in.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="68" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -301,6 +299,7 @@
         <option value="$PROJECT_DIR$/templates/response/select-emoji.html" />
         <option value="$PROJECT_DIR$/Mymood/messenger_utility.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/Mymood/test_units.py" />
       </list>
     </option>
   </component>
@@ -330,6 +329,11 @@
             <path>
               <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mymood" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
+              <item name="models_app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
@@ -389,29 +393,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.messenger_utility">
-    <configuration name="0001_initial" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Mymood" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models_app/migrations" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models_app/migrations/0001_initial.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.test_units">
     <configuration name="controler" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mymood" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -478,6 +460,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_units" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Mymood" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Mymood" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mymood/test_units.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mymood" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -526,19 +530,19 @@
     </configuration>
     <list>
       <item itemvalue="Django server.Mymood" />
-      <item itemvalue="Python.0001_initial" />
       <item itemvalue="Python.messenger_utility" />
       <item itemvalue="Python.process_happiness" />
       <item itemvalue="Python.controler" />
       <item itemvalue="Python.tests" />
+      <item itemvalue="Python.test_units" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_units" />
         <item itemvalue="Python.messenger_utility" />
         <item itemvalue="Python.process_happiness" />
         <item itemvalue="Python.tests" />
         <item itemvalue="Python.controler" />
-        <item itemvalue="Python.0001_initial" />
       </list>
     </recent_temporary>
   </component>
@@ -656,13 +660,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/asgi_redis/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="503" column="6" selection-start-line="503" selection-start-column="6" selection-end-line="503" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Software/Python/Lib/importlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -766,13 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models_app/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -932,8 +922,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        <state relative-caret-position="244">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models_app/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mymood/test_units.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
