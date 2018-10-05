@@ -2,14 +2,13 @@ language: python
 python:
   - "3.7-dev"  # 3.7 development branch
 # command to install dependencies
-install:
-  - pip install -r requirements.txt
-  - pip install .
-# command to run tests
-script:
-  - pytest
 env:
   - DJANGO_VERSION=2.1.1
 install:
+  - pip install -r requirements.txt
+  - pip install .
   - pip install -q Django==$DJANGO_VERSION
   - python setup.py -q install
+# command to run tests
+script:
+  - pytest
