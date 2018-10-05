@@ -9,7 +9,7 @@ def push_notifications(id):
     apiUrl = 'https://graph.facebook.com/v2.6/me/messages?access_token=EAAE358wDWxQBANcfxlUa3tfs7DPhsrrtJN8Q8AWvE7tvq3RdErlFyfHDKY8SMZBHR4YTK8fJkxW054ZAKDDfgXVkXzb0VPvj9gg2ZBs7rBI8k6Yt263vaxGMlBmsxks5oWfkiT7w2Uh5LiCeAll3lYfvpT7oFedMTiHaQMp7l60yVjJvhZAc'
     recipient = {'id': id}
     message = {
-        'attachment': {'type': 'template', 'payload': {'template_type': 'button', 'text': 'Hi! how is it going?😁',
+        'attachment': {'type': 'template', 'payload': {'template_type': 'button', 'text': 'Hi there! How is it going?😁',
                                                        'buttons': [{
                                                            "type": "web_url",
                                                            "url": "https://mymood-service.herokuapp.com/select_emoji/",
