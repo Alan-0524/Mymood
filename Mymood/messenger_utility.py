@@ -27,11 +27,9 @@ def push_notifications(id):
     #     {"content_type": "text", "title": "😞", "payload": "6"},
     #     {"content_type": "text", "title": "😭", "payload": "7"},
     #     {"content_type": "text", "title": "👿", "payload": "8"}]}
-
     params = {'recipient': recipient, 'message': message}
     data = json.dumps(params)
     headers = {'Content-Type': 'application/json'}  # json pattern
-
     response = http.request('POST', apiUrl, body=data, headers=headers)
     print(response.status)  # successful，200 is successful
 
@@ -42,6 +40,5 @@ push_notifications("2334765856551775")
 push_notifications("1823636781087934")
 # Karen
 push_notifications("1908572825896416")
-
 # Song di
 push_notifications("2281321371940745")
