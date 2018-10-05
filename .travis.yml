@@ -7,3 +7,5 @@ env:
 install:
   - pip install -r requirements.txt
   - pip install -q Django==$DJANGO_VERSION
+script:
+    - pytest
