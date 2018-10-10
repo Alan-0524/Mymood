@@ -20,16 +20,24 @@ from Mymood.controler import *
 from django.conf.urls import include, url
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-    url(r'^admin/$', admin.site.urls, name='admin'),
-    url(r'^$', mood),
-    # path('sign_in/', sign_in),
-    url(r'^sign_in/$', query_happiness),
-    url(r'^redirect_sign_up/$', redirect_sign_up),
-    url(r'^sign_up/$', sign_up),
-    url(r'^select_emoji/(.+)/$', select_emoji, name='select_emoji'),
-    url(r'^submit_emoji/$', submit_emoji, name='submit_emoji'),
-    url(r'^query_happiness/$', query_happiness),
+    # url(r'^admin/$', admin.site.urls, name='admin'),
+    # url(r'^$', mood),
+    # url(r'^sign_in/$', query_happiness),
+    # url(r'^redirect_sign_up/$', redirect_sign_up),
+    # url(r'^sign_up/$', sign_up),
+    # url(r'^select_emoji/(.+)/$', select_emoji, name='select_emoji'),
+    # url(r'^submit_emoji/$', submit_emoji, name='submit_emoji'),
+    # url(r'^query_happiness/$', query_happiness),
+
+
+    path('admin/', admin.site.urls),
+    path('', mood),
+    path('sign_in/', query_happiness),
+    path('redirect_sign_up/', redirect_sign_up),
+    path('sign_up/', sign_up),
+    path('select_emoji/', select_emoji),
+    path('submit_emoji/', submit_emoji),
+    path('query_happiness/', query_happiness),
     # path('query_happiness/', include('models_app.urls'))
 ]
 # urlpatterns += staticfiles_urlpatterns()

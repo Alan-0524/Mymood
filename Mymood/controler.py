@@ -29,13 +29,13 @@ def sign_up(request):
 
 
 @xframe_options_exempt
-def select_emoji(request, user_id):
+def select_emoji(request):
     base_url = request.get_host()
     request.session['base_url'] = base_url
-    context = {
-        'user_id': user_id,
-    }
-    return render(request, 'response/select-emoji.html', context)
+    # context = {
+    #     'user_id': user_id,
+    # }
+    return render(request, 'response/select-emoji.html')
 
 
 @xframe_options_exempt

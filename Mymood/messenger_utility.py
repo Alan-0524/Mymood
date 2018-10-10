@@ -9,14 +9,15 @@ def push_notifications(id):
     apiUrl = 'https://graph.facebook.com/v2.6/me/messages?access_token=EAAE358wDWxQBANcfxlUa3tfs7DPhsrrtJN8Q8AWvE7tvq3RdErlFyfHDKY8SMZBHR4YTK8fJkxW054ZAKDDfgXVkXzb0VPvj9gg2ZBs7rBI8k6Yt263vaxGMlBmsxks5oWfkiT7w2Uh5LiCeAll3lYfvpT7oFedMTiHaQMp7l60yVjJvhZAc'
     recipient = {'id': id}
     message = {
-        'attachment': {'type': 'template', 'payload': {'template_type': 'button', 'text': 'Hi there! How is it going?😁',
-                                                       'buttons': [{
-                                                           "type": "web_url",
-                                                           "url": "https://mymood-service.herokuapp.com/select_emoji/",
-                                                           "title": "Tell me 👇",
-                                                           "webview_height_ratio": "full",
-                                                           "messenger_extensions": "true",
-                                                       }]}}}
+        'attachment': {'type': 'template',
+                       'payload': {'template_type': 'button', 'text': 'Hi there! How is it going?😁',
+                                   'buttons': [{
+                                       "type": "web_url",
+                                       "url": "https://mymood-service.herokuapp.com/select_emoji/",
+                                       "title": "Tell me 👇",
+                                       "webview_height_ratio": "full",
+                                       "messenger_extensions": "true",
+                                   }]}}}
     # message = {"text": "how are you going?", "quick_replies": [
     #     {"content_type": "text", "title": "🤣", "payload": "0"},
     #     {"content_type": "text", "title": "😁", "payload": "1"},
@@ -38,10 +39,10 @@ def push_notifications(id):
 
 # an long
 push_notifications("2334765856551775")
-# xiao ming
-push_notifications("1823636781087934")
-# Karen
-push_notifications("1908572825896416")
-
-# Song di
-push_notifications("2281321371940745")
+# # xiao ming
+# push_notifications("1823636781087934")
+# # Karen
+# push_notifications("1908572825896416")
+#
+# # Song di
+# push_notifications("2281321371940745")
