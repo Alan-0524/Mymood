@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'models_app',
-    'django_ajax',
 ]
 
 MIDDLEWARE = [
