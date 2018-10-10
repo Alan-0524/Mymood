@@ -35,7 +35,7 @@ urlpatterns = [
     path('sign_in/', query_happiness),
     path('redirect_sign_up/', redirect_sign_up),
     path('sign_up/', sign_up),
-    path('select_emoji/', select_emoji),
+    path('select_emoji/<int:user_id>/', select_emoji),
     path('submit_emoji/', submit_emoji),
     path('query_happiness/', query_happiness),
     # path('query_happiness/', include('models_app.urls'))
