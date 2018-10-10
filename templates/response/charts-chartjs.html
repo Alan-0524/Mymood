@@ -35,6 +35,10 @@
 </head>
 
 <body>
+{% for happiness in happiness_list %}
+    <li>{{ happiness.team_hpns }}</li>
+{% endfor %}
+
     <section id="main-wrapper" class="theme-default">
         <header id="header">
             <!--logo start-->

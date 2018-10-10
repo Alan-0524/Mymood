@@ -2,10 +2,14 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.hashers import make_password, check_password
 from django.views.decorators.clickjacking import xframe_options_exempt
+from django.http import JsonResponse
+import json
+
+from django.views.decorators.csrf import csrf_exempt
+from django_ajax.decorators import ajax
+
 from Mymood.biz import process_happiness
 from models_app.models import *
-
-import time
 
 
 def mood(request):
@@ -30,16 +34,30 @@ def sign_up(request):
 
 
 @xframe_options_exempt
-def select_emoji(request):
-    return render(request, 'response/select-emoji.html')
+def select_emoji(request, user_id):
+    base_url = request.get_host()
+    request.session['base_url'] = base_url
+    context = {
+        'user_id': user_id,
+    }
+    return render(request, 'response/select-emoji.html', context)
 
 
 @xframe_options_exempt
+@csrf_exempt
 def submit_emoji(request):
-    return render(request, 'response/response-emoji.html')
+    data = request.POST
+    own = data.get('own')
+    team = data.get('team')
+    user_id = data.get('user_id')
+    process_happiness.save_happiness(own, team, user_id)
+    ret = {"status": 0, 'url': ''}
+    return JsonResponse(ret)
 
 
 def query_happiness(request):
-    # happiness = process_happiness.query_happiness()
-    # print("--------------",happiness.idvl_hpns)
-    return render(request, 'response/charts-chartjs.html')
+    happiness_list = process_happiness.query_happiness()
+    context = {
+        'happiness_list': happiness_list,
+    }
+    return render(request, 'response/charts-chartjs.html', context)

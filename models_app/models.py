@@ -8,6 +8,13 @@ class TblHappiness(models.Model):
     idvl_hpns = models.IntegerField(blank=True, null=True)
     team_hpns = models.IntegerField(blank=True, null=True)
 
+    def __str__(self):
+        return str(self.team_id)
+        return str(self.date)
+        return str(self.idvl_hpns)
+        return str(self.team_hpns)
+
+
 
 class TblReminder(models.Model):
     user_id = models.IntegerField()

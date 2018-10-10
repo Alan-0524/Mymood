@@ -24,8 +24,6 @@ SECRET_KEY = 'ne+fa9)jmq=let5yo*15mngi2f^ei-sq9!&-z@i71618@bx$*z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -36,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'models_app',
+    'django_ajax',
 ]
 
 MIDDLEWARE = [
@@ -102,7 +101,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
@@ -132,7 +130,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 APPEND_SLASH = False
 # Static files (CSS, JavaScript, Images)
