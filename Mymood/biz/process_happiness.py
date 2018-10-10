@@ -10,10 +10,11 @@ def query_happiness():
 
 def save_happiness(own, team, user_id):
     try:
-        user = TblUser.objects.get(pk=user_id)
+        user = TblUser.objects.get(user_id=user_id)
         team_id = user.team_id
         happiness = TblHappiness()
         happiness.id = str(uuid.uuid1()).replace("-", "")
+        happiness.user_id = user_id
         happiness.team_id = team_id
         happiness.idvl_hpns = own
         happiness.team_hpns = team

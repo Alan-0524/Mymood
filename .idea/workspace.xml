@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mymood/biz/process_happiness.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/biz/process_happiness.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mymood/messenger_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/messenger_utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_app/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mymood$messenger_utility.coverage" NAME="messenger_utility Coverage Results" MODIFIED="1539214506765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
+    <SUITE FILE_PATH="coverage/Mymood$messenger_utility.coverage" NAME="messenger_utility Coverage Results" MODIFIED="1539214753493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
     <SUITE FILE_PATH="coverage/Mymood$email_tool.coverage" NAME="email_tool Coverage Results" MODIFIED="1537312210274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
     <SUITE FILE_PATH="coverage/Mymood$tests.coverage" NAME="tests Coverage Results" MODIFIED="1538653658936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models_app" />
     <SUITE FILE_PATH="coverage/Mymood$settings.coverage" NAME="settings Coverage Results" MODIFIED="1537365226756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mymood" />
@@ -64,7 +61,7 @@
           <entry key="html" value="61" />
           <entry key="js" value="24" />
           <entry key="models" value="1" />
-          <entry key="py" value="175" />
+          <entry key="py" value="176" />
           <entry key="sql" value="1" />
           <entry key="txt" value="5" />
           <entry key="yml" value="3" />
@@ -76,7 +73,7 @@
           <entry key="HTML" value="61" />
           <entry key="JavaScript" value="24" />
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="175" />
+          <entry key="Python" value="176" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="3" />
         </counts>
@@ -86,7 +83,7 @@
           <entry key="Procfile" value="6" />
           <entry key="html" value="1790" />
           <entry key="js" value="5" />
-          <entry key="py" value="2924" />
+          <entry key="py" value="2936" />
           <entry key="txt" value="20" />
           <entry key="yml" value="3" />
         </counts>
@@ -96,7 +93,7 @@
           <entry key="HTML" value="1790" />
           <entry key="JavaScript" value="5" />
           <entry key="PLAIN_TEXT" value="26" />
-          <entry key="Python" value="2924" />
+          <entry key="Python" value="2936" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -107,11 +104,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/messenger_utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="113" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
+            <state relative-caret-position="184">
+              <caret line="15" column="114" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="114" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <marker date="1539214492293" expanded="true" signature="87:88" ph="..." />
@@ -121,19 +118,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/response/pages-sign-in.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -144,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+            <state relative-caret-position="229">
+              <caret line="36" column="11" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -177,14 +165,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mymood/biz/process_happiness.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="325">
+              <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <marker date="1539214461099" expanded="true" signature="128:129" ph="..." />
+                <marker date="1539215148966" expanded="true" signature="128:129" ph="..." />
               </folding>
             </state>
           </provider>
@@ -312,8 +300,8 @@
         <option value="$PROJECT_DIR$/templates/response/select-emoji.html" />
         <option value="$PROJECT_DIR$/Mymood/static/assets/plugins/chartjs/chartjs-demo.js" />
         <option value="$PROJECT_DIR$/models_app/models.py" />
-        <option value="$PROJECT_DIR$/Mymood/biz/process_happiness.py" />
         <option value="$PROJECT_DIR$/Mymood/messenger_utility.py" />
+        <option value="$PROJECT_DIR$/Mymood/biz/process_happiness.py" />
       </list>
     </option>
   </component>
@@ -374,6 +362,12 @@
             <path>
               <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mymood" type="462c0819:PsiDirectoryNode" />
+              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
+              <item name="biz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -424,7 +418,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.messenger_utility">
+  <component name="RunManager" selected="Django server.Mymood">
     <configuration name="controler" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Mymood" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -637,7 +631,7 @@
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49932885" weight="0.3319149" />
-      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.27234042" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.34184396" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" sideWeight="0.49932885" weight="0.32907802" />
@@ -823,13 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1321">
-          <caret line="1019" column="8" selection-start-line="1019" selection-start-column="8" selection-end-line="1019" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1047,17 +1034,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="384" column="8" selection-start-line="384" selection-start-column="8" selection-end-line="384" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="34" column="28" lean-forward="true" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+        <state relative-caret-position="229">
+          <caret line="36" column="11" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mymood/messenger_utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="15" column="114" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="114" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1539214492293" expanded="true" signature="87:88" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -1066,22 +1071,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mymood/biz/process_happiness.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="325">
+          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1539214461099" expanded="true" signature="128:129" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mymood/messenger_utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="113" selection-start-line="15" selection-start-column="113" selection-end-line="15" selection-end-column="113" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1539214492293" expanded="true" signature="87:88" ph="..." />
+            <marker date="1539215148966" expanded="true" signature="128:129" ph="..." />
           </folding>
         </state>
       </provider>
