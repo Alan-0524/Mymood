@@ -3,13 +3,8 @@ from django.shortcuts import render
 from django.contrib.auth.hashers import make_password, check_password
 from django.views.decorators.clickjacking import xframe_options_exempt
 from django.http import JsonResponse
-import json
-
 from django.views.decorators.csrf import csrf_exempt
-from django_ajax.decorators import ajax
-
 from Mymood.biz import process_happiness
-from models_app.models import *
 
 
 def mood(request):

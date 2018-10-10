@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork">
-      <change beforePath="$PROJECT_DIR$/Mymood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mymood/controler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/controler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mymood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,11 +60,11 @@
           <entry key="Procfile" value="2" />
           <entry key="css" value="3" />
           <entry key="html" value="58" />
-          <entry key="js" value="21" />
+          <entry key="js" value="22" />
           <entry key="models" value="1" />
           <entry key="py" value="169" />
           <entry key="sql" value="1" />
-          <entry key="txt" value="4" />
+          <entry key="txt" value="5" />
           <entry key="yml" value="3" />
         </counts>
       </usages-collector>
@@ -71,8 +72,8 @@
         <counts>
           <entry key="CSS" value="3" />
           <entry key="HTML" value="58" />
-          <entry key="JavaScript" value="21" />
-          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="JavaScript" value="22" />
+          <entry key="PLAIN_TEXT" value="8" />
           <entry key="Python" value="169" />
           <entry key="Scratch" value="1" />
           <entry key="YAML" value="3" />
@@ -83,7 +84,7 @@
           <entry key="Procfile" value="6" />
           <entry key="html" value="1771" />
           <entry key="js" value="5" />
-          <entry key="py" value="2842" />
+          <entry key="py" value="2847" />
           <entry key="txt" value="20" />
           <entry key="yml" value="3" />
         </counts>
@@ -93,7 +94,7 @@
           <entry key="HTML" value="1771" />
           <entry key="JavaScript" value="5" />
           <entry key="PLAIN_TEXT" value="26" />
-          <entry key="Python" value="2842" />
+          <entry key="Python" value="2847" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -117,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/response/select-emoji.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="673">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="78">
+              <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -135,10 +136,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="595">
               <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
             </state>
           </provider>
@@ -147,8 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -159,8 +160,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="272">
+              <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
               <folding>
                 <element signature="e#631#663#0" expanded="true" />
               </folding>
@@ -178,15 +179,6 @@
                 <marker date="1539161444803" expanded="true" signature="116:117" ph="..." />
                 <marker date="1539161444803" expanded="true" signature="306:598" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="639" column="8" selection-start-line="639" selection-start-column="8" selection-end-line="639" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -222,8 +214,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>guage</find>
-      <find>img</find>
       <find>getContext</find>
       <find>MONTHLY GOAL</find>
       <find>logo</find>
@@ -252,6 +242,8 @@
       <find>DEBUG = True</find>
       <find>user_id</find>
       <find>USE_TZ</find>
+      <find>django_ajax</find>
+      <find>ajax</find>
     </findStrings>
     <replaceStrings>
       <replace>..</replace>
@@ -309,11 +301,11 @@
         <option value="$PROJECT_DIR$/templates/response/charts-chartjs.html" />
         <option value="$PROJECT_DIR$/templates/response/pages-sign-in.html" />
         <option value="$PROJECT_DIR$/Mymood/biz/process_happiness.py" />
-        <option value="$PROJECT_DIR$/Mymood/urls.py" />
-        <option value="$PROJECT_DIR$/Mymood/controler.py" />
         <option value="$PROJECT_DIR$/templates/response/select-emoji.html" />
         <option value="$PROJECT_DIR$/models_app/views.py" />
         <option value="$PROJECT_DIR$/Mymood/settings.py" />
+        <option value="$PROJECT_DIR$/Mymood/controler.py" />
+        <option value="$PROJECT_DIR$/Mymood/urls.py" />
       </list>
     </option>
   </component>
@@ -359,17 +351,6 @@
               <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mymood" type="462c0819:PsiDirectoryNode" />
               <item name="models_app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
-              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
-              <item name="Mymood" type="462c0819:PsiDirectoryNode" />
-              <item name="biz" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mymood" type="b2602c69:ProjectViewProjectNode" />
@@ -629,13 +610,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4988764" visible="true" weight="0.22483222" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49932885" visible="true" weight="0.26241136" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49932885" weight="0.26241136" />
       <window_info anchor="bottom" id="Version Control" order="2" sideWeight="0.49932885" weight="0.28085107" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50067115" side_tool="true" weight="0.3319149" />
       <window_info anchor="bottom" id="Python Console" order="4" sideWeight="0.49932885" weight="0.32907802" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32907802" />
+      <window_info anchor="bottom" id="Find" order="7" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49932885" weight="0.3319149" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4113475" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -800,13 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -907,9 +881,6 @@
           <caret line="153" column="19" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="19" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mymood/static/assets/js/vendor/csrf.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/response/pages-sign-up.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1021,26 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <element signature="e#631#663#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1048,13 +999,6 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/response/select-emoji.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
@@ -1074,8 +1018,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mymood/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="595">
           <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mymood/static/assets/js/vendor/csrf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+          <folding>
+            <element signature="e#631#663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/select-emoji.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
         </state>
       </provider>
     </entry>

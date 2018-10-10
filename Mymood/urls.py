@@ -31,7 +31,5 @@ urlpatterns = [
     url(r'^submit_emoji/$', submit_emoji, name='submit_emoji'),
     url(r'^query_happiness/$', query_happiness),
     # path('query_happiness/', include('models_app.urls'))
-    # url(r'^ajax_list/$', 'tools.views.ajax_list', name='ajax-list'),
-    # url(r'^ajax_dict/$', 'tools.views.ajax_dict', name='ajax-dict'),
 ]
 # urlpatterns += staticfiles_urlpatterns()
