@@ -8,7 +8,7 @@ from Mymood.biz import process_happiness, process_teams, process_members, proces
 from django.utils.timezone import now, timedelta
 import csv
 from django.views.decorators.http import require_http_methods
-from Mymood import messenger_utility
+
 
 def mood(request):
     base_url = request.get_raw_uri()
@@ -42,7 +42,6 @@ def get_webhook(request, psid):
         data = {
             'status': '0',
         }
-        messenger_utility.push_register(str(psid))
     else:
         data = {
             'status': '9',

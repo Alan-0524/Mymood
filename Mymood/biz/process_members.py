@@ -1,7 +1,7 @@
 from models_app.models import *
 import html
 import uuid
-
+from Mymood import messenger_utility
 
 def switch_members(request):
     try:
@@ -38,6 +38,7 @@ def query_member(psid):
     if len(user_list) > 0:
         return True
     else:
+        messenger_utility.push_register(str(psid))
         return False
 
 
