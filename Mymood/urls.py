@@ -36,6 +36,8 @@ urlpatterns = [
     path('sign_up/', sign_up),
     path('select_emoji/<int:user_id>/', select_emoji),
     path('submit_emoji/', submit_emoji),
+    path('register_messenger/<int:user_id>/', register_messenger),
+    path('submit_register/', submit_register),
     path('query_happiness/', query_happiness),
     path('refresh_happiness/', refresh_happiness),
     path('export_csv/', export_csv),

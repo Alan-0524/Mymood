@@ -1,5 +1,6 @@
 from models_app.models import *
 import html
+import uuid
 
 
 def switch_members(request):
@@ -33,11 +34,22 @@ def query_members_in_teams(request):
 
 
 def query_member(psid):
-    user = TblUser.objects.filter(user_id=psid)
-    if user.exists():
-        if user.user_name is None or user.user_name == "":
-            return True
-        else:
-            return False
+    user_list = TblUser.objects.filter(user_id=str(psid))
+    if len(user_list) > 0:
+        return True
     else:
         return False
+
+
+def save_members(user_id, user_name, email):
+    try:
+        user = TblUser()
+        user.id = str(uuid.uuid1()).replace("-", "")
+        user.user_id = user_id
+        user.user_name = user_name
+        user.email = email
+        user.role = 0
+        user.team_id = "99999"
+        user.save()
+    except Exception as e:
+        print("Error info:----------------", e)

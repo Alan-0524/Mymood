@@ -13,7 +13,7 @@ def push_notifications(id):
                        'payload': {'template_type': 'button', 'text': 'Hi there! How is it going?😁',
                                    'buttons': [{
                                        "type": "web_url",
-                                       "url": "https://mymood-service.herokuapp.com/select_emoji/1936024143139911/",
+                                       "url": "https://mymood-service.herokuapp.com/select_emoji/"+id+"/",
                                        "title": "Tell me 👇",
                                        "webview_height_ratio": "full",
                                        "messenger_extensions": "true",
@@ -29,6 +29,28 @@ def push_notifications(id):
     #     {"content_type": "text", "title": "😭", "payload": "7"},
     #     {"content_type": "text", "title": "👿", "payload": "8"}]}
 
+    params = {'recipient': recipient, 'message': message}
+    data = json.dumps(params)
+    headers = {'Content-Type': 'application/json'}  # json pattern
+
+    response = http.request('POST', apiUrl, body=data, headers=headers)
+    print(response.status)  # successful，200 is successful
+
+
+def push_register(id):
+    http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
+    apiUrl = 'https://graph.facebook.com/v2.6/me/messages?access_token=EAAE358wDWxQBANcfxlUa3tfs7DPhsrrtJN8Q8AWvE7tvq3RdErlFyfHDKY8SMZBHR4YTK8fJkxW054ZAKDDfgXVkXzb0VPvj9gg2ZBs7rBI8k6Yt263vaxGMlBmsxks5oWfkiT7w2Uh5LiCeAll3lYfvpT7oFedMTiHaQMp7l60yVjJvhZAc'
+    recipient = {'id': id}
+    message = {
+        'attachment': {'type': 'template',
+                       'payload': {'template_type': 'button', 'text': 'Hi there! Click here to register 😁',
+                                   'buttons': [{
+                                       "type": "web_url",
+                                       "url": "https://mymood-service.herokuapp.com/register_messenger/"+id+"/",
+                                       "title": "Click the here to register 👇",
+                                       "webview_height_ratio": "full",
+                                       "messenger_extensions": "true",
+                                   }]}}}
     params = {'recipient': recipient, 'message': message}
     data = json.dumps(params)
     headers = {'Content-Type': 'application/json'}  # json pattern

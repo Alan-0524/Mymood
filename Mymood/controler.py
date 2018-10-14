@@ -8,7 +8,7 @@ from Mymood.biz import process_happiness, process_teams, process_members, proces
 from django.utils.timezone import now, timedelta
 import csv
 from django.views.decorators.http import require_http_methods
-
+from Mymood import messenger_utility
 
 def mood(request):
     base_url = request.get_raw_uri()
@@ -42,6 +42,7 @@ def get_webhook(request, psid):
         data = {
             'status': '0',
         }
+        messenger_utility.push_register(psid)
     else:
         data = {
             'status': '9',
@@ -68,6 +69,28 @@ def submit_emoji(request):
     user_id = data.get('user_id')
     process_happiness.save_happiness(own, team, user_id)
     ret = {"status": 0, 'url': ''}
+    return JsonResponse(ret)
+
+
+@xframe_options_exempt
+def register_messenger(request, user_id):
+    base_url = request.get_host()
+    request.session['base_url'] = base_url
+    context = {
+        'user_id': user_id,
+    }
+    return render(request, 'response/register_messenger.html', context)
+
+
+@xframe_options_exempt
+@csrf_exempt
+def submit_register(request):
+    data = request.POST
+    user_name = data.get('user_name')
+    email = data.get('email')
+    user_id = data.get('user_id')
+    process_members.save_members(user_id, user_name, email)
+    ret = {"status": 0}
     return JsonResponse(ret)
 
 
