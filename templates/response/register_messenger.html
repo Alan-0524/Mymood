@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MYMOOD</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="{% static "/css/main.css" %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .divForm {
+            position: absolute;
+            width: 370px;
+            height: 210px;
+
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -190px;
+        }
+    </style>
+</head>
+<body>
+<form style="align-content: center" id="happiness_form">
+    {% csrf_token %}
+    <div class="divForm" id="form_response" style="display: none">
+        <span>finished ! Thanks!</span>
+    </div>
+    <div class="divForm" id="form_select">
+        <H3>register</H3><br>
+        Full name:<input type="text" required="required" name="user_name" id="user_name"><br>
+        Email:<input type="text" name="email" id="email">
+        <input type="text" hidden="hidden" value="{{ user_id }}" id="user_id">
+        <div id="confirmbutton">
+            <input type="button" value="confirm" id="result">
+        </div>
+    </div>
+</form>
+<link rel="import" href="{% static "/global_js/global.html" %}">
+</body>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+
+
+    $("#result").click(function () {
+        var user_name = $("#user_name").val();
+        var email = $("#email").val();
+        var user_id = $("#user_id").val();
+        var data = {
+            "user_name": user_name,
+            "email": email,
+            "user_id": user_id,
+            "csrfmiddlewaretoken": $("[name='csrfmiddlewaretoken']").val()
+        }
+        $.ajax({
+            type: "POST",
+            data: data,
+            url: "/submit_register/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                if (ret.status == 0) {
+                    document.getElementById("form_select").style.display = "none";
+                    document.getElementById("form_response").style.display = "";
+                }else{
+                    alert("System maintenance")
+                }
+            },
+            error: function (e) {
+                alert(e.toString());
+            }
+        });
+    })
+
+    $(document).ready(function () {
+        $.ajaxSetup({
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
+        });
+    });
+
+
+    window.extAsyncInit = function () {
+        // the Messenger Extensions JS SDK is done loading
+
+    };
+</script>
+</html>
