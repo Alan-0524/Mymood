@@ -56,7 +56,7 @@ def push_register(id):
     headers = {'Content-Type': 'application/json'}  # json pattern
 
     response = http.request('POST', apiUrl, body=data, headers=headers)
-    print(response.status)  # successful，200 is successful
+    print(response.status)
 
 
 # an long
