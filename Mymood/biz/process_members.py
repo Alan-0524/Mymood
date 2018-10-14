@@ -32,10 +32,12 @@ def query_members_in_teams(request):
     return html_text
 
 
-def query_member(request):
-    user_id = request.GET.get("psid")
-    user = TblUser.objects.filter(user_id=user_id)
+def query_member(psid):
+    user = TblUser.objects.filter(user_id=psid)
     if user.exists():
-        return True
+        if user.user_name is None or user.user_name == "":
+            return True
+        else:
+            return False
     else:
         return False

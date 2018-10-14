@@ -33,8 +33,7 @@ def sign_up(request):
 
 @require_http_methods(["GET"])
 def get_webhook(request, psid):
-    print(psid)
-    result = process_members.query_member(request)
+    result = process_members.query_member(psid)
     if result is True:
         data = {
             'status': '1',
