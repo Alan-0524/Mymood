@@ -69,4 +69,4 @@ def push_register(id):
 # # Song di
 # push_notifications("2281321371940745")
 
-push_notifications("1936024143139911")
+# push_notifications("1936024143139911")
