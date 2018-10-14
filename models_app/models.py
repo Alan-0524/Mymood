@@ -10,11 +10,7 @@ class TblHappiness(models.Model):
     team_hpns = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return str(self.user_id)
         return str(self.team_id)
-        return str(self.date)
-        return str(self.idvl_hpns)
-        return str(self.team_hpns)
 
 
 class TblReminder(models.Model):
@@ -31,11 +27,29 @@ class TblTeam(models.Model):
     wt_end = models.IntegerField(blank=True, null=True)
     team_size = models.IntegerField(blank=True, null=True)
 
+    def __str__(self):
+        return str(self.team_id)
+    class Meta:
+        ordering = ["name"]
 
 class TblUser(models.Model):
     id = models.CharField(max_length=32, primary_key=True)
     user_id = models.CharField(max_length=16, null=True)
+    user_name = models.CharField(max_length=50, null=True)
     email = models.CharField(max_length=255, null=True)
     password = models.CharField(max_length=255, null=True)
     role = models.IntegerField(blank=True, null=True)
     team_id = models.CharField(max_length=5, null=True)
+
+    def __str__(self):
+        return str(self.user_id)
+
+
+class TblEvent(models.Model):
+    id = models.CharField(max_length=32, primary_key=True)
+    event_title = models.CharField(max_length=50, null=True)
+    event_date = models.DateTimeField(null=True)
+    event_content = models.CharField(max_length=2000, null=True)
+
+    def __str__(self):
+        return str(self.event_title)

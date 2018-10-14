@@ -13,7 +13,7 @@ def push_notifications(id):
                        'payload': {'template_type': 'button', 'text': 'Hi there! How is it going?😁',
                                    'buttons': [{
                                        "type": "web_url",
-                                       "url": "https://mymood-service.herokuapp.com/select_emoji/2334765856551775/",
+                                       "url": "https://mymood-service.herokuapp.com/select_emoji/1936024143139911/",
                                        "title": "Tell me 👇",
                                        "webview_height_ratio": "full",
                                        "messenger_extensions": "true",
@@ -38,11 +38,13 @@ def push_notifications(id):
 
 
 # an long
-push_notifications("2334765856551775")
+# push_notifications("2334765856551775")
 # # xiao ming
 # push_notifications("1823636781087934")
 # # Karen
 # push_notifications("1908572825896416")
-#
+
 # # Song di
 # push_notifications("2281321371940745")
+
+push_notifications("1936024143139911")

@@ -29,15 +29,26 @@ urlpatterns = [
     # url(r'^submit_emoji/$', submit_emoji, name='submit_emoji'),
     # url(r'^query_happiness/$', query_happiness),
 
-
     path('admin/', admin.site.urls),
     path('', mood),
-    path('sign_in/', query_happiness),
+    path('sign_in/', sign_in),
     path('redirect_sign_up/', redirect_sign_up),
     path('sign_up/', sign_up),
     path('select_emoji/<int:user_id>/', select_emoji),
     path('submit_emoji/', submit_emoji),
     path('query_happiness/', query_happiness),
+    path('refresh_happiness/', refresh_happiness),
+    path('export_csv/', export_csv),
+    path('jump_members_in_teams/', jump_members_in_teams),
+    path('query_members_in_teams/', query_members_in_teams),
+    path('switch_members/', switch_members),
+    path('create_teams/', create_teams),
+    path('check_team_name/', check_team_name),
+    path('jump_events/', jump_events),
+    path('save_event/', save_event),
+    path('query_events/', query_events),
+    path('query_teams/', query_teams),
+    path('get_webhook/<int:psid>/', get_webhook),
     # path('query_happiness/', include('models_app.urls'))
 ]
 # urlpatterns += staticfiles_urlpatterns()
