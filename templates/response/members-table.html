@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+{% load staticfiles %}
+<body>
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Form Elements</h3>
+            <div class="actions pull-right">
+                <i class="fa fa-expand"></i>
+                <i class="fa fa-chevron-down"></i>
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal form-border">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Team name</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="team_name" placeholder="team name">
+                    </div>
+                </div>
+                <input type="button" class="btn btn-default" value="Confirm" id="confirm_create_team">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Hover rows</h3>
+            <div class="actions pull-right">
+                <i class="fa fa-expand"></i>
+                <i class="fa fa-chevron-down"></i>
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+        <div class="panel-body" style="display: block;">
+            <table class="table table-hover" id="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title" id="show_name">Selects a team</h3>
+            <div class="actions pull-right">
+                <i class="fa fa-expand"></i>
+                <i class="fa fa-chevron-down"></i>
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+        <input id="user_id" hidden="hidden">
+        <div class="panel-body" style="display: block;">
+            <div class="form-group">
+                <select class="form-control input-lg" id="team_select">
+                </select>
+            </div>
+            <input type="button" class="btn btn-default" value="Confirm" id="confirm_switch_team">
+        </div>
+    </div>
+</div>
+<script>
+    var query_members_in_teams = function () {
+        $.ajax({
+            type: "POST",
+            url: "{{ request.session.base_url }}query_members_in_teams/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                $("#table").empty();
+                $("#table").append(ret.html_text);
+            },
+            error: function (e) {
+                console.log(e.toString());
+                alert(e.toString());
+            }
+        });
+    };
+
+    var query_teams = function () {
+        $.ajax({
+            type: "POST",
+            url: "{{ request.session.base_url }}query_teams/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                $("#team_select").empty();
+                $("#team_select").append(ret.html_text);
+            },
+            error: function (e) {
+                console.log(e.toString());
+                alert(e.toString());
+            }
+        });
+    };
+
+    $(document).ready(query_members_in_teams);
+    $(document).ready(query_teams);
+
+    var switch_team = function (user_id, user_name) {
+        $("#user_id").val(user_id);
+        $("#show_name").empty();
+        $("#show_name").append("Selects a team for " + user_name);
+    }
+    $("#confirm_switch_team").click(function () {
+        var user_id = $("#user_id").val();
+        var team_id = $("#team_select").val();
+        var data = {
+            "user_id": user_id,
+            "team_id": team_id,
+            "csrfmiddlewaretoken": $("[name='csrfmiddlewaretoken']").val()
+        };
+        $.ajax({
+            type: "POST",
+            data: data,
+            url: "{{ request.session.base_url }}switch_members/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                if (ret.status == 0) {
+                    query_members_in_teams();
+                } else {
+                    alert("There are some problems with the system")
+                }
+            },
+            error: function (e) {
+                alert(e.toString());
+            }
+        });
+    })
+
+    $("#confirm_create_team").click(function () {
+        var team_name = $("#team_name").val();
+        var data = {
+            "team_name": team_name,
+            "csrfmiddlewaretoken": $("[name='csrfmiddlewaretoken']").val()
+        }
+        $.ajax({
+            type: "POST",
+            data: data,
+            url: "{{ request.session.base_url }}check_team_name/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                if (ret.status == 0) {
+                    create_teams(data)
+                } else {
+                    alert("The name has existed")
+                }
+            },
+            error: function (e) {
+                alert(e.toString());
+            }
+        });
+    })
+
+    var create_teams = function (data) {
+        $.ajax({
+            type: "POST",
+            data: data,
+            url: "{{ request.session.base_url }}create_teams/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                if (ret.status == 0) {
+                    query_members_in_teams();
+                    query_teams();
+                    alert("success")
+                } else {
+                    alert("There are some problems with the system")
+                }
+            },
+            error: function (e) {
+                alert(e.toString());
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+{% load staticfiles %}
+<style type="text/css">
+    .sub1 {
+        position: absolute;
+        left: 120px;
+        top: 2px;
+    }
+
+    .sub2 {
+        position: absolute;
+        left: 220px;
+        top: 2px;
+    }
+
+    .sub3 {
+        position: absolute;
+        left: 320px;
+        top: 2px;
+    }
+    .sub4 {
+        position: absolute;
+        left: 420px;
+        top: 2px;
+    }
+</style>
+<body>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="reportdate actions">
+                    <i class="fa fa-calendar-o"></i>
+                    <span>{{ start_date|safe }} -- {{ end_date|safe }}</span>
+                    <b class="caret"></b>
+                </div>
+                <h3 class="panel-title">for teams</h3>
+                <button type="button" class="btn btn-default btn-trans sub1" onclick="select_data()">Whole</button>
+                <button type="button" class="btn btn-default btn-trans sub2" onclick="select_data('query_teams','')">
+                    Teams
+                </button>
+                <div class="sub3">
+                    <button type="button" class="btn btn-default btn-trans" data-toggle="dropdown"
+                            aria-expanded="false">
+                        Team
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        {% for team in team_list %}
+                            <li><a href="javascript:void(0);"
+                                   onclick="select_data('query_individuals','{{ team.team_id }}' )">{{ team.name }} </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-default btn-trans sub4" onclick="export_data()">
+                    Export
+                </button>
+            </div>
+            <div class="panel-body text-center">
+                <div class="chart">
+                    <div id="area-chart"></div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">for owns</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="chart">
+                        <div id="area-chart2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static "/plugins/c3Chart/js/d3-5.4.0.min.js" %}"></script>
+<script src="{% static "/plugins/c3Chart/js/c3-2.min.js" %}"></script>
+<script>
+    var chart = c3.generate({
+        bindto: '#area-chart',
+        data: {
+            x: 'x',
+            columns: [
+                ['x', '0', '0', '0']
+            ]
+        },
+        axis: {
+            x: {
+                type: 'category'
+            },
+            y: {
+                label: {
+                    text: 'happiness levels',
+                    position: 'outer-middle'
+                }
+            },
+        }
+    });
+
+    var chart2 = c3.generate({
+        bindto: '#area-chart2',
+        data: {
+            x: 'x',
+            columns: [
+                ['x', '0', '0', '0']
+            ]
+        },
+        axis: {
+            x: {
+                type: 'category'
+            },
+            y: {
+                label: {
+                    text: 'happiness levels',
+                    position: 'outer-middle'
+                }
+            },
+        }
+    });
+
+    var data = {
+        "team_id": "",
+        "query_type": "",
+        "startDate": '{{ start_date|safe }}',
+        "endDate": '{{ end_date|safe }}',
+        "csrfmiddlewaretoken": $("[name='csrfmiddlewaretoken']").val()
+    };
+
+    var load_data = function (happiness_list_teams) {
+        console.log(happiness_list_teams);
+        chart.load({
+            columns: [
+                happiness_list_teams[0],
+                happiness_list_teams[1],
+            ],
+        }, 300);
+        for (var i = 2; i < happiness_list_teams.length; i++) {
+            chart.load({
+                columns: [
+                    happiness_list_teams[i],
+                ],
+            }, 300);
+        }
+    }
+
+    var load_data2 = function (happiness_list_individuals) {
+        console.log(happiness_list_individuals);
+        chart2.load({
+            columns: [
+                happiness_list_individuals[0],
+                happiness_list_individuals[1],
+            ],
+        }, 300);
+        for (var i = 2; i < happiness_list_individuals.length; i++) {
+            chart2.load({
+                columns: [
+                    happiness_list_individuals[i],
+                ],
+            }, 300);
+        }
+    }
+
+    load_data({{ happiness_list_teams|safe }});
+    load_data2({{ happiness_list_individuals|safe }});
+
+    $('.reportdate').daterangepicker({
+        format: 'YYYY-MM-DD',
+        startDate: '{{ start_date|safe }}',
+        endDate: '{{ end_date|safe }}',
+    });
+    $('.reportdate').on('apply.daterangepicker', function (ev, picker) {
+        data.startDate = picker.startDate.format('YYYY-MM-DD'),
+            data.endDate = picker.endDate.format('YYYY-MM-DD'),
+            $.ajax({
+                type: "POST",
+                data: data,
+                url: "{{ request.session.base_url }}refresh_happiness/",
+                cache: false,
+                headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+                dataType: "json",
+                success: function (ret) {
+                    console.log(ret);
+                    happiness_list_teams = ret.happiness_list_teams;
+                    load_data(happiness_list_teams);
+                    happiness_list_individuals = ret.happiness_list_individuals;
+                    load_data2(happiness_list_individuals);
+                },
+                error: function (e) {
+                    console.log(e.toString());
+                    alert(e.toString());
+                }
+            });
+    });
+
+    var select_data = function (query_type, team_id) {
+        console.log(team_id);
+        data.query_type = query_type;
+        if (query_type == "query_individuals") {
+            data.team_id = team_id;
+        }
+
+        chart.unload();
+        chart2.unload();
+        $.ajax({
+            type: "POST",
+            data: data,
+            url: "{{ request.session.base_url }}refresh_happiness/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                happiness_list_teams = ret.happiness_list_teams;
+                load_data(happiness_list_teams);
+                happiness_list_individuals = ret.happiness_list_individuals;
+                load_data2(happiness_list_individuals);
+            },
+            error: function (e) {
+                console.log(e.toString());
+                alert(e.toString());
+            }
+        });
+    }
+
+    var export_data = function () {
+        window.open('{{ request.session.base_url }}export_csv/');
+    }
+
+</script>
+</body>
+</html>

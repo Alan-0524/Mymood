@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<body>
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Area as Line</h3>
+                <div class="actions pull-right">
+                    <i class="fa fa-expand"></i>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div id="area-as-line"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    Morris.Area({
+        element: 'area-as-line',
+        behaveLikeLine: true,
+        data: [
+            {x: '2014 Q1', y: 3, z: 3, q:5},
+            {x: '2014 Q2', y: 2, z: 1, q:2},
+            {x: '2014 Q3', y: 2, z: 4, q:8},
+            {x: '2014 Q4', y: 3, z: 3, q:6}
+        ],
+        xkey: 'x',
+        ykeys: ['y', 'z','q'],
+        labels: ['Y', 'Z','q'],
+        fillOpacity: 0.1,
+        hideHover: 'auto',
+        behaveLikeLine: true,
+        resize: true,
+        pointFillColors: ['#ffffff'],
+        pointStrokeColors: ['black'],
+        lineColors: ['#cad87f', '#83ddc2','#dda95b']
+    });
+
+
+</script>
+</body>
+
+</html>
