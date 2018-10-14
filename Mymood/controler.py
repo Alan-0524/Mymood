@@ -42,7 +42,7 @@ def get_webhook(request, psid):
         data = {
             'status': '0',
         }
-        messenger_utility.push_register(psid)
+        messenger_utility.push_register(str(psid))
     else:
         data = {
             'status': '9',
