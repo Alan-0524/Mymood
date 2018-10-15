@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -14,8 +13,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TblHappiness',
             fields=[
-                ('id', models.BigAutoField(primary_key=True, serialize=False)),
-                ('team_id', models.IntegerField()),
+                ('id', models.CharField(primary_key=True, serialize=False)),
+                ('user_id', models.CharField()),
+                ('team_id', models.CharField()),
                 ('date', models.DateTimeField()),
                 ('idvl_hpns', models.IntegerField(blank=True, null=True)),
                 ('team_hpns', models.IntegerField(blank=True, null=True)),
@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TblReminder',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.CharField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('user_id', models.IntegerField()),
                 ('cur_cnt', models.IntegerField(blank=True, null=True)),
             ],
@@ -32,7 +32,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TblTeam',
             fields=[
-                ('team_id', models.AutoField(primary_key=True, serialize=False)),
+                ('id', models.CharField(primary_key=True, null=True)),
+                ('team_id', models.CharField(serialize=False)),
                 ('name', models.CharField(max_length=255)),
                 ('wt_start', models.IntegerField(blank=True, null=True)),
                 ('wt_end', models.IntegerField(blank=True, null=True)),
@@ -42,11 +43,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='TblUser',
             fields=[
-                ('user_id', models.AutoField(primary_key=True, serialize=False)),
+                ('id', models.CharField(primary_key=True, null=True)),
+                ('user_id', models.CharField(serialize=False)),
                 ('email', models.CharField(max_length=255)),
                 ('password', models.CharField(max_length=255)),
-                ('role', models.IntegerField(blank=True, null=True)),
-                ('team_id', models.IntegerField(blank=True, null=True)),
+                ('role', models.CharField(blank=True, null=True)),
+                ('team_id', models.CharField(blank=True, null=True)),
             ],
         ),
     ]
