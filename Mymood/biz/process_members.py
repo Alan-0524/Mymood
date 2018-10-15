@@ -3,6 +3,7 @@ import html
 import uuid
 from Mymood import messenger_utility
 
+
 def switch_members(request):
     try:
         user_id = request.POST.get("user_id")
@@ -20,7 +21,7 @@ def query_members_in_teams(request):
     list_query_teams = TblTeam.objects.all()
     text = str("")
     for i in range(0, len(list_query_teams)):
-        team = list_query_teams.__getitem__(i)
+        team = list_query_teams.__getitem__(i)   # Get all objects
         text = text + "<thead><tr><th>#</th><th>" + team.name + "</th></tr></thead><tbody>"
 
         list_query_members = TblUser.objects.filter(team_id=team.team_id)

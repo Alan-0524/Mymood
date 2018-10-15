@@ -4,11 +4,17 @@ import html
 
 
 def query_events():
+    # Get all objects
     event_list = TblEvent.objects.all()
     text = str("")
+    # Loop list
     for i in range(0, len(event_list)):
+        # put objects in string of Html
         event = event_list.__getitem__(i)
-        text = text + "<tr><td>" + event.event_title + "</td><td>" + str(event.event_date)[:10] + "</td><td>" + event.event_content + "</td></tr>"
+        text = text + "<tr><td>" + event.event_title + "</td><td>" + str(event.event_date)[
+
+                                                                     :10] + "</td><td>" + event.event_content + "</td></tr>"
+    # Translation string to html
     html_text = html.unescape(text)
     return html_text
 
