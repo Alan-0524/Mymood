@@ -67,5 +67,5 @@
 #
 #         list_happiness = TblHappiness.objects.filter(team_id=team.team_id)
 #         self.assertIsNotNone(list_happiness)
-def division_funtion(self):
+def test_eql(self):
     self.assertEqual(1, 1)
