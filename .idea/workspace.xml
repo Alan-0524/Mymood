@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork">
-      <change beforePath="$PROJECT_DIR$/models_app/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_app/tests.py" afterDir="false" />
-    </list>
+    <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,7 @@
           <entry key="dummy" value="12" />
           <entry key="html" value="4983" />
           <entry key="js" value="49" />
-          <entry key="py" value="7921" />
+          <entry key="py" value="7925" />
           <entry key="txt" value="20" />
           <entry key="yml" value="3" />
         </counts>
@@ -101,7 +99,7 @@
           <entry key="HTML" value="4983" />
           <entry key="JavaScript" value="49" />
           <entry key="PLAIN_TEXT" value="38" />
-          <entry key="Python" value="7921" />
+          <entry key="Python" value="7925" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -115,8 +113,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models_app/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+            <state relative-caret-position="265">
+              <caret line="70" column="26" lean-forward="true" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -320,7 +318,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -622,7 +620,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5011236" side_tool="true" weight="0.22483222" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4988764" visible="true" weight="0.22483222" />
@@ -1084,8 +1081,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models_app/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+        <state relative-caret-position="265">
+          <caret line="70" column="26" lean-forward="true" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
         </state>
       </provider>
     </entry>
