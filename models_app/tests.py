@@ -68,6 +68,4 @@
 #         list_happiness = TblHappiness.objects.filter(team_id=team.team_id)
 #         self.assertIsNotNone(list_happiness)
 def division_funtion(self):
-    a = 1
-    b = 1
-    self.assertEqual(a + b, 2)
+    self.assertEqual(1, 1)

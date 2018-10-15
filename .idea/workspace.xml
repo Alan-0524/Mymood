@@ -91,7 +91,7 @@
           <entry key="dummy" value="12" />
           <entry key="html" value="4983" />
           <entry key="js" value="49" />
-          <entry key="py" value="7919" />
+          <entry key="py" value="7921" />
           <entry key="txt" value="20" />
           <entry key="yml" value="3" />
         </counts>
@@ -101,7 +101,7 @@
           <entry key="HTML" value="4983" />
           <entry key="JavaScript" value="49" />
           <entry key="PLAIN_TEXT" value="38" />
-          <entry key="Python" value="7919" />
+          <entry key="Python" value="7921" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -115,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models_app/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+            <state relative-caret-position="1173">
+              <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -200,7 +200,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Tables</find>
       <find>confirmbutton</find>
       <find>result</find>
       <find>Placeholder Input</find>
@@ -230,6 +229,7 @@
       <find>forms</find>
       <find>Dashboard</find>
       <find>TblHappiness</find>
+      <find>pytest</find>
     </findStrings>
     <replaceStrings>
       <replace>..</replace>
@@ -1084,8 +1084,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models_app/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+        <state relative-caret-position="1173">
+          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
         </state>
       </provider>
     </entry>
