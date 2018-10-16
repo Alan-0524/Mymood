@@ -6,8 +6,9 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from Mymood.biz import process_happiness, process_teams, process_members, process_events
 from django.utils.timezone import now, timedelta
-import csv
+from models_app.models import TblUser
 from django.views.decorators.http import require_http_methods
+import csv
 
 
 def mood(request):
@@ -17,7 +18,34 @@ def mood(request):
 
 
 def sign_in(request):
-    return render(request, 'response/index.html')
+    if request.method == "POST":
+        user_name = request.POST.get("user_name")
+        password = request.POST.get("password")
+        try:
+            user = TblUser.objects.get(user_name=user_name)
+            if check_password(password, user.password) is True:
+                request.session['is_login'] = True
+                request.session['user_id'] = user.user_id
+                request.session['user_name'] = user.user_name
+                # request.session.get('is_login', None)
+                role = ""
+                if user.role == 0:
+                    role = "Administrator"
+                if user.role == 1:
+                    role = "Researcher"
+                data = {
+                    'user_name': user.user_name,
+                    'user_role': role
+                }
+                return render(request, 'response/index.html', data)
+            else:
+                message = "Wrong user name or password!"
+        except Exception as e:
+            print(e)
+            message = "User does not exist!"
+    else:
+        return render(request, 'response/pages-sign-in.html')
+    return render(request, 'response/pages-sign-in.html', {'status': message})
 
 
 def redirect_sign_up(request):
@@ -25,10 +53,16 @@ def redirect_sign_up(request):
 
 
 def sign_up(request):
-    email = request.POST.get("email")
-    password = make_password(request.POST.get("password"))
-    print(email, password)
-    return render(request, 'response/index.html')
+    try:
+        result = process_members.create_members(request)
+
+        if result == "success":
+            return render(request, 'response/pages-sign-in.html')
+        else:
+            return render(request, 'response/pages-sign-up.html', {'status': 'User already exists!'})
+    except Exception as e:
+        print("Error info:----------------", e)
+        return render(request, 'response/pages-sign-up.html', "System exception!")
 
 
 @require_http_methods(["GET"])

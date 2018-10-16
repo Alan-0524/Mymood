@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MYMOOD</title>
+    <title>Howzitgoing</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <!-- Favicon -->
@@ -41,7 +41,7 @@
                     <div class="brand">
                         <a href="index.html" class="logo">
                             <i class="icon-layers"></i>
-                            <span>MY</span>MOOD</a>
+                            <span>How</span>zitgoing</a>
                     </div>
                 </header>
                 <div class="panel panel-primary">
@@ -51,8 +51,8 @@
                         </h3>
                     </div>
                     <div class="panel-body">
-                        <p>Already a member? <a href="pages-login.html"><strong>Sign In</strong></a></p>
-                        <form role="form" action="{{ request.session.base_url }}sign_up/" method="post">
+                        <p>Already a member? <a href="{{ request.session.base_url }}"><strong>Sign In</strong></a></p>
+                        <form role="form" action="{{ request.session.base_url }}sign_up/" method="post" id = "sign_up_form">
                             {% csrf_token %}
                             {# <div class="form-group">#}
                             {#    <label for="exampleInputEmail1">Name</label>#}
@@ -60,9 +60,9 @@
                             {#      placeholder="Enter your name">#}
                             {# </div>#}
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Email</label>
-                                <input type="password" class="form-control" name = "email" id="exampleInputEmail1"
-                                       placeholder="Enter your email">
+                                <label for="exampleInputPassword1">User name</label>   <p style="color: #ac2925">{{ status }}</p>
+                                <input type="email" class="form-control" name="user_name" id="exampleInputEmail1"
+                                       placeholder="Enter user name">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
@@ -75,7 +75,8 @@
                                        placeholder="Retype your password">
                             </div>
 
-                            <input href="javascript:void(0)" type="submit" class="btn btn-primary btn-block" value="Sign Up" />
+                            <input href="javascript:void(0)" onclick="submit_info()" class="btn btn-primary btn-block"
+                                   value="Sign Up"/>
                         </form>
 
                     </div>
@@ -88,5 +89,33 @@
 <!--Global JS-->
 <link rel="import" href="{% static "/global_js/global.html" %}">
 </body>
+<script>
+    function submit_info() {
+        var user_name = $('#exampleInputEmail1').val();
+        var password1 = $('#password1').val();
+        var password2 = $('#password2').val();
+        {#reg = /^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/#}
+        if (user_name === "") {
+            alert("User name can not be empty");
+            return;
+        }
+        {#!reg.test(email)#}
 
+        if (password1 === "") {
+            alert("The password cannot be empty");
+            return;
+        }
+
+        if (password1.length<6) {
+            alert("Password length must be greater than or equal to 6 digits");
+            return;
+        }
+
+        if (password1 != password2) {
+            alert("Two passwords are inconsistent");
+            return;
+        }
+        document.getElementById("sign_up_form").submit();
+    }
+</script>
 </html>

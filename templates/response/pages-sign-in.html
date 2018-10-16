@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MYMOOD</title>
+    <title>Howzitgoing</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
@@ -44,7 +44,7 @@
                     <div class="brand">
                         <a href="index.html" class="logo">
                             <i class="icon-layers"></i>
-                            <span>MY</span>MOOD</a>
+                            <span>How</span>zitgoing</a>
                     </div>
                 </header>
                 <div class="panel panel-primary">
@@ -55,24 +55,29 @@
                     </div>
                     <div class="panel-body">
                         <p> Login to access your account.</p>
-                        <form class="form-horizontal" role="form">
+                        <p style="color: #ac2925">{{ status }}</p>
+                        <form class="form-horizontal" action="{{ request.session.base_url }}sign_in/" method="post"
+                              role="form" id="sign_in_form">
+                            {% csrf_token %}
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                    <input type="email" class="form-control" name="user_name" id="email"
+                                           placeholder="User Name">
                                     <i class="fa fa-user"></i>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                    <input type="password" class="form-control" name="password" id="password"
+                                           placeholder="Password">
                                     <i class="fa fa-lock"></i>
-                                    <a href="javascript:void(0)" class="help-block">Forgot Your Password?</a>
+                                    {#                                    <a href="javascript:void(0)" class="help-block">Forgot Your Password?</a>#}
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <a href="javascript:void(0)"
-                                       onclick="location.href = '{{ request.session.base_url }}sign_in/'"
+                                       onclick="submit_info()"
                                        class="btn btn-primary btn-block">Sign in</a>
                                     <hr/>
                                     <a href="javascript:void(0)"
@@ -90,4 +95,27 @@
 </section>
 <link rel="import" href="{% static "/global_js/global.html" %}">
 </body>
+<script>
+    function submit_info() {
+        var user_name = $('#email').val();
+        var password = $('#password').val();
+
+        if (user_name === "") {
+            alert("User name can not be empty");
+            return;
+        }
+
+        if (password === "") {
+            alert("The password cannot be empty");
+            return;
+        }
+
+        if (password.length < 6) {
+            alert("Password length must be greater than or equal to 6 digits");
+            return;
+        }
+
+        document.getElementById("sign_in_form").submit();
+    }
+</script>
 </html>

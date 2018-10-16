@@ -2,6 +2,8 @@ from models_app.models import *
 import html
 import uuid
 from Mymood import messenger_utility
+from django.contrib.auth.hashers import make_password
+import random
 
 
 def switch_members(request):
@@ -21,7 +23,7 @@ def query_members_in_teams(request):
     list_query_teams = TblTeam.objects.all()
     text = str("")
     for i in range(0, len(list_query_teams)):
-        team = list_query_teams.__getitem__(i)   # Get all objects
+        team = list_query_teams.__getitem__(i)  # Get all objects
         text = text + "<thead><tr><th>#</th><th>" + team.name + "</th></tr></thead><tbody>"
 
         list_query_members = TblUser.objects.filter(team_id=team.team_id)
@@ -55,3 +57,21 @@ def save_members(user_id, user_name, email):
         user.save()
     except Exception as e:
         print("Error info:----------------", e)
+
+
+def create_members(request):
+    user_name = request.POST.get("user_name")
+    user = TblUser.objects.filter(user_name=user_name)
+    if len(user) > 0:
+        return "exists"
+    else:
+        user = TblUser()
+        u_id = ''.join(str(random.choice(range(10))) for _ in range(16))
+        user.id = str(uuid.uuid1()).replace("-", "")
+        user.user_id = u_id
+        user.user_name = user_name
+        user.role = 1
+        password = make_password(request.POST.get("password"))
+        user.password = password
+        user.save()
+        return "success"
