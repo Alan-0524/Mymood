@@ -39,8 +39,8 @@
         <div style="margin-bottom: 50px">
             <!-- <input type="radio" name="personal" value="0">🤣 -->
             <!-- <input type="radio" name="own" value="1">😁 -->
-            <input type="radio" name="own" value="1" id="own1" onclick="addborder1(this.id)">😃
-            <input type="radio" name="own" value="2" id="own2" onclick="addborder1(this.id)">🙂
+            <input type="radio" name="own" value="1" id="own1" onclick="addborder1(this.id)">😁
+            <input type="radio" name="own" value="2" id="own2" onclick="addborder1(this.id)">😃
             <input type="radio" name="own" value="3" id="own3" checked onclick="addborder1(this.id)">😐
             <input type="radio" name="own" value="4" id="own4" onclick="addborder1(this.id)">😔
             <input type="radio" name="own" value="5" id="own5" onclick="addborder1(this.id)">😞
@@ -51,8 +51,8 @@
         <div style="margin-bottom: 30px">
             <!-- <input type="radio" name="team" value="0">🤣 -->
             <!-- <input type="radio" name="team" value="1">😁 -->
-            <input type="radio" name="team" value="1" id="team1" onclick="addborder2(this.id)">😃
-            <input type="radio" name="team" value="2" id="team2" onclick="addborder2(this.id)">🙂
+            <input type="radio" name="team" value="1" id="team1" onclick="addborder2(this.id)">😁
+            <input type="radio" name="team" value="2" id="team2" onclick="addborder2(this.id)">😃
             <input type="radio" name="team" value="3" id="team3" checked onclick="addborder2(this.id)">😐
             <input type="radio" name="team" value="4" id="team4" onclick="addborder2(this.id)">😔
             <input type="radio" name="team" value="5" id="team5" onclick="addborder2(this.id)">😞
@@ -69,6 +69,7 @@
 <link rel="import" href="{% static "/global_js/global.html" %}">
 </body>
 <script>
+    //Apply to facebook for an permission about using Messenger
     (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {
@@ -80,7 +81,13 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'Messenger'));
 
+    $(document).ready(function () {
+        $.ajaxSetup({
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
+        });
+    });
 
+    //Click the submit buttton to get the value of two radio(options)
     $("#result").click(function () {
         var own = $("input[name='own']:checked").val();
         var team = $("input[name='team']:checked").val();
@@ -94,7 +101,8 @@
         $.ajax({
             type: "POST",
             data: data,
-            url: "/submit_emoji/", //后台处理函数的url 这里用的是static url 需要与urls.py中的name一致,或者直接写http地址
+            url: "/submit_emoji/", //The url for processing data at back end
+            		//here use the static url, which should be same as the name in urls.py, or use http address
             cache: false,
             headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
             dataType: "json",
@@ -108,42 +116,38 @@
         });
     })
 
-    $(document).ready(function () {
-        $.ajaxSetup({
-            data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
-        });
-    });
-
 
     window.extAsyncInit = function () {
         // the Messenger Extensions JS SDK is done loading
 
     };
     
-        // highlight the emoji by adding border
-		function addborder1(sId){
-			var own_radio = document.getElementsByName('own');
-			for (var i = 0; i < own_radio.length; i++) {
-				if (own_radio[i].id == sId) {
-					own_radio[i].previousSibling.previousSibling.checked = true;
-					own_radio[i].style.border = '1px solid blue';
-				} 
-				else {
-					own_radio[i].style.border = '1px solid white';
-				}
+
+    // highlight the emoji by adding border
+	function addborder1(sId){
+		var own_radio = document.getElementsByName('own');
+		for (var i = 0; i < own_radio.length; i++) {
+			if (own_radio[i].id == sId) {
+				own_radio[i].previousSibling.previousSibling.checked = true;
+				own_radio[i].style.border = '1px solid blue';
+			} 
+			else {
+				own_radio[i].style.border = '1px solid white';
 			}
 		}
-		function addborder2(sId){
-			var team_radio = document.getElementsByName('team');
-			for (var j = 0; j < team_radio.length; j++) {
-				if (team_radio[j].id == sId) {
-					team_radio[j].previousSibling.previousSibling.checked = true;
-					team_radio[j].style.border = '1px solid blue';
-				} 
-				else {
-					team_radio[j].style.border = '1px solid white';
-				}
+	}
+	function addborder2(sId){
+		var team_radio = document.getElementsByName('team');
+		for (var j = 0; j < team_radio.length; j++) {
+			if (team_radio[j].id == sId) {
+				team_radio[j].previousSibling.previousSibling.checked = true;
+				team_radio[j].style.border = '1px solid blue';
+			} 
+			else {
+				team_radio[j].style.border = '1px solid white';
 			}
 		}
+	}
+
 </script>
 </html>
