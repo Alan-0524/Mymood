@@ -11,6 +11,43 @@ from django.views.decorators.http import require_http_methods
 import csv
 
 
+def mood(request):
+    base_url = request.get_raw_uri()
+    request.session['base_url'] = base_url
+    return render(request, 'response/pages-sign-in.html')
+
+
+def sign_in(request):
+    if request.method == "POST":
+        user_name = request.POST.get("user_name")
+        password = request.POST.get("password")
+        try:
+            user = TblUser.objects.get(user_name=user_name)
+            if check_password(password, user.password) is True:
+                request.session['is_login'] = True
+                request.session['user_id'] = user.user_id
+                request.session['user_name'] = user.user_name
+                # request.session.get('is_login', None)
+                role = ""
+                if user.role == 0:
+                    role = "Administrator"
+                if user.role == 1:
+                    role = "Researcher"
+                data = {
+                    'user_name': user.user_name,
+                    'user_role': role
+                }
+                return render(request, 'response/index.html', data)
+            else:
+                message = "Wrong user name or password!"
+        except Exception as e:
+            print(e)
+            message = "User does not exist!"
+    else:
+        return render(request, 'response/pages-sign-in.html')
+    return render(request, 'response/pages-sign-in.html', {'status': message})
+
+
 def redirect_sign_up(request):
     return render(request, 'response/pages-sign-up.html')
 
