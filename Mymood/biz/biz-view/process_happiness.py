@@ -17,13 +17,13 @@ def query_all_happiness(request, for_who):
     end_date = now().date()
     date_range = (start_date, end_date)
 
-    if startDate is not None and endDate is not None:
+    if startDate != None and endDate != None:
         date_range = (startDate, endDate)
         start_sec = time.mktime(time.strptime(startDate, '%Y-%m-%d'))  # Conversion date format
         end_sec = time.mktime(time.strptime(endDate, '%Y-%m-%d'))  # Conversion date format
         work_days = int((end_sec - start_sec) / (24 * 60 * 60))  # Calculating the difference
         if work_days >= 30:
-            date_type = "month"
+            date_type = "day"
 
     if query_type == "query_teams":
         list_target = TblTeam.objects.all()

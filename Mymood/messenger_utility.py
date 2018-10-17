@@ -10,7 +10,7 @@ def push_notifications(id):
     recipient = {'id': id}
     message = {
         'attachment': {'type': 'template',
-                       'payload': {'template_type': 'button', 'text': 'Hi there! How is it going?😁',
+                       'payload': {'template_type': 'button', 'text': 'Hello! It is time to enter your happiness.😁',
                                    'buttons': [{
                                        "type": "web_url",
                                        "url": "https://mymood-service.herokuapp.com/select_emoji/"+id+"/",
@@ -43,7 +43,7 @@ def push_register(id):
     recipient = {'id': id}
     message = {
         'attachment': {'type': 'template',
-                       'payload': {'template_type': 'button', 'text': 'Hi there! Click here to register 😁',
+                       'payload': {'template_type': 'button', 'text': 'Click here to register 😁',
                                    'buttons': [{
                                        "type": "web_url",
                                        "url": "https://mymood-service.herokuapp.com/register_messenger/"+id+"/",

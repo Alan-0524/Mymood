@@ -39,7 +39,7 @@ def sign_in(request):
                 }
                 return render(request, 'response/index.html', data)
             else:
-                message = "Wrong user name or password!"
+                message = "User name or password is incorrect!"
         except Exception as e:
             print(e)
             message = "User does not exist!"
