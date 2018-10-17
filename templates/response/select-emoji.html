@@ -11,7 +11,12 @@
     <meta charset="UTF-8">
     <title>Howzitgoing</title>
     <style type="text/css">
-        .divForm {
+        body{
+        	top: 20%;
+            left: 50%;
+            text-align: center;
+        }
+        /*.divForm {
             position: absolute;
             width: 370px;
             height: 210px;
@@ -21,9 +26,12 @@
             left: 50%;
             margin-top: -200px;
             margin-left: -190px;
-        }
+        }*/
         .radio input{
             display: none;
+        }
+        .radio span{
+        	border: 2px solid white;
         }
     </style>
 </head>
@@ -35,40 +43,74 @@
 	    <div class="divForm" id="form_select">
 	        
 	        <span>What is  your current sttate of happiness about your work in this team?</span>
-	        <div class="radio" style="margin-bottom: 50px">
+	        <div class="radio" ><!-- style="margin-bottom: 50px" -->
 	            <!-- <input type="radio" name="personal" value="0">🤣 -->
 	            <!-- <input type="radio" name="own" value="1">😁 -->
-	            <input type="radio" name="own" value="1" id="own1" onclick="addborder1(this.id)">😁
-	            <input type="radio" name="own" value="2" id="own2" onclick="addborder1(this.id)">😃
-	            <input type="radio" name="own" value="3" id="own3" checked onclick="addborder1(this.id)">😐
+	           
+            	<input type="radio" name="own" value="1">
+            	<span name="ownemoji" id="own1" onclick="addborder1(this.id)">😁</span>
+             	           
+            	<input type="radio" name="own" value="2">
+            	<span name="ownemoji" id="own2" onclick="addborder1(this.id)">😃</span>
+            	           
+            	<input type="radio" name="own" value="3" checked>
+            	<span name="ownemoji" id="own3" onclick="addborder1(this.id)" style="border-color: blue">😐</span>
+            	           
+            	<input type="radio" name="own" value="4">
+            	<span name="ownemoji" id="own4" onclick="addborder1(this.id)">😔</span>            
+           
+            	<input type="radio" name="own" value="5">
+            	<span name="ownemoji" id="own5" onclick="addborder1(this.id)">😞</span>
+	            
+<!-- 	            <input type="radio" name="own" value="2" id="own2" onclick="addborder1(this.id)">😃
+	            <input type="radio" name="own" value="3" id="own3" onclick="addborder1(this.id)"checked >😐
 	            <input type="radio" name="own" value="4" id="own4" onclick="addborder1(this.id)">😔
-	            <input type="radio" name="own" value="5" id="own5" onclick="addborder1(this.id)">😞
+	            <input type="radio" name="own" value="5" id="own5" onclick="addborder1(this.id)">😞 -->
 	            <!-- <input type="radio" name="own" value="7">😭 -->
 	            <!-- <input type="radio" name="personal" value="8">👿 -->
 	        </div>
+
 	        <span>How happy do you think about your team?</span>
-	        <div class="radio" style="margin-bottom: 30px">
+	        <div class="radio" ><!-- style="margin-bottom: 30px" -->
 	            <!-- <input type="radio" name="team" value="0">🤣 -->
 	            <!-- <input type="radio" name="team" value="1">😁 -->
-	            <input type="radio" name="team" value="1" id="team1" onclick="addborder2(this.id)">😁
+	            
+            	<input type="radio" name="team" value="1">
+            	<span name="teamemoji" id="team1" onclick="addborder2(this.id)">😁</span>
+            
+            	<input type="radio" name="team" value="2">
+            	<span name="teamemoji" id="team2" onclick="addborder2(this.id)">😃</span>
+            
+            	<input type="radio" name="team" value="3" checked>
+            	<span name="teamemoji" id="team3" onclick="addborder2(this.id)" style="border-color: blue">😐</span>
+            
+            	<input type="radio" name="team" value="4">
+            	<span name="teamemoji" id="team4" onclick="addborder2(this.id)">😔</span>
+            
+            	<input type="radio" name="team" value="5">
+            	<span name="teamemoji" id="team5" onclick="addborder2(this.id)">😞</span>
+	            
+<!-- 	            <input type="radio" name="team" value="1" id="team1" onclick="addborder2(this.id)">😁
 	            <input type="radio" name="team" value="2" id="team2" onclick="addborder2(this.id)">😃
-	            <input type="radio" name="team" value="3" id="team3" checked onclick="addborder2(this.id)">😐
+	            <input type="radio" name="team" value="3" id="team3" onclick="addborder2(this.id)"checked >😐
 	            <input type="radio" name="team" value="4" id="team4" onclick="addborder2(this.id)">😔
-	            <input type="radio" name="team" value="5" id="team5" onclick="addborder2(this.id)">😞
+	            <input type="radio" name="team" value="5" id="team5" onclick="addborder2(this.id)">😞 -->
 	            <!-- <input type="radio" name="team" value="7">😭 -->
 	            <!-- <input type="radio" name="team" value="8">👿 -->
 	        </div>
 
 	        <input type="text" hidden="hidden" value="{{ user_id }}" id="user_id">
+
 	    </div>
 
-		<div id="confirmbutton" disabled="">
+		<div class="divForm" id="confirmbutton">
 	        <input type="button" value="confirm" id="result">
 	    </div>
 
 	    <div class="divForm" id="form_response" style="display: none">
 	        <span>Thanks! Your information has been saved.</span>
 	    </div>
+
 	</form>
 	<link rel="import" href="{% static "/global_js/global.html" %}">
 </body>
@@ -131,26 +173,26 @@
 
     // highlight the emoji by adding border
 	function addborder1(sId){
-		var own_radio = document.getElementsByName('own');
+		var own_radio = document.getElementsByName('ownemoji');
 		for (var i = 0; i < own_radio.length; i++) {
 			if (own_radio[i].id == sId) {
-				own_radio[i].previousSibling.previousSibling.checked = true;
-				own_radio[i].style.border = '1px solid blue';
+				own_radio[i].previousSibling.checked = true;
+				own_radio[i].style.border = '2px solid blue';
 			} 
 			else {
-				own_radio[i].style.border = '1px solid white';
+				own_radio[i].style.border = '2px solid white';
 			}
 		}
 	}
 	function addborder2(sId){
-		var team_radio = document.getElementsByName('team');
+		var team_radio = document.getElementsByName('teamemoji');
 		for (var j = 0; j < team_radio.length; j++) {
 			if (team_radio[j].id == sId) {
-				team_radio[j].previousSibling.previousSibling.checked = true;
-				team_radio[j].style.border = '1px solid blue';
+				team_radio[j].checked = true;
+				team_radio[j].style.border = '2px solid blue';
 			} 
 			else {
-				team_radio[j].style.border = '1px solid white';
+				team_radio[j].style.border = '2px solid white';
 			}
 		}
 	}
