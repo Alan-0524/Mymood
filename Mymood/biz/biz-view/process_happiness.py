@@ -17,7 +17,7 @@ def query_all_happiness(request, for_who):
     end_date = now().date()
     date_range = (start_date, end_date)
 
-    if startDate is not None and endDate is not None:
+    if startDate != None and endDate != None:
         date_range = (startDate, endDate)
         start_sec = time.mktime(time.strptime(startDate, '%Y-%m-%d'))  # Conversion date format
         end_sec = time.mktime(time.strptime(endDate, '%Y-%m-%d'))  # Conversion date format
