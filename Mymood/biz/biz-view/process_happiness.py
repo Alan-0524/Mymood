@@ -22,8 +22,8 @@ def query_all_happiness(request, for_who):
         start_sec = time.mktime(time.strptime(startDate, '%Y-%m-%d'))  # Conversion date format
         end_sec = time.mktime(time.strptime(endDate, '%Y-%m-%d'))  # Conversion date format
         work_days = int((end_sec - start_sec) / (24 * 60 * 60))  # Calculating the difference
-        if work_days >= 30:
-            date_type = "month"
+        if work_days >= 22:
+            date_type = "day"
 
     if query_type == "query_teams":
         list_target = TblTeam.objects.all()
