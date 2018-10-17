@@ -15,10 +15,10 @@ def create_teams(request):
         team_name = request.POST.get("team_name")
         team = TblTeam()
         team.id = str(uuid.uuid1()).replace("-", "")
-        new_id = random.randint(0, 99999)
+        new_id = random.randint(0, 999999)
         check_team_id = TblTeam.objects.filter(team_id=new_id)
         if check_team_id.exists():
-            new_id = random.randint(0, 99999)
+            new_id = random.randint(0, 999999)
         else:
             team.team_id = new_id
         team.name = team_name
