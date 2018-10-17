@@ -22,6 +22,9 @@
             margin-top: -200px;
             margin-left: -190px;
         }
+        #own, #team{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -35,25 +38,25 @@
         <span>your own work</span>
         <div style="margin-bottom: 50px">
             {#            <input type="radio" name="personal" value="0">🤣#}
-            <input type="radio" name="own" value="1">😁
-            <input type="radio" name="own" value="2">😃
-            <input type="radio" name="own" value="3">🙂
-            <input type="radio" name="own" value="4" checked>😐
-            <input type="radio" name="own" value="5">😔
-            <input type="radio" name="own" value="6">😞
-            <input type="radio" name="own" value="7">😭
+            <!-- <input type="radio" name="own" value="1">😁 -->
+            <input type="radio" name="own" value="2" onclick="addborder1(this.id)">😃
+            <input type="radio" name="own" value="3" onclick="addborder1(this.id)">🙂
+            <input type="radio" name="own" value="4" checked onclick="addborder1(this.id)">😐
+            <input type="radio" name="own" value="5" onclick="addborder1(this.id)">😔
+            <input type="radio" name="own" value="6" onclick="addborder1(this.id)">😞
+            <!-- <input type="radio" name="own" value="7">😭 -->
             {#            <input type="radio" name="personal" value="8">👿#}
         </div>
         <span>your team work</span>
         <div style="margin-bottom: 30px">
             {#            <input type="radio" name="team" value="0">🤣#}
-            <input type="radio" name="team" value="1">😁
-            <input type="radio" name="team" value="2">😃
-            <input type="radio" name="team" value="3">🙂
-            <input type="radio" name="team" value="4" checked>😐
-            <input type="radio" name="team" value="5">😔
-            <input type="radio" name="team" value="6">😞
-            <input type="radio" name="team" value="7">😭
+            <!-- <input type="radio" name="team" value="1">😁 -->
+            <input type="radio" name="team" value="2" onclick="addborder2(this.id)">😃
+            <input type="radio" name="team" value="3" onclick="addborder2(this.id)">🙂
+            <input type="radio" name="team" value="4" checked onclick="addborder2(this.id)">😐
+            <input type="radio" name="team" value="5" onclick="addborder2(this.id)">😔
+            <input type="radio" name="team" value="6" onclick="addborder2(this.id)">😞
+            <!-- <input type="radio" name="team" value="7">😭 -->
             {#            <input type="radio" name="team" value="8">👿#}
         </div>
         <input type="text" hidden="hidden" value="{{ user_id }}" id="user_id">
@@ -116,5 +119,31 @@
         // the Messenger Extensions JS SDK is done loading
 
     };
+    
+        // highlight the emoji by adding border
+		function addborder1(sId){
+			var own_radio = document.getElementsByName('own');
+			for (var i = 0; i < own_radio.length; i++) {
+				if (own_radio[i].id == sId) {
+					own_radio[i].previousSibling.previousSibling.checked = true;
+					own_radio[i].style.border = '1px solid blue';
+				} 
+				else {
+					own_radio[i].style.border = '1px solid white';
+				}
+			}
+		}
+		function addborder2(sId){
+			var team_radio = document.getElementsByName('team');
+			for (var j = 0; j < team_radio.length; j++) {
+				if (team_radio[j].id == sId) {
+					team_radio[j].previousSibling.previousSibling.checked = true;
+					team_radio[j].style.border = '1px solid blue';
+				} 
+				else {
+					team_radio[j].style.border = '1px solid white';
+				}
+			}
+		}
 </script>
 </html>
