@@ -22,19 +22,20 @@
             margin-top: -200px;
             margin-left: -190px;
         }
-        #own, #team{
+        .radio input{
             display: none;
         }
     </style>
 </head>
 <body>
+	<H3>Howzitgong</H3><br>
 	<form style="align-content: center" id="happiness_form">
 	    {% csrf_token %}
 	    
 	    <div class="divForm" id="form_select">
-	        <H3>Howzitgong</H3><br>
+	        
 	        <span>What is  your current sttate of happiness about your work in this team?</span>
-	        <div style="margin-bottom: 50px">
+	        <div class="radio" style="margin-bottom: 50px">
 	            <!-- <input type="radio" name="personal" value="0">🤣 -->
 	            <!-- <input type="radio" name="own" value="1">😁 -->
 	            <input type="radio" name="own" value="1" id="own1" onclick="addborder1(this.id)">😁
@@ -46,7 +47,7 @@
 	            <!-- <input type="radio" name="personal" value="8">👿 -->
 	        </div>
 	        <span>How happy do you think about your team?</span>
-	        <div style="margin-bottom: 30px">
+	        <div class="radio" style="margin-bottom: 30px">
 	            <!-- <input type="radio" name="team" value="0">🤣 -->
 	            <!-- <input type="radio" name="team" value="1">😁 -->
 	            <input type="radio" name="team" value="1" id="team1" onclick="addborder2(this.id)">😁
@@ -57,6 +58,7 @@
 	            <!-- <input type="radio" name="team" value="7">😭 -->
 	            <!-- <input type="radio" name="team" value="8">👿 -->
 	        </div>
+
 	        <input type="text" hidden="hidden" value="{{ user_id }}" id="user_id">
 	    </div>
 
