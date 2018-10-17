@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork">
-      <change afterPath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mymood/timed_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +93,7 @@
           <entry key="dummy" value="12" />
           <entry key="html" value="5596" />
           <entry key="js" value="49" />
-          <entry key="py" value="8457" />
+          <entry key="py" value="8459" />
           <entry key="txt" value="20" />
           <entry key="yml" value="3" />
         </counts>
@@ -105,7 +103,7 @@
           <entry key="HTML" value="5596" />
           <entry key="JavaScript" value="49" />
           <entry key="PLAIN_TEXT" value="38" />
-          <entry key="Python" value="8457" />
+          <entry key="Python" value="8459" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -186,11 +184,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+            <state relative-caret-position="187">
+              <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
-                <marker date="1539766842618" expanded="true" signature="163:172" ph="..." />
+                <marker date="1539772105303" expanded="true" signature="163:172" ph="..." />
               </folding>
             </state>
           </provider>
@@ -301,7 +299,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/Mymood/wsgi.py" />
         <option value="$PROJECT_DIR$/Procfile" />
@@ -352,6 +349,7 @@
         <option value="$PROJECT_DIR$/templates/response/events-table.html" />
         <option value="$PROJECT_DIR$/Mymood/messenger_utility.py" />
         <option value="$PROJECT_DIR$/Mymood/timed_task.py" />
+        <option value="$PROJECT_DIR$/models_app/management/commands/timed_task.py" />
       </list>
     </option>
   </component>
@@ -1069,11 +1067,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="187">
+          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
-            <marker date="1539766842618" expanded="true" signature="163:172" ph="..." />
+            <marker date="1539772105303" expanded="true" signature="163:172" ph="..." />
           </folding>
         </state>
       </provider>
