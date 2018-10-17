@@ -28,46 +28,49 @@
     </style>
 </head>
 <body>
-<form style="align-content: center" id="happiness_form">
-    {% csrf_token %}
-    <div class="divForm" id="form_response" style="display: none">
-        <span>Got it! Thanks!</span>
-    </div>
-    <div class="divForm" id="form_select">
-        <H3>Howzitgong</H3><br>
-        <span>What is  your current sttate of happiness about your work in this team?</span>
-        <div style="margin-bottom: 50px">
-            <!-- <input type="radio" name="personal" value="0">🤣 -->
-            <!-- <input type="radio" name="own" value="1">😁 -->
-            <input type="radio" name="own" value="1" id="own1" onclick="addborder1(this.id)">😁
-            <input type="radio" name="own" value="2" id="own2" onclick="addborder1(this.id)">😃
-            <input type="radio" name="own" value="3" id="own3" checked onclick="addborder1(this.id)">😐
-            <input type="radio" name="own" value="4" id="own4" onclick="addborder1(this.id)">😔
-            <input type="radio" name="own" value="5" id="own5" onclick="addborder1(this.id)">😞
-            <!-- <input type="radio" name="own" value="7">😭 -->
-            <!-- <input type="radio" name="personal" value="8">👿 -->
-        </div>
-        <span>How happy do you think about your team?</span>
-        <div style="margin-bottom: 30px">
-            <!-- <input type="radio" name="team" value="0">🤣 -->
-            <!-- <input type="radio" name="team" value="1">😁 -->
-            <input type="radio" name="team" value="1" id="team1" onclick="addborder2(this.id)">😁
-            <input type="radio" name="team" value="2" id="team2" onclick="addborder2(this.id)">😃
-            <input type="radio" name="team" value="3" id="team3" checked onclick="addborder2(this.id)">😐
-            <input type="radio" name="team" value="4" id="team4" onclick="addborder2(this.id)">😔
-            <input type="radio" name="team" value="5" id="team5" onclick="addborder2(this.id)">😞
-            <!-- <input type="radio" name="team" value="7">😭 -->
-            <!-- <input type="radio" name="team" value="8">👿 -->
-        </div>
-        <input type="text" hidden="hidden" value="{{ user_id }}" id="user_id">
-        <div id="confirmbutton">
+	<form style="align-content: center" id="happiness_form">
+	    {% csrf_token %}
+	    
+	    <div class="divForm" id="form_select">
+	        <H3>Howzitgong</H3><br>
+	        <span>What is  your current sttate of happiness about your work in this team?</span>
+	        <div style="margin-bottom: 50px">
+	            <!-- <input type="radio" name="personal" value="0">🤣 -->
+	            <!-- <input type="radio" name="own" value="1">😁 -->
+	            <input type="radio" name="own" value="1" id="own1" onclick="addborder1(this.id)">😁
+	            <input type="radio" name="own" value="2" id="own2" onclick="addborder1(this.id)">😃
+	            <input type="radio" name="own" value="3" id="own3" checked onclick="addborder1(this.id)">😐
+	            <input type="radio" name="own" value="4" id="own4" onclick="addborder1(this.id)">😔
+	            <input type="radio" name="own" value="5" id="own5" onclick="addborder1(this.id)">😞
+	            <!-- <input type="radio" name="own" value="7">😭 -->
+	            <!-- <input type="radio" name="personal" value="8">👿 -->
+	        </div>
+	        <span>How happy do you think about your team?</span>
+	        <div style="margin-bottom: 30px">
+	            <!-- <input type="radio" name="team" value="0">🤣 -->
+	            <!-- <input type="radio" name="team" value="1">😁 -->
+	            <input type="radio" name="team" value="1" id="team1" onclick="addborder2(this.id)">😁
+	            <input type="radio" name="team" value="2" id="team2" onclick="addborder2(this.id)">😃
+	            <input type="radio" name="team" value="3" id="team3" checked onclick="addborder2(this.id)">😐
+	            <input type="radio" name="team" value="4" id="team4" onclick="addborder2(this.id)">😔
+	            <input type="radio" name="team" value="5" id="team5" onclick="addborder2(this.id)">😞
+	            <!-- <input type="radio" name="team" value="7">😭 -->
+	            <!-- <input type="radio" name="team" value="8">👿 -->
+	        </div>
+	        <input type="text" hidden="hidden" value="{{ user_id }}" id="user_id">
+	    </div>
 
-            <input type="button" value="confirm" id="result">
-        </div>
-    </div>
-</form>
-<link rel="import" href="{% static "/global_js/global.html" %}">
+		<div id="confirmbutton" disabled="">
+	        <input type="button" value="confirm" id="result">
+	    </div>
+
+	    <div class="divForm" id="form_response" style="display: none">
+	        <span>Thanks! Your information has been saved.</span>
+	    </div>
+	</form>
+	<link rel="import" href="{% static "/global_js/global.html" %}">
 </body>
+
 <script>
     //Apply to facebook for an permission about using Messenger
     (function (d, s, id) {
@@ -107,8 +110,9 @@
             headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
             dataType: "json",
             success: function (ret) {
-                document.getElementById("form_select").style.display = "none";
-                document.getElementById("form_response").style.display = "";
+                // document.getElementById("form_select").style.display = "none";
+				document.getElementById("confirmbutton").style.disabled="true";	//block the button after submit
+                document.getElementById("form_response").style.display = "";	//show the comment after submit
             },
             error: function (e) {
                 alert(e.toString());
