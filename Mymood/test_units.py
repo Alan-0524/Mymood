@@ -1,8 +1,10 @@
-from datetime import datetime, date,timedelta
+from datetime import datetime, date, timedelta
 from models_app.models import *
 from Mymood import messenger_utility
 import schedule
 import time
+
+
 def inc(x):
     return x + 1
 
@@ -10,9 +12,7 @@ def inc(x):
 def test_answer():
     assert inc(5) == 6
 
-
 # print(str(datetime.now().time())>'15:33:47')
-
 
 
 # def test_job():
@@ -38,6 +38,3 @@ def test_answer():
 #                     messenger_utility.push_notifications(user_id)
 #                 if str(now) > second_time and second_time_status == 0:
 #                     messenger_utility.push_notifications(user_id)
-
-
-
