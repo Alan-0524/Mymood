@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="Mymood framwork">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mymood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,10 +92,10 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Procfile" value="6" />
-          <entry key="dummy" value="18" />
+          <entry key="dummy" value="22" />
           <entry key="html" value="5596" />
           <entry key="js" value="49" />
-          <entry key="py" value="10378" />
+          <entry key="py" value="10380" />
           <entry key="txt" value="20" />
           <entry key="yml" value="3" />
         </counts>
@@ -104,8 +104,8 @@
         <counts>
           <entry key="HTML" value="5596" />
           <entry key="JavaScript" value="49" />
-          <entry key="PLAIN_TEXT" value="44" />
-          <entry key="Python" value="10378" />
+          <entry key="PLAIN_TEXT" value="48" />
+          <entry key="Python" value="10380" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -147,11 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mymood/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1781">
-              <caret line="119" column="21" lean-forward="true" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="21" />
+            <state relative-caret-position="98">
+              <caret line="110" selection-start-line="110" selection-end-line="119" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -194,8 +194,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/test_units.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="170">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -204,7 +204,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models_app/model_tests.py">
+        <entry file="file://$PROJECT_DIR$/models_app/model_unit.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1207">
               <caret line="71" selection-start-line="71" selection-end-line="71" />
@@ -212,10 +212,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="160">
               <caret line="44" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
@@ -568,7 +568,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PycharmProjects\Mymood\models_app\model_tests.py" />
+      <option name="SCRIPT_NAME" value="D:\PycharmProjects\Mymood\models_app\model_unit.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -713,7 +713,7 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
-      <window_info anchor="right" id="Database" order="6" weight="0.18993288" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.18993288" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
     </layout>
   </component>
@@ -1104,20 +1104,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models_app/model_unit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Mymood/test_units.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="170">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models_app/model_tests.py">
+    <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="160">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
@@ -1130,15 +1137,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mymood/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1781">
-          <caret line="119" column="21" lean-forward="true" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="98">
+          <caret line="110" selection-start-line="110" selection-end-line="119" selection-end-column="1" />
         </state>
       </provider>
     </entry>

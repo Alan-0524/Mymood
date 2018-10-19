@@ -107,6 +107,7 @@ WSGI_APPLICATION = 'Mymood.wsgi.application'
 #         'PORT': '3306',
 #     }
 # }
+# mysql://g9adbtdd7hvio43u:nmps70dpzix5j485@u28rhuskh0x5paau.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/xm0d5xg6burif6vy
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
