@@ -1,7 +1,7 @@
 # from django.test import TestCase
 # from models_app.models import *
 # import uuid
-
+from datetime import datetime, date
 
 # Create your tests here.
 
@@ -67,5 +67,5 @@
 #
 #         list_happiness = TblHappiness.objects.filter(team_id=team.team_id)
 #         self.assertIsNotNone(list_happiness)
-def test_eql(self):
-    self.assertEqual(1, 1)
+# def test_eql(self):
+#     self.assertEqual(1, 1)

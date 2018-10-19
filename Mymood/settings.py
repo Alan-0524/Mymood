@@ -36,6 +36,14 @@ INSTALLED_APPS = [
     'models_app',
 ]
 
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+#         'LOCATION': 'unique-snowflake',
+#         'TIMEOUT': 60,
+#     }
+# }
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -81,7 +89,7 @@ WSGI_APPLICATION = 'Mymood.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'mood',
+#         'NAME': 'sdm_project',
 #         'USER': 'sdm',
 #         'PASSWORD': '000000',
 #         'HOST': '127.0.0.1',

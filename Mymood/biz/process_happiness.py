@@ -95,20 +95,30 @@ def organize_happiness_data(query_type, date_type, date_range, list_target, for_
 
 
 def save_happiness(own, team, user_id):
-    try:
-        user = TblUser.objects.get(user_id=user_id)
-        team_id = user.team_id
-        happiness = TblHappiness()
-        happiness.id = str(uuid.uuid1()).replace("-", "")
-        happiness.user_id = user_id
-        happiness.team_id = team_id
-        happiness.idvl_hpns = own
-        happiness.team_hpns = team
-        time_now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-        happiness.date = time_now
-        happiness.save()
-    except Exception as e:
-        print("Error info:----------------", e)
+    user = TblUser.objects.get(user_id=user_id)
+    team_id = user.team_id
+    happiness = TblHappiness()
+    happiness.id = str(uuid.uuid1()).replace("-", "")
+    happiness.user_id = user_id
+    happiness.team_id = team_id
+    happiness.idvl_hpns = own
+    happiness.team_hpns = team
+    time_now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+    happiness.date = time_now
+    happiness.save()
+    if user.first_time_status == 0 and user.second_time_status == 0:
+        user.first_time_status = 1
+    elif user.first_time_status == 1 and user.second_time_status == 0:
+        user.second_time_status = 1
+    user.save()
+
+
+def save_happiness_level(happiness_level):
+    happiness = happiness_level.split("&")
+    user_id = happiness[0]
+    idvl = happiness[1]
+    team = happiness[2]
+    save_happiness(idvl, team, user_id)
 
 
 def query_team_happiness(request):

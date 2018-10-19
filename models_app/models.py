@@ -23,14 +23,17 @@ class TblTeam(models.Model):
     id = models.CharField(max_length=32, primary_key=True)
     team_id = models.CharField(max_length=5, null=True)
     name = models.CharField(max_length=255, null=True)
-    wt_start = models.IntegerField(blank=True, null=True)
-    wt_end = models.IntegerField(blank=True, null=True)
+    wt_start = models.CharField(blank=True, max_length=2, null=True)
+    wt_end = models.CharField(blank=True, max_length=2, null=True)
     team_size = models.IntegerField(blank=True, null=True)
+    week_push = models.CharField(max_length=7, null=True)
 
     def __str__(self):
         return str(self.team_id)
+
     class Meta:
         ordering = ["name"]
+
 
 class TblUser(models.Model):
     id = models.CharField(max_length=32, primary_key=True)
@@ -40,6 +43,10 @@ class TblUser(models.Model):
     password = models.CharField(max_length=255, null=True)
     role = models.IntegerField(blank=True, null=True)
     team_id = models.CharField(max_length=5, null=True)
+    first_time = models.CharField(max_length=50, blank=True, null=True)
+    first_time_status = models.IntegerField(blank=True, null=True)
+    second_time = models.CharField(max_length=50, blank=True, null=True)
+    second_time_status = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return str(self.user_id)

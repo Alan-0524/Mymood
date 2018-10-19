@@ -83,6 +83,20 @@ def get_webhook(request, psid):
     return JsonResponse(data, safe=False)
 
 
+@require_http_methods(["GET"])
+def save_happiness_level(request, happiness_level):
+    try:
+        process_happiness.save_happiness_level(happiness_level)
+        data = {
+            'status': '0',
+        }
+    except Exception as e:
+        data = {
+            'status': '1',
+        }
+    return JsonResponse(data, safe=False)
+
+
 @xframe_options_exempt
 def select_emoji(request, user_id):
     base_url = request.get_host()

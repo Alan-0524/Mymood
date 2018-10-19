@@ -11,12 +11,38 @@ def switch_members(request):
         user_id = request.POST.get("user_id")
         team_id = request.POST.get("team_id")
         user = TblUser.objects.get(user_id=user_id)
+        origin_team_id = user.team_id
         user.team_id = team_id
         user.save()
+        if team_id != "99999":
+            assign_time(team_id)
+            assign_time(origin_team_id)
     except Exception as e:
         print("Error info:----------------", e)
         return "error"
     return "success"
+
+
+def assign_time(team_id):
+    team = TblTeam.objects.get(team_id=team_id)
+    start = int(team.wt_start)
+    end = int(team.wt_end)
+    difference = end - start
+    list_user = TblUser.objects.filter(team_id=team_id)
+    total = len(list_user)
+    if total >0:
+        interval = int(difference / total * 0.5)
+        for i in range(0, total):
+            user = list_user.__getitem__(i)
+            first_time = start + interval * i
+            if first_time < 10:
+                first_time = "0"+str(first_time)
+            user.first_time = first_time
+            second_time = int(user.first_time) + total * interval
+            if second_time < 10:
+                second_time = "0"+str(second_time)
+            user.second_time = second_time
+            user.save()
 
 
 def query_members_in_teams(request):
@@ -43,6 +69,7 @@ def query_member(psid):
     else:
         messenger_utility.push_register(str(psid))
         return False
+
 
 
 def save_members(user_id, user_name, email):
