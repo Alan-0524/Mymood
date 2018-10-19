@@ -1,10 +1,3 @@
-from datetime import datetime, date, timedelta
-from models_app.models import *
-from Mymood import messenger_utility
-import schedule
-import time
-
-
 def inc(x):
     return x + 1
 
