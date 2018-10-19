@@ -3,6 +3,13 @@
 # import uuid
 from datetime import datetime, date
 
+
+def inc(x):
+    return x + 1
+
+
+def test_answer():
+    assert inc(5) == 6
 # Create your tests here.
 
 # id = models.CharField(max_length=32, primary_key=True)
