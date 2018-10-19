@@ -97,17 +97,26 @@ WSGI_APPLICATION = 'Mymood.wsgi.application'
 #     }
 # }
 # product
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'sdm_project',
+#         'USER': 'sdm',
+#         'PASSWORD': '000000',
+#         'HOST': 'ec2-18-220-82-47.us-east-2.compute.amazonaws.com',
+#         'PORT': '3306',
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sdm_project',
-        'USER': 'sdm',
-        'PASSWORD': '000000',
-        'HOST': 'ec2-18-220-82-47.us-east-2.compute.amazonaws.com',
+        'NAME': 'xm0d5xg6burif6vy',
+        'USER': 'g9adbtdd7hvio43u',
+        'PASSWORD': 'nmps70dpzix5j485',
+        'HOST': 'u28rhuskh0x5paau.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
