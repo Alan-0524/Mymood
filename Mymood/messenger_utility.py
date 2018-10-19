@@ -63,7 +63,7 @@ def push_register(id):
 # print(a>b>c)
 # an long
 
-push_notifications("2334765856551775")
+# push_notifications("2334765856551775")
     # push_notifications_team("2334765856551775")
 # # xiao ming
 # push_notifications("1823636781087934")
