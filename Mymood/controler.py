@@ -97,7 +97,6 @@ def save_happiness_level(request, happiness_level):
     return JsonResponse(data, safe=False)
 
 
-@xframe_options_exempt
 def select_emoji(request, user_id):
     base_url = request.get_host()
     request.session['base_url'] = base_url
@@ -107,8 +106,6 @@ def select_emoji(request, user_id):
     return render(request, 'response/select-emoji.html', context)
 
 
-@xframe_options_exempt
-@csrf_exempt
 def submit_emoji(request):
     data = request.POST
     own = data.get('own')
@@ -119,7 +116,6 @@ def submit_emoji(request):
     return JsonResponse(ret)
 
 
-@xframe_options_exempt
 def register_messenger(request, user_id):
     base_url = request.get_host()
     request.session['base_url'] = base_url
@@ -129,7 +125,6 @@ def register_messenger(request, user_id):
     return render(request, 'response/register_messenger_independent.html', context)
 
 
-@xframe_options_exempt
 def submit_register(request):
     data = request.POST
     user_name = data.get('user_name')
@@ -150,7 +145,6 @@ def query_happiness(request):
     return render(request, 'response/charts-c3.html', context)
 
 
-@csrf_exempt
 def refresh_happiness(request):
     happiness_list_teams = process_happiness.query_all_happiness(request, 'team_hpns')
     happiness_list_individuals = process_happiness.query_all_happiness(request, 'idvl_hpns')
@@ -158,7 +152,6 @@ def refresh_happiness(request):
     return JsonResponse(context)
 
 
-@csrf_exempt
 def export_csv(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="happiness.csv"'
@@ -180,7 +173,6 @@ def export_csv(request):
     return response
 
 
-@csrf_exempt
 def switch_members(request):
     result = process_members.switch_members(request)
     if result == "success":
@@ -196,7 +188,6 @@ def jump_members_in_teams(request):
     return render(request, 'response/members-table.html', context)
 
 
-@csrf_exempt
 def query_members_in_teams(request):
     html_text = process_members.query_members_in_teams(request)
     context = {
@@ -217,7 +208,6 @@ def load_teams(request):
     return JsonResponse(context)
 
 
-@csrf_exempt
 def check_team_name(request):
     result = process_teams.check_team_name(request)
     if result is True:
@@ -253,7 +243,6 @@ def jump_events(request):
     return render(request, 'response/events-table.html', context)
 
 
-@csrf_exempt
 def query_events(request):
     html_text = process_events.query_events()
     context = {
@@ -262,7 +251,6 @@ def query_events(request):
     return JsonResponse(context)
 
 
-@csrf_exempt
 def save_event(request):
     result = process_events.save_event(request)
     if result == "success":
@@ -272,7 +260,6 @@ def save_event(request):
     return JsonResponse(ret)
 
 
-@csrf_exempt
 def query_teams(request):
     html_text = process_teams.query_teams_html(request)
     context = {
