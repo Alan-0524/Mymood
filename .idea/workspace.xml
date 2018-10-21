@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mymood/biz/biz-view/controler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/biz/biz-view/controler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mymood/biz/process_members.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/biz/process_members.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mymood/biz/process_teams.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/biz/process_teams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mymood/controler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/controler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mymood/messenger_utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/messenger_utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mymood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mymood/test_units.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/test_units.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mymood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/response/events-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/events-table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/response/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/response/members-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/members-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/response/register_messenger_independent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/register_messenger_independent.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +64,7 @@
         <counts>
           <entry key="Procfile" value="2" />
           <entry key="css" value="15" />
-          <entry key="html" value="171" />
+          <entry key="html" value="172" />
           <entry key="js" value="60" />
           <entry key="lastfailed" value="1" />
           <entry key="models" value="1" />
@@ -92,7 +80,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="15" />
-          <entry key="HTML" value="171" />
+          <entry key="HTML" value="172" />
           <entry key="JavaScript" value="60" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="Python" value="363" />
@@ -106,7 +94,7 @@
         <counts>
           <entry key="Procfile" value="6" />
           <entry key="dummy" value="27" />
-          <entry key="html" value="7471" />
+          <entry key="html" value="7474" />
           <entry key="js" value="49" />
           <entry key="py" value="12047" />
           <entry key="txt" value="20" />
@@ -115,7 +103,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="7471" />
+          <entry key="HTML" value="7474" />
           <entry key="JavaScript" value="49" />
           <entry key="PLAIN_TEXT" value="53" />
           <entry key="Python" value="12047" />
@@ -153,18 +141,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/response/members-table.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-              <folding>
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
@@ -181,8 +157,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/response/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1962">
-              <caret line="205" column="35" lean-forward="true" selection-start-line="205" selection-start-column="35" selection-end-line="205" selection-end-column="35" />
+            <state relative-caret-position="327">
+              <caret line="206" column="9" lean-forward="true" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/response/register_messenger_independent.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="61" column="131" selection-start-line="61" selection-start-column="131" selection-end-line="61" selection-end-column="131" />
             </state>
           </provider>
         </entry>
@@ -242,7 +227,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/test_units.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-115">
@@ -264,7 +249,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>create_researcher</find>
       <find>result</find>
       <find>register_messenger</find>
       <find>register_messenger_independent.html</find>
@@ -294,6 +278,7 @@
       <find>team_size</find>
       <find>size</find>
       <find>jump_members_in_teams</find>
+      <find>CRLF</find>
     </findStrings>
     <replaceStrings>
       <replace>..</replace>
@@ -366,7 +351,6 @@
         <option value="$PROJECT_DIR$/templates/response/success.html" />
         <option value="$PROJECT_DIR$/templates/response/events-table.html" />
         <option value="$PROJECT_DIR$/Mymood/settings.py" />
-        <option value="$PROJECT_DIR$/templates/response/register_messenger_independent.html" />
         <option value="$PROJECT_DIR$/templates/response/tables-data-tables.html" />
         <option value="$PROJECT_DIR$/Mymood/controler.py" />
         <option value="$PROJECT_DIR$/Mymood/urls.py" />
@@ -377,6 +361,7 @@
         <option value="$PROJECT_DIR$/Mymood/biz/process_teams.py" />
         <option value="$PROJECT_DIR$/templates/response/teams-table.html" />
         <option value="$PROJECT_DIR$/templates/response/index.html" />
+        <option value="$PROJECT_DIR$/templates/response/register_messenger_independent.html" />
       </list>
     </option>
   </component>
@@ -993,13 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/response/register_messenger_independent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="91" column="28" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Html5_templates/assets/plugins/dataTables/js/jquery.dataTables.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -1170,17 +1148,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/response/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1962">
-          <caret line="205" column="35" lean-forward="true" selection-start-line="205" selection-start-column="35" selection-end-line="205" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Mymood/test_units.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-115">
           <caret selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="206" column="9" lean-forward="true" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/register_messenger_independent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="61" column="131" selection-start-line="61" selection-start-column="131" selection-end-line="61" selection-end-column="131" />
         </state>
       </provider>
     </entry>
