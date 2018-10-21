@@ -31,16 +31,16 @@ class Command(BaseCommand):
                             first_time_status = user.first_time_status
                             second_time = user.second_time
                             second_time_status = user.second_time_status
-                            print("user_name:", user_name, "--------first_time:", first_time, "------------now:",
-                                  str(now), "second_time:" + second_time)
+                            print("user_name:", user_name, "; first_time:", first_time, "; now:",
+                                  str(now), "; second_time:" + second_time)
                             if second_time > str(now) > first_time and first_time_status == 0:
                                 messenger_utility.push_notifications(user_id)
-                                print("------push notifications to " + user_name + " at " + str(
-                                    now) + " for first time successful------")
+                                print("push notifications to " + user_name + " at " + str(
+                                    now) + " for first time successful")
                             if "20:00:00 " > str(now) > second_time and second_time_status == 0:
                                 messenger_utility.push_notifications(user_id)
-                                print("------push notifications to " + user_name + " at " + str(
-                                    now) + " for second time successful------")
+                                print("push notifications to " + user_name + " at " + str(
+                                    now) + " for second time successful")
                 if str(now) > "20:00:00 ":
                     list_user = TblUser.objects.all()
                     for j in range(0, len(list_user)):

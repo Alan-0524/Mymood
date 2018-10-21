@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/response/register_messenger_independent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/register_messenger_independent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +96,7 @@
           <entry key="dummy" value="27" />
           <entry key="html" value="7474" />
           <entry key="js" value="49" />
-          <entry key="py" value="12047" />
+          <entry key="py" value="12053" />
           <entry key="txt" value="20" />
           <entry key="yml" value="3" />
         </counts>
@@ -106,7 +106,7 @@
           <entry key="HTML" value="7474" />
           <entry key="JavaScript" value="49" />
           <entry key="PLAIN_TEXT" value="53" />
-          <entry key="Python" value="12047" />
+          <entry key="Python" value="12053" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -140,15 +140,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+            <state relative-caret-position="157">
+              <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
-                <marker date="1540088183497" expanded="true" signature="369:378" ph="..." />
-                <marker date="1540088183497" expanded="true" signature="2865:2874" ph="..." />
+                <marker date="1540093195742" expanded="true" signature="369:378" ph="..." />
+                <marker date="1540093195742" expanded="true" signature="2827:2836" ph="..." />
               </folding>
             </state>
           </provider>
@@ -163,10 +163,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/response/register_messenger_independent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
+            <state relative-caret-position="-618">
               <caret line="61" column="131" selection-start-line="61" selection-start-column="131" selection-end-line="61" selection-end-column="131" />
             </state>
           </provider>
@@ -357,11 +357,11 @@
         <option value="$PROJECT_DIR$/templates/response/members-table.html" />
         <option value="$PROJECT_DIR$/Mymood/test_units.py" />
         <option value="$PROJECT_DIR$/Mymood/biz/process_members.py" />
-        <option value="$PROJECT_DIR$/models_app/management/commands/timed_task.py" />
         <option value="$PROJECT_DIR$/Mymood/biz/process_teams.py" />
         <option value="$PROJECT_DIR$/templates/response/teams-table.html" />
         <option value="$PROJECT_DIR$/templates/response/index.html" />
         <option value="$PROJECT_DIR$/templates/response/register_messenger_independent.html" />
+        <option value="$PROJECT_DIR$/models_app/management/commands/timed_task.py" />
       </list>
     </option>
   </component>
@@ -1100,18 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-            <marker date="1540088183497" expanded="true" signature="369:378" ph="..." />
-            <marker date="1540088183497" expanded="true" signature="2865:2874" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Mymood/biz/process_happiness.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="749">
@@ -1164,8 +1152,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/response/register_messenger_independent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
+        <state relative-caret-position="-618">
           <caret line="61" column="131" selection-start-line="61" selection-start-column="131" selection-end-line="61" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+            <marker date="1540093195742" expanded="true" signature="369:378" ph="..." />
+            <marker date="1540093195742" expanded="true" signature="2827:2836" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
