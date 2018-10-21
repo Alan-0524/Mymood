@@ -7,33 +7,34 @@
 <!--<![endif]-->
 {% load staticfiles %}
 <body>
-<div class="col-md-12">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Create a team</h3>
-            <div class="actions pull-right">
-                <i class="fa fa-expand"></i>
-                <i class="fa fa-chevron-down"></i>
-                <i class="fa fa-times"></i>
-            </div>
-        </div>
-        <div class="panel-body">
-            <form class="form-horizontal form-border">
-                <div class="form-group">
-                    <label class="col-sm-3 control-label">Team name</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" id="team_name" placeholder="team name">
-                    </div>
-                </div>
-                <input type="button" class="btn btn-default" value="Confirm" id="confirm_create_team">
-            </form>
-        </div>
-    </div>
-</div>
+{#<div class="col-md-12">#}
+{#    <div class="panel panel-default">#}
+{#        <div class="panel-heading">#}
+{#            <h3 class="panel-title">Create a team</h3>#}
+{#            <div class="actions pull-right">#}
+{#                <i class="fa fa-expand"></i>#}
+{#                <i class="fa fa-chevron-down"></i>#}
+{#                <i class="fa fa-times"></i>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="panel-body">#}
+{#            <form class="form-horizontal form-border">#}
+{#                <div class="form-group">#}
+{#                    <label class="col-sm-3 control-label">Team name</label>#}
+{#                    <div class="col-sm-6">#}
+{#                        <input type="text" class="form-control" id="team_name" placeholder="team name">#}
+{#                    </div>#}
+{#                </div>#}
+{#                <input type="button" class="btn btn-default" value="Confirm" id="confirm_create_team">#}
+{#                <p style="color: #cb2027" id="alarm_team"></p>#}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
 <div class="col-md-6">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">Team list</h3>
+            <h3 class="panel-title">Members list</h3>
             <div class="actions pull-right">
                 <i class="fa fa-expand"></i>
                 <i class="fa fa-chevron-down"></i>
@@ -45,6 +46,7 @@
                 <thead>
                 <tr>
                     <th>#</th>
+                    <th></th>
                     <th>Username</th>
                 </tr>
                 </thead>
@@ -57,7 +59,7 @@
 <div class="col-md-6">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title" id="show_name">Selects a team</h3>
+            <h2 class="panel-title" id="show_name" >Selects a team</h2>
             <div class="actions pull-right">
                 <i class="fa fa-expand"></i>
                 <i class="fa fa-chevron-down"></i>
@@ -71,6 +73,7 @@
                 </select>
             </div>
             <input type="button" class="btn btn-default" value="Confirm" id="confirm_switch_team">
+            <p style="color: #cb2027" id="alarm"></p>
         </div>
     </div>
 </div>
@@ -85,10 +88,12 @@
             success: function (ret) {
                 $("#table").empty();
                 $("#table").append(ret.html_text);
+                $("#confirm_switch_team").removeAttr('disabled');
             },
             error: function (e) {
                 console.log(e.toString());
                 alert(e.toString());
+                $("#confirm_switch_team").removeAttr('disabled');
             }
         });
     };
@@ -117,16 +122,23 @@
     var switch_team = function (user_id, user_name) {
         $("#user_id").val(user_id);
         $("#show_name").empty();
-        $("#show_name").append("Selects a team for " + user_name);
+        $("#show_name").append("Choose a team for " + user_name);
     }
     $("#confirm_switch_team").click(function () {
         var user_id = $("#user_id").val();
         var team_id = $("#team_select").val();
+        if (user_id === "" || user_id === null){
+                $("#alarm").empty();
+                $("#alarm").append("Member not selected yet");
+                return;
+        }
+        $("#alarm").empty();
         var data = {
             "user_id": user_id,
             "team_id": team_id,
             "csrfmiddlewaretoken": $("[name='csrfmiddlewaretoken']").val()
         };
+        $("#confirm_switch_team").attr("disabled","true");
         $.ajax({
             type: "POST",
             data: data,
@@ -139,20 +151,30 @@
                     query_members_in_teams();
                 } else {
                     alert("There are some problems with the system")
+                    $("#confirm_switch_team").removeAttr('disabled');
                 }
             },
             error: function (e) {
                 alert(e.toString());
+                $("#confirm_switch_team").removeAttr('disabled');
             }
         });
     })
 
+
     $("#confirm_create_team").click(function () {
         var team_name = $("#team_name").val();
+        if (team_name === "" || team_name === null){
+                $("#alarm_team").empty();
+                $("#alarm_team").append("The team name has not been entered yet");
+                return;
+        }
+        $("#alarm_team").empty();
         var data = {
             "team_name": team_name,
             "csrfmiddlewaretoken": $("[name='csrfmiddlewaretoken']").val()
         }
+        $("#confirm_create_team").attr("disabled","true");
         $.ajax({
             type: "POST",
             data: data,
@@ -165,10 +187,12 @@
                     create_teams(data)
                 } else {
                     alert("The name has existed")
+                    $("#confirm_create_team").removeAttr('disabled');
                 }
             },
             error: function (e) {
                 alert(e.toString());
+                $("#confirm_create_team").removeAttr('disabled');
             }
         });
     })
@@ -186,12 +210,15 @@
                     query_members_in_teams();
                     query_teams();
                     alert("success")
+                    $("#confirm_create_team").removeAttr('disabled');
                 } else {
                     alert("There are some problems with the system")
+                    $("#confirm_create_team").removeAttr('disabled');
                 }
             },
             error: function (e) {
                 alert(e.toString());
+                $("#confirm_create_team").removeAttr('disabled');
             }
         });
     }

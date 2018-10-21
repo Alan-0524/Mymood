@@ -54,7 +54,7 @@ def redirect_sign_up(request):
 
 def sign_up(request):
     try:
-        result = process_members.create_members(request)
+        result = process_members.create_researcher(request)
 
         if result == "success":
             return render(request, 'response/pages-sign-in.html')
@@ -126,7 +126,7 @@ def register_messenger(request, user_id):
     context = {
         'user_id': user_id,
     }
-    return render(request, 'response/register_messenger.html', context)
+    return render(request, 'response/register_messenger_independent.html', context)
 
 
 @xframe_options_exempt
@@ -134,10 +134,9 @@ def register_messenger(request, user_id):
 def submit_register(request):
     data = request.POST
     user_name = data.get('user_name')
-    email = data.get('email')
     user_id = data.get('user_id')
-    process_members.save_members(user_id, user_name, email)
-    ret = {"status": 0}
+    result = process_members.create_members(user_id, user_name, "")
+    ret = {"status": result}
     return JsonResponse(ret)
 
 
@@ -207,6 +206,18 @@ def query_members_in_teams(request):
     return JsonResponse(context)
 
 
+def jump_teams(request):
+    return render(request, 'response/teams-table.html')
+
+
+def load_teams(request):
+    html_text = process_teams.load_teams(request)
+    context = {
+        'html_text': html_text,
+    }
+    return JsonResponse(context)
+
+
 @csrf_exempt
 def check_team_name(request):
     result = process_teams.check_team_name(request)
@@ -217,13 +228,24 @@ def check_team_name(request):
     return JsonResponse(ret)
 
 
-@csrf_exempt
 def create_teams(request):
     result = process_teams.create_teams(request)
-    if result == "success":
-        ret = {"status": 0}
+    ret = {"status": result}
+    return JsonResponse(ret)
+
+
+def get_team(request):
+    data = process_teams.get_team(request)
+    if data != "error":
+        ret = {"data": data}
     else:
-        ret = {"status": 1}
+        ret = {"data": "error"}
+    return JsonResponse(ret)
+
+
+def delete_team(request):
+    status = process_teams.delete_team(request)
+    ret = {"status": status}
     return JsonResponse(ret)
 
 
@@ -258,3 +280,7 @@ def query_teams(request):
         'html_text': html_text,
     }
     return JsonResponse(context)
+
+
+def success(request):
+    return render(request, 'response/success.html')

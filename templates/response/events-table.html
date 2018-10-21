@@ -92,6 +92,7 @@
             "event_content": event_content,
             "csrfmiddlewaretoken": $("[name='csrfmiddlewaretoken']").val()
         };
+        $("#confirm_create_event").attr("disabled","true");
         $.ajax({
             type: "POST",
             data: data,
@@ -104,10 +105,12 @@
                     query_event();
                 } else {
                     alert("There are some problems with the system")
+                    $("#confirm_create_event").removeAttr('disabled');
                 }
             },
             error: function (e) {
                 alert(e.toString());
+                $("#confirm_create_event").removeAttr('disabled');
             }
         });
     });
@@ -122,10 +125,12 @@
             success: function (ret) {
                 $("#event_table").empty();
                 $("#event_table").append(ret.html_text);
+                $("#confirm_create_event").removeAttr('disabled');
             },
             error: function (e) {
                 console.log(e.toString());
                 alert(e.toString());
+                $("#confirm_create_event").removeAttr('disabled');
             }
         });
     };

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<body>
+<div class="col-md-12" hidden="hidden" id="edit-div">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Edit team information</h3>
+            <div class="actions pull-right">
+                <i class="fa fa-expand"></i>
+                <i class="fa fa-chevron-down"></i>
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal form-border">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Team name</label>
+                    <div class="col-sm-6">
+                        <input type="text" hidden="hidden" id="uni_id">
+                        <input type="text" class="form-control" id="team_name" maxlength="20">
+                    </div>
+                </div>
+{#                <div class="form-group">#}
+{#                    <label class="col-sm-3 control-label">Maximum number of members</label>#}
+{#                    <div class="col-sm-6">#}
+{#                        <select class="form-control" id="team_size">#}
+{#                        </select>#}
+{#                    </div>#}
+{#                </div>#}
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Start time</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" id="start_time">
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">End time</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" id="end_time">
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Notification days</label>
+                    <div class="col-sm-6">
+                        <label class="checkbox-inline">
+                            <input class="icheck" type="checkbox" checked="checked" id="w0" value="0">Monday</label>
+                        <label class="checkbox-inline">
+                            <input class="icheck" type="checkbox" checked="checked" id="w1" value="1">Tuesday</label>
+                        <label class="checkbox-inline">
+                            <input class="icheck" type="checkbox" checked="checked" id="w2" value="2">Wednesday</label>
+                        <label class="checkbox-inline">
+                            <input class="icheck" type="checkbox" checked="checked" id="w3" value="3">Thursday</label>
+                        <label class="checkbox-inline">
+                            <input class="icheck" type="checkbox" checked="checked" id="w4" value="4">Friday</label>
+                        <label class="checkbox-inline">
+                            <input class="icheck" type="checkbox" id="w5" value="5">Saturday</label>
+                        <label class="checkbox-inline">
+                            <input class="icheck" type="checkbox" id="w6" value="6">Sunday</label>
+                    </div>
+                </div>
+                <input type="button" onclick="submit_team()" id="submit_button" class="btn btn-primary" value="Submit">
+                <input type="button" onclick="cancel()" id="submit_button" class="btn btn-primary" value="Cancel">
+                <p style="color: #cb2027" id="alarm"></p>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-12" id="list-div">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Team list</h3>
+            <div class="actions pull-right">
+                <button type="button" onclick="add()" class="btn btn-success btn-sm">Create a team</button>
+            </div>
+        </div>
+        <div class="panel-body">
+            {% csrf_token %}
+            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th width="10">Edit</th>
+                    <th width="10">Delete</th>
+                    <th>Name</th>
+                    <th>Number of members</th>
+                    <th>Notification days</th>
+                    <th>Start time</th>
+                    <th>End time</th>
+                </tr>
+                </thead>
+                <tbody id="table">
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var load_teams = function () {
+        $.ajax({
+            type: "POST",
+            url: "{{ request.session.base_url }}load_teams/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                $("#table").empty();
+                $("#table").append(ret.html_text);
+            },
+            error: function (e) {
+                console.log(e.toString());
+            }
+        });
+    };
+    var add = function () {
+        for (var i = 0; i <= 6; i++) {
+            $("#w" + i).removeAttr('checked', '');
+        }
+        ;
+        $("#uni_id").val("");
+        $("#team_name").val("");
+        {#$("#team_size").val("1");#}
+        $("#start_time").val("8");
+        $("#end_time").val("8");
+        $("#edit-div").show();
+        $("#list-div").hide();
+    }
+    var delete_team = function (id) {
+        if (confirm("Confirm?")) {
+            $.ajax({
+                type: "POST",
+                data: {"id": id},
+                url: "{{ request.session.base_url }}delete_team/",
+                cache: false,
+                headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+                dataType: "json",
+                success: function (ret) {
+                    if (ret.status == "success") {
+                        load_teams();
+                    } else {
+                        alert(ret.status);
+                    }
+                },
+                error: function (e) {
+                    alert(e.toString());
+                }
+            });
+        }
+    }
+    var edit_team = function (id) {
+        $.ajax({
+            type: "POST",
+            data: {"id": id},
+            url: "{{ request.session.base_url }}get_team/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                if (ret.data != "error") {
+                    $("#uni_id").val(id);
+                    $("#team_name").val(ret.data["name"]);
+                    {#$("#team_size").val(ret.data["team_size"]);#}
+                    $("#start_time").val(parseInt(ret.data["wt_start"]));
+                    $("#end_time").val(parseInt(ret.data["wt_end"]));
+                    var notificationDays = ret.data["week_push"];
+                    for (var i = 0; i <= 6; i++) {
+                        $("#w" + i).removeAttr('checked', '');
+                    }
+                    for (var i = 0; i <= 6; i++) {
+                        if (notificationDays.indexOf(i.toString()) != -1) {
+                            $("#w" + i).prop('checked', 'checked');
+                        }
+                    }
+                    $("#edit-div").show();
+                    $("#list-div").hide();
+                } else {
+                    $("#alarm").append("System maintenance, please try again later");
+                }
+            },
+            error: function (e) {
+                alert(e.toString());
+            }
+        });
+
+    }
+    var cancel = function () {
+        $("#edit-div").hide();
+        $("#list-div").show();
+    }
+    var initialization_option = function () {
+        for (var i = 8; i <= 18; i++) {
+            $("#start_time").append("<option value='" + i + "'>" + i + ":00</option>")
+        }
+        for (var i = 8; i <= 18; i++) {
+            $("#end_time").append("<option value='" + i + "'>" + i + ":00</option>")
+        }
+    }
+
+    var submit_team = function () {
+        $("#alarm").empty();
+        $("#submit_button").attr("disabled", "true");
+        var id = $("#uni_id").val();
+        var teamName = $("#team_name").val();
+        var startTime = $("#start_time").val();
+        var endTime = $("#end_time").val();
+        var notificationDays = "";
+        if ($("#w0").is(':checked')) {
+            notificationDays = notificationDays + $("#w0").val()
+        }
+        if ($("#w1").is(':checked')) {
+            notificationDays = notificationDays + $("#w1").val()
+        }
+        if ($("#w2").is(':checked')) {
+            notificationDays = notificationDays + $("#w2").val()
+        }
+        if ($("#w3").is(':checked')) {
+            notificationDays = notificationDays + $("#w3").val()
+        }
+        if ($("#w4").is(':checked')) {
+            notificationDays = notificationDays + $("#w4").val()
+        }
+        if ($("#w5").is(':checked')) {
+            notificationDays = notificationDays + $("#w5").val()
+        }
+        if ($("#w6").is(':checked')) {
+            notificationDays = notificationDays + $("#w6").val()
+        }
+        if (teamName === "" || teamName === null) {
+            $("#alarm").append("Team name can not be empty");
+            $("#submit_button").removeAttr('disabled');
+            return;
+        }
+        if (startTime === "" || startTime === null) {
+            $("#alarm").append("Start time can not be empty");
+            $("#submit_button").removeAttr('disabled');
+            return;
+        }
+        if (endTime === "" || endTime === null) {
+            $("#alarm").append("End time can not be empty");
+            $("#submit_button").removeAttr('disabled');
+            return;
+        }
+        if (notificationDays === "" || notificationDays === null) {
+            $("#alarm").append("Notification days can not be empty");
+            $("#submit_button").removeAttr('disabled');
+            return;
+        }
+        if (parseInt(startTime) >= parseInt(endTime)) {
+            $("#alarm").append("End time should be later than start time");
+            $("#submit_button").removeAttr('disabled');
+            return;
+        }
+        var data = {
+            "id": id,
+            "name": teamName,
+            "team_size": "8",
+            "wt_start": startTime,
+            "wt_end": endTime,
+            "week_push": notificationDays,
+            "csrfmiddlewaretoken": $("[name='csrfmiddlewaretoken']").val()
+        };
+        if (confirm("Confirm?")) {
+            $.ajax({
+                type: "POST",
+                data: data,
+                url: "{{ request.session.base_url }}create_teams/",
+                cache: false,
+                headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+                dataType: "json",
+                success: function (ret) {
+                    if (ret.status === "success") {
+                        load_teams();
+                        $("#submit_button").removeAttr('disabled');
+                        $("#edit-div").hide();
+                        $("#list-div").show();
+                    } else {
+                        $("#alarm").append(ret.status);
+                        $("#submit_button").removeAttr('disabled');
+                    }
+                },
+                error: function (e) {
+                    alert(e.toString());
+                    $("#submit_button").removeAttr('disabled');
+                }
+            });
+        } else {
+            $("#submit_button").removeAttr('disabled');
+        }
+    }
+
+    $(document).ready(load_teams);
+    $(document).ready(initialization_option);
+</script>
+</html>

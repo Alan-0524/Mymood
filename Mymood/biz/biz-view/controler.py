@@ -52,17 +52,17 @@ def redirect_sign_up(request):
     return render(request, 'response/pages-sign-up.html')
 
 
-def sign_up(request):
-    try:
-        result = process_members.create_members(request)
-
-        if result == "success":
-            return render(request, 'response/pages-sign-in.html')
-        else:
-            return render(request, 'response/pages-sign-up.html', {'status': 'User already exists!'})
-    except Exception as e:
-        print("Error info:----------------", e)
-        return render(request, 'response/pages-sign-up.html', "System exception!")
+# def sign_up(request):
+#     try:
+#         result = process_members.create_members(request)
+#
+#         if result == "success":
+#             return render(request, 'response/pages-sign-in.html')
+#         else:
+#             return render(request, 'response/pages-sign-up.html', {'status': 'User already exists!'})
+#     except Exception as e:
+#         print("Error info:----------------", e)
+#         return render(request, 'response/pages-sign-up.html', "System exception!")
 
 
 @require_http_methods(["GET"])

@@ -51,7 +51,12 @@ urlpatterns = [
     path('query_events/', query_events),
     path('query_teams/', query_teams),
     path('get_webhook/<int:psid>/', get_webhook),
-    path('save_happiness_level/<happiness_level>', save_happiness_level)
+    path('save_happiness_level/<happiness_level>', save_happiness_level),
+    path('success/', success),
+    path('jump_teams/', jump_teams),
+    path('load_teams/', load_teams),
+    path('get_team/', get_team),
+    path('delete_team/', delete_team),
     # path('query_happiness/', include('models_app.urls'))
 ]
 # urlpatterns += staticfiles_urlpatterns()

@@ -1,9 +1,19 @@
+import datetime, time
+
+
 def inc(x):
     return x + 1
 
 
 def test_answer():
     assert inc(5) == 6
+
+
+format = "%H:%M:%S"
+
+result = datetime.datetime(*time.strptime("11:00:00", format)[:6]) + datetime.timedelta(seconds=360)
+
+print(result.strftime(format))
 
 # print(str(datetime.now().time())>'15:33:47')
 

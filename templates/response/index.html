@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{% static "/plugins/daterangepicker/daterangepicker-bs3.css" %}">
     <!-- Calendar demo -->
     <link rel="stylesheet" href="{% static "/css/clndr.css" %}">
+    <link rel="stylesheet" href="{% static "/plugins/messenger/css/messenger.css" %}">
     <!-- Switchery -->
     <link rel="stylesheet" href="{% static "/plugins/switchery/switchery.min.css" %}">
     <!-- Custom styles for this theme -->
@@ -47,7 +48,7 @@
         <div class="brand">
             <a href="index.html" class="logo">
                 <i class="icon-layers"></i>
-                <span>How</span>.Is.It</a>
+                <span>How</span>zitgoing</a>
         </div>
         <!--logo end-->
         <ul class="nav navbar-nav navbar-left">
@@ -91,12 +92,16 @@
                         <i class="fa  fa-fw fa-bar-chart-o"></i> Charts
                     </a>
                 </li>
-                <li class="nav-dropdown" id="jump_members_in_teams">
-                    <a href="javascript:void(0)" title="Tables" onclick="jump_members_in_teams()">
-                        <i class="fa  fa-fw fa-th-list"></i> Teams&Members
+                <li class="nav-dropdown" id="jump_teams">
+                    <a href="javascript:void(0)" title="Tables" onclick="jump_teams()">
+                        <i class="fa  fa-fw fa-th-list"></i> Teams
                     </a>
                 </li>
-
+                <li class="nav-dropdown" id="jump_members_in_teams">
+                    <a href="javascript:void(0)" title="Tables" onclick="jump_members_in_teams()">
+                        <i class="fa  fa-fw fa-th-list"></i> Members
+                    </a>
+                </li>
                 <li class="nav-dropdown" id="jump_events">
                     <a href="javascript:void(0)" onclick="jump_events()" title="Events">
                         <i class="fa fa-fw fa-file-text"></i> Events
@@ -174,6 +179,8 @@
 <script src="{% static "/plugins/underscore/underscore-min.js" %}"></script>
 <!-- Switch -->
 <script src="{% static "/plugins/switchery/switchery.min.js" %}"></script>
+
+<script src="{% static "/plugins/messenger/js/messenger.min.js" %}"></script>
 </body>
 <script>
     function query_happiness() {
@@ -187,10 +194,16 @@
     function jump_events() {
         $("#main-content").load("{{ request.session.base_url }}jump_events/");
     }
+
+    function jump_teams(){
+        $("#main-content").load("{{ request.session.base_url }}jump_teams/");
+    }
+
     $(document).ready(function(){
         if ("{{ user_role }}" == "Researcher") {
             $("#jump_members_in_teams").hide()
             $("#jump_events").hide()
+            $("#jump_teams").hide()
         }
     })
     $(document).ready(query_happiness())
