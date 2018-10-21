@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Mymood/controler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/controler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/response/register_messenger_independent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/register_messenger_independent.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,7 +94,7 @@
         <counts>
           <entry key="Procfile" value="6" />
           <entry key="dummy" value="27" />
-          <entry key="html" value="7483" />
+          <entry key="html" value="7485" />
           <entry key="js" value="49" />
           <entry key="py" value="12053" />
           <entry key="txt" value="20" />
@@ -104,7 +103,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="7483" />
+          <entry key="HTML" value="7485" />
           <entry key="JavaScript" value="49" />
           <entry key="PLAIN_TEXT" value="53" />
           <entry key="Python" value="12053" />
@@ -176,8 +175,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/response/register_messenger_independent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1720">
-              <caret line="147" column="6" selection-start-line="147" selection-start-column="6" selection-end-line="147" selection-end-column="6" />
+            <state relative-caret-position="241">
+              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -185,7 +184,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/response/register_messenger.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
+            <state relative-caret-position="782">
               <caret line="70" column="34" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="34" />
             </state>
           </provider>
@@ -353,8 +352,8 @@
         <option value="$PROJECT_DIR$/templates/response/teams-table.html" />
         <option value="$PROJECT_DIR$/templates/response/index.html" />
         <option value="$PROJECT_DIR$/models_app/management/commands/timed_task.py" />
-        <option value="$PROJECT_DIR$/templates/response/register_messenger_independent.html" />
         <option value="$PROJECT_DIR$/Mymood/controler.py" />
+        <option value="$PROJECT_DIR$/templates/response/register_messenger_independent.html" />
       </list>
     </option>
   </component>
@@ -697,11 +696,11 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5011236" side_tool="true" weight="0.22483222" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4988764" visible="true" weight="0.22214764" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4988764" visible="true" weight="0.22214764" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49932885" weight="0.34751773" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" sideWeight="0.49932885" visible="true" weight="0.34751773" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49932885" weight="0.28085107" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50067115" side_tool="true" weight="0.3319149" />
       <window_info anchor="bottom" id="Python Console" order="5" sideWeight="0.49932885" weight="0.32907802" />
@@ -709,7 +708,7 @@
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49932885" weight="0.20567375" />
-      <window_info anchor="bottom" id="Debug" order="10" visible="true" weight="0.30070922" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.30070922" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" sideWeight="0.49932885" weight="0.32907802" />
@@ -1127,13 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/response/register_messenger.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="70" column="34" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -1155,10 +1147,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/register_messenger.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="70" column="34" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/response/register_messenger_independent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1720">
-          <caret line="147" column="6" selection-start-line="147" selection-start-column="6" selection-end-line="147" selection-end-column="6" />
+        <state relative-caret-position="241">
+          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
         </state>
       </provider>
     </entry>
