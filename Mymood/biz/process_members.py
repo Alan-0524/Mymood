@@ -89,6 +89,10 @@ def create_members(user_id, user_name, email):
             user.user_id = user_id
             user.user_name = user_name
             user.email = email
+            user.first_time = "00:00"
+            user.first_time_status = 0
+            user.second_time = "00:00"
+            user.second_time_status = 0
             user.role = 2
             user.team_id = "99999"
             user.save()
