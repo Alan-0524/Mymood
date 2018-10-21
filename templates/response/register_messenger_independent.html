@@ -51,15 +51,19 @@
                         </h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form"  id = "sign_up_form">
+                        <form role="form" id="sign_up_form">
                             {% csrf_token %}
                             <input value="{{ user_id }}" id="user_id" hidden="hidden">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">User name</label>   <p style="color: #ac2925" id="result"></p>
-                                <input type="email" class="form-control" maxlength="20" name="user_name" id="exampleInputEmail1"
+                                <label for="exampleInputPassword1">User name</label>
+                                <p style="color: #ac2925" id="result"></p>
+                                <input type="email" class="form-control" maxlength="20" name="user_name"
+                                       id="exampleInputEmail1"
                                        placeholder="Enter user name">
                             </div>
-                            <button href="javascript:void(0)" onclick="submit_info()" id="submit" class="btn btn-primary btn-block">Sign Up</button>
+                            <input href="javascript:void(0)" type="button" onclick="submit_info()" id="submit"
+                                   class="btn btn-primary btn-block"
+                                   value="Sign Up"/>
                         </form>
 
                     </div>
@@ -86,8 +90,19 @@
 <link rel="import" href="{% static "/global_js/global.html" %}">
 </body>
 <script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+
     function submit_info() {
-        $("#submit").attr("disabled","true");
+        $("#submit").attr("disabled", "true");
         $("#result").empty()
         var user_name = $('#exampleInputEmail1').val();
         if (user_name === "") {
@@ -111,8 +126,8 @@
             dataType: "json",
             success: function (ret) {
                 if (ret.status === "success") {
-                    window.location.href="/success/";
-                }else{
+                    window.location.href = "/success/";
+                } else {
                     $("#result").empty();
                     $("#result").append(ret.status);
                     $("#submit").removeAttr('disabled');
@@ -126,5 +141,10 @@
         });
 
     }
+
+    window.extAsyncInit = function () {
+        // the Messenger Extensions JS SDK is done loading
+
+    };
 </script>
 </html>

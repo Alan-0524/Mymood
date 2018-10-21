@@ -130,7 +130,6 @@ def register_messenger(request, user_id):
 
 
 @xframe_options_exempt
-@csrf_exempt
 def submit_register(request):
     data = request.POST
     user_name = data.get('user_name')

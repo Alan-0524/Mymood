@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mymood/controler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mymood/controler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/response/register_messenger_independent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/register_messenger_independent.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,12 +65,12 @@
         <counts>
           <entry key="Procfile" value="2" />
           <entry key="css" value="15" />
-          <entry key="html" value="172" />
+          <entry key="html" value="174" />
           <entry key="js" value="60" />
           <entry key="lastfailed" value="1" />
           <entry key="models" value="1" />
           <entry key="path" value="2" />
-          <entry key="py" value="363" />
+          <entry key="py" value="365" />
           <entry key="pyi" value="2" />
           <entry key="sql" value="1" />
           <entry key="ts" value="2" />
@@ -80,10 +81,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="15" />
-          <entry key="HTML" value="172" />
+          <entry key="HTML" value="174" />
           <entry key="JavaScript" value="60" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="363" />
+          <entry key="Python" value="365" />
           <entry key="PythonStub" value="2" />
           <entry key="Scratch" value="1" />
           <entry key="TypeScript" value="2" />
@@ -94,7 +95,7 @@
         <counts>
           <entry key="Procfile" value="6" />
           <entry key="dummy" value="27" />
-          <entry key="html" value="7474" />
+          <entry key="html" value="7483" />
           <entry key="js" value="49" />
           <entry key="py" value="12053" />
           <entry key="txt" value="20" />
@@ -103,7 +104,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="7474" />
+          <entry key="HTML" value="7483" />
           <entry key="JavaScript" value="49" />
           <entry key="PLAIN_TEXT" value="53" />
           <entry key="Python" value="12053" />
@@ -132,18 +133,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
+        <entry file="file://$PROJECT_DIR$/templates/response/pages-sign-in.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+            <state relative-caret-position="261">
+              <caret line="84" column="91" lean-forward="true" selection-start-line="84" selection-start-column="91" selection-end-line="84" selection-end-column="91" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="106">
               <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
@@ -157,17 +167,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/response/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="1602">
               <caret line="206" column="9" lean-forward="true" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/response/register_messenger_independent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-618">
-              <caret line="61" column="131" selection-start-line="61" selection-start-column="131" selection-end-line="61" selection-end-column="131" />
+            <state relative-caret-position="1720">
+              <caret line="147" column="6" selection-start-line="147" selection-start-column="6" selection-end-line="147" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/response/register_messenger.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="70" column="34" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -188,40 +207,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
+            <state relative-caret-position="887">
+              <caret line="131" column="22" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <marker date="1540074247866" expanded="true" signature="7041:7044" ph="..." />
-                <marker date="1540074247866" expanded="true" signature="7598:7735" ph="..." />
-                <marker date="1540074247866" expanded="true" signature="7626:7735" ph="..." />
-                <marker date="1540074247866" expanded="true" signature="8463:8464" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mymood/biz/process_happiness.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
-              <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1539909166174" expanded="true" signature="4408:4569" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mymood/biz/process_members.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1540087959279" expanded="true" signature="787:1755" ph="..." />
+                <marker date="1540095249356" expanded="true" signature="7028:7031" ph="..." />
+                <marker date="1540095249356" expanded="true" signature="7585:7722" ph="..." />
+                <marker date="1540095249356" expanded="true" signature="7613:7722" ph="..." />
+                <marker date="1540095249356" expanded="true" signature="8450:8451" ph="..." />
               </folding>
             </state>
           </provider>
@@ -352,7 +345,6 @@
         <option value="$PROJECT_DIR$/templates/response/events-table.html" />
         <option value="$PROJECT_DIR$/Mymood/settings.py" />
         <option value="$PROJECT_DIR$/templates/response/tables-data-tables.html" />
-        <option value="$PROJECT_DIR$/Mymood/controler.py" />
         <option value="$PROJECT_DIR$/Mymood/urls.py" />
         <option value="$PROJECT_DIR$/templates/response/members-table.html" />
         <option value="$PROJECT_DIR$/Mymood/test_units.py" />
@@ -360,8 +352,9 @@
         <option value="$PROJECT_DIR$/Mymood/biz/process_teams.py" />
         <option value="$PROJECT_DIR$/templates/response/teams-table.html" />
         <option value="$PROJECT_DIR$/templates/response/index.html" />
-        <option value="$PROJECT_DIR$/templates/response/register_messenger_independent.html" />
         <option value="$PROJECT_DIR$/models_app/management/commands/timed_task.py" />
+        <option value="$PROJECT_DIR$/templates/response/register_messenger_independent.html" />
+        <option value="$PROJECT_DIR$/Mymood/controler.py" />
       </list>
     </option>
   </component>
@@ -708,7 +701,7 @@
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49932885" visible="true" weight="0.34751773" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49932885" weight="0.34751773" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49932885" weight="0.28085107" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50067115" side_tool="true" weight="0.3319149" />
       <window_info anchor="bottom" id="Python Console" order="5" sideWeight="0.49932885" weight="0.32907802" />
@@ -716,7 +709,7 @@
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49932885" weight="0.20567375" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.30070922" />
+      <window_info anchor="bottom" id="Debug" order="10" visible="true" weight="0.30070922" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" sideWeight="0.49932885" weight="0.32907802" />
@@ -892,13 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/response/register_messenger.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="58" column="8" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="85" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/response/charts-chartjs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-159">
@@ -1037,13 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/response/pages-sign-in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="63" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Html5_templates/ui-alerts-notifications.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1075,27 +1054,6 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <marker date="1540087959279" expanded="true" signature="787:1755" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <marker date="1540074247866" expanded="true" signature="7041:7044" ph="..." />
-            <marker date="1540074247866" expanded="true" signature="7598:7735" ph="..." />
-            <marker date="1540074247866" expanded="true" signature="7626:7735" ph="..." />
-            <marker date="1540074247866" expanded="true" signature="8463:8464" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1143,29 +1101,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/response/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="206" column="9" lean-forward="true" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/response/register_messenger_independent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-618">
-          <caret line="61" column="131" selection-start-line="61" selection-start-column="131" selection-end-line="61" selection-end-column="131" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="106">
           <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
             <marker date="1540093195742" expanded="true" signature="369:378" ph="..." />
             <marker date="1540093195742" expanded="true" signature="2827:2836" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="206" column="9" lean-forward="true" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/pages-sign-in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="84" column="91" lean-forward="true" selection-start-line="84" selection-start-column="91" selection-end-line="84" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/register_messenger.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="70" column="34" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mymood/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mymood/controler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="887">
+          <caret line="131" column="22" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <marker date="1540095249356" expanded="true" signature="7028:7031" ph="..." />
+            <marker date="1540095249356" expanded="true" signature="7585:7722" ph="..." />
+            <marker date="1540095249356" expanded="true" signature="7613:7722" ph="..." />
+            <marker date="1540095249356" expanded="true" signature="8450:8451" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/register_messenger_independent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1720">
+          <caret line="147" column="6" selection-start-line="147" selection-start-column="6" selection-end-line="147" selection-end-column="6" />
         </state>
       </provider>
     </entry>
