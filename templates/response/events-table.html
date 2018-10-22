@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js">
 
-<div class="col-md-12">
+<div class="col-md-12" id="event_list">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">Event List</h3>
             <div class="actions pull-right">
-                <i class="fa fa-expand"></i>
-                <i class="fa fa-chevron-down"></i>
-                <i class="fa fa-times"></i>
+                <div class="actions pull-right">
+                    <button type="button" onclick="add_event()" class="btn btn-success btn-sm">Create a event</button>
+                </div>
             </div>
         </div>
         <div class="panel-body">
@@ -20,33 +20,24 @@
                 {% csrf_token %}
                 <thead>
                 <tr>
+                    <th width="10">Edit</th>
+                    <th width="10">Delete</th>
                     <th>Title</th>
                     <th>Date</th>
                     <th>Content</th>
-{#                    <th>Detail</th>#}
                 </tr>
                 </thead>
                 <tbody id="event_table">
-                <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-{#                    <td>#}
-{#                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#scrollingModal">#}
-{#                            detail#}
-{#                        </button>#}
-{#                    </td>#}
-                </tr>
-
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-<div class="col-md-12">
+<div class="col-md-12" id="event_edit" hidden="hidden">
+    {% csrf_token %}
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">Create a event</h3>
+            <h3 class="panel-title">Edit a event</h3>
             <div class="actions pull-right">
                 <i class="fa fa-expand"></i>
                 <i class="fa fa-chevron-down"></i>
@@ -58,7 +49,9 @@
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Event title</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="event_title" placeholder="event title name">
+                        <input id="event_id" hidden="hidden">
+                        <input type="text" class="form-control" id="event_title" maxlength="40"
+                               placeholder="event title name">
                     </div>
                 </div>
                 <div class="form-group">
@@ -72,48 +65,85 @@
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Textarea</label>
                     <div class="col-sm-6">
-                        <textarea class="form-control" id="event_content"></textarea>
+                        <textarea class="form-control" id="event_content" maxlength="1000"></textarea>
                     </div>
                 </div>
                 <input type="button" class="btn btn-default" value="Confirm" id="confirm_create_event">
+                <p style="color: #cb2027" id="alarm"></p>
             </form>
         </div>
     </div>
 </div>
-
+<div class="col-md-12" id="event_detail" hidden="hidden">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Event detail</h3>
+            <div class="actions pull-right">
+                <i class="fa fa-expand"></i>
+                <i class="fa fa-chevron-down"></i>
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+        <div class="panel-body" id="event_detail_content">
+        </div>
+        <div class="panel-footer">
+            <input type="button" class="btn btn-default" value="Close" onclick="close_detail()">
+        </div>
+    </div>
+</div>
 <script>
 
     $("#confirm_create_event").click(function () {
+        var event_id = $("#event_id").val();
         var event_title = $("#event_title").val();
         var event_time = $("#event_time").val();
         var event_content = $("#event_content").val();
+        $("#alarm").empty();
+        if (event_title === "" || event_title === null) {
+            $("#alarm").append("Event title can not be empty");
+            $("#submit_button").removeAttr('disabled');
+            return;
+        }
+        if (event_content === "" || event_content === null) {
+            $("#alarm").append("Event content can not be empty");
+            $("#submit_button").removeAttr('disabled');
+            return;
+        }
+        $("#confirm_create_event").attr("disabled", "true");
         var data = {
+            "id": event_id,
             "event_title": event_title,
             "event_time": event_time,
             "event_content": event_content,
             "csrfmiddlewaretoken": $("[name='csrfmiddlewaretoken']").val()
         };
-        $("#confirm_create_event").attr("disabled","true");
-        $.ajax({
-            type: "POST",
-            data: data,
-            url: "{{ request.session.base_url }}save_event/",
-            cache: false,
-            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
-            dataType: "json",
-            success: function (ret) {
-                if (ret.status == 0) {
-                    query_event();
-                } else {
-                    alert("There are some problems with the system")
+        if (confirm("Confirm?")) {
+            $.ajax({
+                type: "POST",
+                data: data,
+                url: "{{ request.session.base_url }}save_event/",
+                cache: false,
+                headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+                dataType: "json",
+                success: function (ret) {
+                    if (ret.status == 0) {
+                        query_event();
+                        $("#event_list").show();
+                        $("#event_edit").hide();
+                        $("#submit_button").removeAttr('disabled');
+                    } else {
+                        $("#alarm").append("System maintenance, please try again later");
+                        $("#confirm_create_event").removeAttr('disabled');
+                    }
+                },
+                error: function (e) {
+                    alert(e.toString());
                     $("#confirm_create_event").removeAttr('disabled');
                 }
-            },
-            error: function (e) {
-                alert(e.toString());
-                $("#confirm_create_event").removeAttr('disabled');
-            }
-        });
+            });
+        } else {
+            $("#confirm_create_event").removeAttr('disabled');
+        }
     });
 
     var query_event = function () {
@@ -135,6 +165,93 @@
             }
         });
     };
+
+    var edit_event = function (id) {
+        $.ajax({
+            type: "POST",
+            data: {"id": id},
+            url: "{{ request.session.base_url }}get_event/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                if (ret.data != "error") {
+                    $("#event_id").val(ret.data["id"]);
+                    $("#event_title").val(ret.data["title"]);
+                    $("#event_time").val(ret.data["date"].slice(0, 10));
+                    $("#event_content").val(ret.data["content"]);
+                    $("#event_list").hide();
+                    $("#event_edit").show();
+                } else {
+                    $("#alarm").append("System maintenance, please try again later");
+                }
+            },
+            error: function (e) {
+                console.log(e.toString());
+            }
+        });
+    }
+
+    var add_event = function () {
+        $("#event_id").val("");
+        $("#event_title").val("");
+        $("#event_content").val("");
+        ini_time();
+        $("#event_list").hide();
+        $("#event_edit").show();
+    }
+
+    var delete_event = function (id) {
+        if (confirm("Confirm?")) {
+            $.ajax({
+                type: "POST",
+                data: {"id": id},
+                url: "{{ request.session.base_url }}delete_event/",
+                cache: false,
+                headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+                dataType: "json",
+                success: function (ret) {
+                    if (ret.status == "success") {
+                        query_event();
+                        $("#event_list").show();
+                        $("#event_edit").hide();
+                    } else {
+                        alert(e.toString());
+                    }
+                },
+                error: function (e) {
+                    console.log(e.toString());
+                    alert(e.toString());
+                }
+            });
+        }
+    }
+
+    var event_detail = function (id) {
+        $.ajax({
+            type: "POST",
+            data: {"id": id},
+            url: "{{ request.session.base_url }}event_detail/",
+            cache: false,
+            headers: {"X-CSRFToken": $("[name='csrfmiddlewaretoken']").val()},
+            dataType: "json",
+            success: function (ret) {
+                $("#event_detail_content").append(ret.html_text);
+                $("#event_detail").show();
+                $("#event_list").hide();
+            },
+            error: function (e) {
+                console.log(e.toString());
+                alert(e.toString());
+            }
+        });
+    }
+
+    var close_detail = function () {
+        $("#event_detail").hide();
+        $("#event_list").show();
+        $("#event_detail_content").empty();
+    }
 
     var ini_time = function () {
         var date = new Date();

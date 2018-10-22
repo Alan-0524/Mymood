@@ -57,6 +57,9 @@ urlpatterns = [
     path('load_teams/', load_teams),
     path('get_team/', get_team),
     path('delete_team/', delete_team),
+    path('get_event/', get_event),
+    path('delete_event/', delete_event),
+    path('event_detail/', event_detail),
     # path('query_happiness/', include('models_app.urls'))
 ]
 # urlpatterns += staticfiles_urlpatterns()

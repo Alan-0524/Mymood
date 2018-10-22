@@ -11,18 +11,31 @@ def query_events():
     for i in range(0, len(event_list)):
         # put objects in string of Html
         event = event_list.__getitem__(i)
-        text = text + "<tr><td>" + event.event_title + "</td><td>" + str(event.event_date)[
-
-                                                                     :10] + "</td><td>" + event.event_content + "</td></tr>"
+        text = text + "<tr><td><a href='javascript:void(0)'><i class='fa fa-edit' onclick=""edit_event('" + event.id + "')""></i></a></td><td><a href='javascript:void(0)'><i class='fa fa-minus-square-o' onclick=""delete_event('" + event.id + "')""></i></a></td><td><a href='javascript:void(0)' onclick=""event_detail('" + event.id + "')"">" + str(
+            event.event_title)[:30] + "</a></td><td>" + str(
+            event.event_date)[:10] + "</td><td>" + str(event.event_content)[:30] + "</td></tr>"
     # Translation string to html
+    html_text = html.unescape(text)
+    return html_text
+
+
+def event_detail(request):
+    id = request.POST.get("id")
+    event = TblEvent.objects.get(id=id)
+    text = "<p>Event title:" + event.event_title + "</p><p>Event date:" + str(event.event_date)[
+                                                                          :10] + "</p><p>Event content:" + event.event_content + "</p>"
     html_text = html.unescape(text)
     return html_text
 
 
 def save_event(request):
     try:
-        event = TblEvent()
-        event.id = str(uuid.uuid1()).replace("-", "")
+        id = request.POST.get("id")
+        if id != "" and id is not None:
+            event = TblEvent.objects.get(id=id)
+        else:
+            event = TblEvent()
+            event.id = str(uuid.uuid1()).replace("-", "")
         event.event_title = request.POST.get('event_title')
         event.event_date = request.POST.get('event_time')
         event.event_content = request.POST.get('event_content')
@@ -31,3 +44,23 @@ def save_event(request):
         print("Error info:----------------", e)
         return "error"
     return "success"
+
+
+def get_event(request):
+    try:
+        id = request.POST.get("id")
+        event = TblEvent.objects.get(id=id)
+        data = {"id": event.id, "title": event.event_title, "date": event.event_date, "content": event.event_content}
+        return data
+    except Exception as e:
+        return "error"
+
+
+def delete_event(request):
+    try:
+        id = request.POST.get("id")
+        event = TblEvent.objects.get(id=id)
+        event.delete()
+        return "success"
+    except Exception as e:
+        return "error"

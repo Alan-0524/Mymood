@@ -260,6 +260,29 @@ def save_event(request):
     return JsonResponse(ret)
 
 
+def get_event(request):
+    data = process_events.get_event(request)
+    if data != "error":
+        ret = {"data": data}
+    else:
+        ret = {"data": "error"}
+    return JsonResponse(ret)
+
+
+def delete_event(request):
+    status = process_events.delete_event(request)
+    ret = {"status": status}
+    return JsonResponse(ret)
+
+
+def event_detail(request):
+    html_text = process_events.event_detail(request)
+    context = {
+        'html_text': html_text,
+    }
+    return JsonResponse(context)
+
+
 def query_teams(request):
     html_text = process_teams.query_teams_html(request)
     context = {
