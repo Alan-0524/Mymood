@@ -56,7 +56,7 @@ def query_members_in_teams(request):
     text = str("")
     for i in range(0, len(list_query_teams)):
         team = list_query_teams.__getitem__(i)  # Get all objects
-        text = text + "<thead><tr><th>#</th><th></th><th>" + team.name + "</th><th>first start time</th><th>second start time</th></tr></thead><tbody>"
+        text = text + "<thead><tr><th>#</th><th></th><th>" + team.name + "</th><th>Push time 1</th><th>Push time 2</th></tr></thead><tbody>"
 
         list_query_members = TblUser.objects.filter(team_id=team.team_id)
         for j in range(0, len(list_query_members)):

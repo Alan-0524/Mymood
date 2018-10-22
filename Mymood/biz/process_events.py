@@ -12,8 +12,8 @@ def query_events():
         # put objects in string of Html
         event = event_list.__getitem__(i)
         text = text + "<tr><td><a href='javascript:void(0)'><i class='fa fa-edit' onclick=""edit_event('" + event.id + "')""></i></a></td><td><a href='javascript:void(0)'><i class='fa fa-minus-square-o' onclick=""delete_event('" + event.id + "')""></i></a></td><td><a href='javascript:void(0)' onclick=""event_detail('" + event.id + "')"">" + str(
-            event.event_title)[:30] + "</a></td><td>" + str(
-            event.event_date)[:10] + "</td><td>" + str(event.event_content)[:30] + "</td></tr>"
+            event.event_title)[:40] + "</a></td><td>" + str(
+            event.event_date)[:10] + "</td><td>" + str(event.event_content)[:40] + "...</td></tr>"
     # Translation string to html
     html_text = html.unescape(text)
     return html_text

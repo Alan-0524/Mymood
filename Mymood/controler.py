@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+
 from django.shortcuts import render
 from django.contrib.auth.hashers import make_password, check_password
 from django.views.decorators.clickjacking import xframe_options_exempt
@@ -8,7 +8,7 @@ from Mymood.biz import process_happiness, process_teams, process_members, proces
 from django.utils.timezone import now, timedelta
 from models_app.models import TblUser
 from django.views.decorators.http import require_http_methods
-import csv
+
 
 
 def mood(request):
@@ -153,23 +153,24 @@ def refresh_happiness(request):
 
 
 def export_csv(request):
-    response = HttpResponse(content_type='text/csv')
-    response['Content-Disposition'] = 'attachment; filename="happiness.csv"'
-    writer = csv.writer(response)
-
-    happiness_list_teams = process_happiness.query_all_happiness(request, 'team_hpns')
-    happiness_list_individuals = process_happiness.query_all_happiness(request, 'idvl_hpns')
-
-    writer.writerow(['For teams'])
-    for i in range(0, len(happiness_list_teams)):
-        happiness_data_teams = happiness_list_teams[i]
-        writer.writerow(happiness_data_teams)
-    writer.writerow([''])
-    writer.writerow([''])
-    writer.writerow(['For owns'])
-    for j in range(0, len(happiness_list_individuals)):
-        happiness_data_teams = happiness_list_individuals[j]
-        writer.writerow(happiness_data_teams)
+    # response = HttpResponse(content_type='text/csv')
+    # response['Content-Disposition'] = 'attachment; filename="happiness.csv"'
+    # writer = csv.writer(response)
+    #
+    # happiness_list_teams = process_happiness.query_all_happiness(request, 'team_hpns')
+    # happiness_list_individuals = process_happiness.query_all_happiness(request, 'idvl_hpns')
+    #
+    # writer.writerow(['For teams'])
+    # for i in range(0, len(happiness_list_teams)):
+    #     happiness_data_teams = happiness_list_teams[i]
+    #     writer.writerow(happiness_data_teams)
+    # writer.writerow([''])
+    # writer.writerow([''])
+    # writer.writerow(['For owns'])
+    # for j in range(0, len(happiness_list_individuals)):
+    #     happiness_data_teams = happiness_list_individuals[j]
+    #     writer.writerow(happiness_data_teams)
+    response = process_happiness.export_csv()
     return response
 
 

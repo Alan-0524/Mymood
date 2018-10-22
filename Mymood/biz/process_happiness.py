@@ -4,7 +4,8 @@ import time
 import datetime
 from django.db.models import Max, Avg, F, Q
 from django.utils.timezone import now, timedelta
-import json
+from django.http import HttpResponse
+import csv
 
 
 def query_all_happiness(request, for_who):
@@ -146,3 +147,23 @@ def date_filter(request):
         return date_range
     else:
         print("error time range!")
+
+
+def export_csv():
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="happiness.csv"'
+    writer = csv.writer(response)
+    happness_list = TblHappiness.objects.all()
+
+    for i in range(0, len(happness_list)):
+        happiness = happness_list.__getitem__(i)
+        writer.writerow(['member;'])
+        writer.writerow(['team_id:'])
+        writer.writerow([happiness.team_id])
+        writer.writerow(['date'])
+        writer.writerow([str(happiness.date)[:10]])
+        writer.writerow(['for work'])
+        writer.writerow([str(happiness.idvl_hpns)])
+        writer.writerow(['for teams'])
+        writer.writerow([str(happiness.team_hpns)])
+    return response

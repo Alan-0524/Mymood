@@ -63,12 +63,13 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Textarea</label>
+                    <label class="col-sm-3 control-label">Event content</label>
                     <div class="col-sm-6">
                         <textarea class="form-control" id="event_content" maxlength="1000"></textarea>
                     </div>
                 </div>
                 <input type="button" class="btn btn-default" value="Confirm" id="confirm_create_event">
+                <input type="button" class="btn btn-default" value="Cancel" id="cancel_create">
                 <p style="color: #cb2027" id="alarm"></p>
             </form>
         </div>
@@ -92,6 +93,7 @@
     </div>
 </div>
 <script>
+
 
     $("#confirm_create_event").click(function () {
         var event_id = $("#event_id").val();
@@ -144,6 +146,11 @@
         } else {
             $("#confirm_create_event").removeAttr('disabled');
         }
+    });
+
+    $("#cancel_create").click(function () {
+        $("#event_list").show();
+        $("#event_edit").hide();
     });
 
     var query_event = function () {
