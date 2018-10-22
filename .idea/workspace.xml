@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +64,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Procfile" value="2" />
+          <entry key="Procfile" value="3" />
           <entry key="css" value="19" />
           <entry key="html" value="182" />
           <entry key="js" value="60" />
@@ -73,7 +75,7 @@
           <entry key="pyi" value="2" />
           <entry key="sql" value="1" />
           <entry key="ts" value="2" />
-          <entry key="txt" value="8" />
+          <entry key="txt" value="9" />
           <entry key="yml" value="3" />
         </counts>
       </usages-collector>
@@ -82,7 +84,7 @@
           <entry key="CSS" value="19" />
           <entry key="HTML" value="182" />
           <entry key="JavaScript" value="60" />
-          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="PLAIN_TEXT" value="16" />
           <entry key="Python" value="375" />
           <entry key="PythonStub" value="2" />
           <entry key="Scratch" value="1" />
@@ -92,11 +94,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Procfile" value="6" />
+          <entry key="Procfile" value="19" />
           <entry key="dummy" value="27" />
           <entry key="html" value="8140" />
           <entry key="js" value="49" />
-          <entry key="py" value="12452" />
+          <entry key="py" value="12464" />
           <entry key="txt" value="20" />
           <entry key="yml" value="3" />
         </counts>
@@ -105,8 +107,8 @@
         <counts>
           <entry key="HTML" value="8140" />
           <entry key="JavaScript" value="49" />
-          <entry key="PLAIN_TEXT" value="53" />
-          <entry key="Python" value="12452" />
+          <entry key="PLAIN_TEXT" value="66" />
+          <entry key="Python" value="12464" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -146,13 +148,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="44" column="54" lean-forward="true" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+            <state relative-caret-position="935">
+              <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
-                <marker date="1540195764906" expanded="true" signature="310:319" ph="..." />
-                <marker date="1540195764906" expanded="true" signature="2779:2788" ph="..." />
+                <marker date="1540197560033" expanded="true" signature="2529:2530" ph="..." />
+                <marker date="1540197560033" expanded="true" signature="2601:2612" ph="..." />
+                <marker date="1540197560033" expanded="true" signature="5151:5162" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -170,20 +191,7 @@
         <entry file="file://$PROJECT_DIR$/templates/response/teams-table.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="121">
-              <caret line="135" column="34" lean-forward="true" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mymood/biz/process_teams.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="45" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1540089447997" expanded="true" signature="2005:2387" ph="..." />
-              </folding>
+              <caret line="135" column="34" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -202,18 +210,6 @@
                 <marker date="1540191555924" expanded="true" signature="8270:8550" ph="..." />
                 <marker date="1540191555924" expanded="true" signature="8407:8550" ph="..." />
                 <marker date="1540191555924" expanded="true" signature="8742:8743" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mymood/biz/process_members.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1550">
-              <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -321,7 +317,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/response/response-emoji.html" />
         <option value="$PROJECT_DIR$/models_app/urls.py" />
         <option value="$PROJECT_DIR$/models_app/views.py" />
         <option value="$PROJECT_DIR$/Mymood/static/assets/plugins/chartjs/chartjs-demo.js" />
@@ -350,7 +345,6 @@
         <option value="$PROJECT_DIR$/models_app/models.py" />
         <option value="$PROJECT_DIR$/templates/response/select-emoji.html" />
         <option value="$PROJECT_DIR$/Mymood/biz/process_happiness.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/.pytest_cache/v/cache/lastfailed" />
         <option value="$PROJECT_DIR$/models_app/model_unit.py" />
         <option value="$PROJECT_DIR$/Mymood/biz/biz-view/controler.py" />
@@ -371,6 +365,8 @@
         <option value="$PROJECT_DIR$/Mymood/biz/process_events.py" />
         <option value="$PROJECT_DIR$/templates/response/events-table.html" />
         <option value="$PROJECT_DIR$/templates/response/index.html" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/models_app/management/commands/timed_task.py" />
       </list>
     </option>
@@ -782,13 +778,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Mymood/biz/biz-view/process_teams.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2958">
@@ -821,13 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -1078,7 +1060,7 @@
     <entry file="file://$PROJECT_DIR$/Mymood/biz/process_teams.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="24" column="45" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="45" />
+          <caret line="24" column="45" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="45" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
             <marker date="1540089447997" expanded="true" signature="2005:2387" ph="..." />
@@ -1099,7 +1081,7 @@
     <entry file="file://$PROJECT_DIR$/templates/response/teams-table.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
-          <caret line="135" column="34" lean-forward="true" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="34" />
+          <caret line="135" column="34" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1156,14 +1138,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="44" column="54" lean-forward="true" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+        <state relative-caret-position="935">
+          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
-            <marker date="1540195764906" expanded="true" signature="310:319" ph="..." />
-            <marker date="1540195764906" expanded="true" signature="2779:2788" ph="..." />
+            <marker date="1540197560033" expanded="true" signature="2529:2530" ph="..." />
+            <marker date="1540197560033" expanded="true" signature="2601:2612" ph="..." />
+            <marker date="1540197560033" expanded="true" signature="5151:5162" ph="..." />
           </folding>
         </state>
       </provider>
