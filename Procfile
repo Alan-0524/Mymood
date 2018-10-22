@@ -1,2 +1,2 @@
 web: gunicorn Mymood.wsgi
-clock: python timed_task.py
+clock: python clock.py
