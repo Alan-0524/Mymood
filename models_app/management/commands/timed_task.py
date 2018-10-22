@@ -36,11 +36,11 @@ class Command(BaseCommand):
                                 messenger_utility.push_notifications(user_id)
                                 print("push notifications to " + user_name + " at " + str(
                                     now) + " for first time successful")
-                            if "23:59:00 " > str(now) > second_time and second_time_status == 0:
+                            if "20:00:00 " > str(now) > second_time and second_time_status == 0:
                                 messenger_utility.push_notifications(user_id)
                                 print("push notifications to " + user_name + " at " + str(
                                     now) + " for second time successful")
-                if str(now) > "23:59:00 ":
+                if str(now) > "20:00:00 ":
                     list_user = TblUser.objects.all()
                     for j in range(0, len(list_user)):
                         user = list_user.__getitem__(j)
@@ -50,7 +50,7 @@ class Command(BaseCommand):
                         print("------stop pushing notifications at " + str(now) + "------")
                     schedule.clear()
 
-        schedule.every(5).seconds.do(push_notification)
+        schedule.every(180).seconds.do(push_notification)
         # schedule.every(10).seconds.do(job)
         # schedule.every().hour.do(job)
         # schedule.every().day.at("22:03").do(job)

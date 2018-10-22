@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52e0d88-3bd6-49c3-aaa6-32968d3c5858" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_app/management/commands/timed_task.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,7 +97,7 @@
           <entry key="dummy" value="27" />
           <entry key="html" value="8140" />
           <entry key="js" value="49" />
-          <entry key="py" value="12464" />
+          <entry key="py" value="12476" />
           <entry key="txt" value="20" />
           <entry key="yml" value="3" />
         </counts>
@@ -108,7 +107,7 @@
           <entry key="HTML" value="8140" />
           <entry key="JavaScript" value="49" />
           <entry key="PLAIN_TEXT" value="86" />
-          <entry key="Python" value="12473" />
+          <entry key="Python" value="12485" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -145,16 +144,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-544">
-              <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="259">
+              <caret line="44" column="54" lean-forward="true" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
-                <marker date="1540201088497" expanded="true" signature="241:243" ph="..." />
-                <marker date="1540201088497" expanded="true" signature="310:319" ph="..." />
-                <marker date="1540201088497" expanded="true" signature="2772:2781" ph="..." />
+                <marker date="1540201641545" expanded="true" signature="241:243" ph="..." />
+                <marker date="1540201641545" expanded="true" signature="310:319" ph="..." />
+                <marker date="1540201641545" expanded="true" signature="2772:2781" ph="..." />
               </folding>
             </state>
           </provider>
@@ -170,7 +169,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -355,8 +354,8 @@
         <option value="$PROJECT_DIR$/templates/response/events-table.html" />
         <option value="$PROJECT_DIR$/templates/response/index.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/models_app/management/commands/timed_task.py" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/models_app/management/commands/timed_task.py" />
       </list>
     </option>
   </component>
@@ -669,11 +668,11 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5011236" side_tool="true" weight="0.22483222" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4988764" visible="true" weight="0.22550336" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4988764" visible="true" weight="0.22550336" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49932885" visible="true" weight="0.34751773" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" sideWeight="0.49932885" visible="true" weight="0.34751773" />
       <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49932885" weight="0.28085107" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50067115" side_tool="true" weight="0.3319149" />
       <window_info anchor="bottom" id="Python Console" order="5" sideWeight="0.49932885" weight="0.32907802" />
@@ -1118,23 +1117,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-            <marker date="1540201088497" expanded="true" signature="241:243" ph="..." />
-            <marker date="1540201088497" expanded="true" signature="310:319" ph="..." />
-            <marker date="1540201088497" expanded="true" signature="2772:2781" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models_app/management/commands/timed_task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="44" column="54" lean-forward="true" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+            <marker date="1540201641545" expanded="true" signature="241:243" ph="..." />
+            <marker date="1540201641545" expanded="true" signature="310:319" ph="..." />
+            <marker date="1540201641545" expanded="true" signature="2772:2781" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
