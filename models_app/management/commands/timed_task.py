@@ -5,7 +5,6 @@ import schedule
 import time
 from models_app.models import *
 from django.db.models import Q
-import logging
 
 
 class Command(BaseCommand):
@@ -19,7 +18,7 @@ class Command(BaseCommand):
                 team_id = team.team_id
                 result = day in week_push
                 now = datetime.now().time()
-                logging.info("now:------------", str(now), "--------")
+                print("now:------------", str(now), "--------")
                 if result is True:
                     user_list = TblUser.objects.filter(team_id=team_id, role=2)
                     if len(user_list) > 0:
@@ -31,24 +30,24 @@ class Command(BaseCommand):
                             first_time_status = user.first_time_status
                             second_time = user.second_time
                             second_time_status = user.second_time_status
-                            logging.info("user_name:", user_name, "; first_time:", first_time, "; now:",
+                            print("user_name:", user_name, "; first_time:", first_time, "; now:",
                                          str(now), "; second_time:" + second_time)
                             if second_time > str(now) > first_time and first_time_status == 0:
                                 messenger_utility.push_notifications(user_id)
-                                logging.info("push notifications to " + user_name + " at " + str(
+                                print("push notifications to " + user_name + " at " + str(
                                     now) + " for first time successful")
-                            if "20:00:00 " > str(now) > second_time and second_time_status == 0:
+                            if "23:59:00 " > str(now) > second_time and second_time_status == 0:
                                 messenger_utility.push_notifications(user_id)
-                                logging.info("push notifications to " + user_name + " at " + str(
+                                print("push notifications to " + user_name + " at " + str(
                                     now) + " for second time successful")
-                if str(now) > "20:00:00 ":
+                if str(now) > "23:59:00 ":
                     list_user = TblUser.objects.all()
                     for j in range(0, len(list_user)):
                         user = list_user.__getitem__(j)
                         user.first_time_status = "0"
                         user.second_time_status = "0"
                         user.save()
-                        logging.info("------stop pushing notifications at " + str(now) + "------")
+                        print("------stop pushing notifications at " + str(now) + "------")
                     schedule.clear()
 
         schedule.every(5).seconds.do(push_notification)
