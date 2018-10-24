@@ -1,20 +1,32 @@
 import datetime, time
+import subprocess
+import urllib3
+import json
+import certifi
+# def inc(x):
+#     return x + 1
+#
+#
+# def test_answer():
+#     assert inc(5) == 6
+#
+#
+# format = "%H:%M:%S"
+#
+# result = datetime.datetime(*time.strptime("11:00:00", format)[:6]) + datetime.timedelta(seconds=360)
+#
+# print(result.strftime(format))
 
 
-def inc(x):
-    return x + 1
+http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
+apiUrl = 'https://www.messenger-mywebhook.herokuapp.com/index.js'
+message = {}
+params = {'message': message}
+data = json.dumps(params)
+headers = {'Content-Type': 'application/json'}  # json pattern
 
-
-def test_answer():
-    assert inc(5) == 6
-
-
-format = "%H:%M:%S"
-
-result = datetime.datetime(*time.strptime("11:00:00", format)[:6]) + datetime.timedelta(seconds=360)
-
-print(result.strftime(format))
-
+response = http.request('POST', apiUrl, body=data, headers=headers)
+print(response.status)
 # print(str(datetime.now().time())>'15:33:47')
 
 

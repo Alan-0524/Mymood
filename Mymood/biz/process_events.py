@@ -19,7 +19,7 @@ def query_events():
     return html_text
 
 
-def event_detail(request):
+def event_detail(request):  # 查询书细节
     id = request.POST.get("id")
     event = TblEvent.objects.get(id=id)
     text = "<p>Event title:" + event.event_title + "</p><p>Event date:" + str(event.event_date)[
@@ -28,7 +28,7 @@ def event_detail(request):
     return html_text
 
 
-def save_event(request):
+def save_event(request):  # 保存数据
     try:
         id = request.POST.get("id")
         if id != "" and id is not None:
@@ -46,7 +46,7 @@ def save_event(request):
     return "success"
 
 
-def get_event(request):
+def get_event(request):  # 获取事件
     try:
         id = request.POST.get("id")
         event = TblEvent.objects.get(id=id)
@@ -56,7 +56,7 @@ def get_event(request):
         return "error"
 
 
-def delete_event(request):
+def delete_event(request):  # 删除事件
     try:
         id = request.POST.get("id")
         event = TblEvent.objects.get(id=id)

@@ -8,7 +8,7 @@ from django.http import HttpResponse
 import csv
 
 
-def query_all_happiness(request, for_who):
+def query_all_happiness(request, for_who):  # 动态查询所有心情数据
     startDate = request.POST.get("startDate")
     endDate = request.POST.get("endDate")
     query_type = request.POST.get("query_type")
@@ -37,14 +37,14 @@ def query_all_happiness(request, for_who):
     return list_happiness
 
 
-def organize_happiness_data(query_type, date_type, date_range, list_target, for_who):
+def organize_happiness_data(query_type, date_type, date_range, list_target, for_who):  # 组织所要展现的数据
     conter_max = [0, 0]
     list_tep = []
     list_queryset = []
     list_happiness = []
     x = ['x']
     select = {date_type: 'extract( ' + date_type + ' from date )'}
-    for i in range(0, len(list_target)):
+    for i in range(0, len(list_target)):  # 组织团队数据
         if query_type == "query_teams":
             team = list_target.__getitem__(i)
             team_id = team.team_id
@@ -54,7 +54,7 @@ def organize_happiness_data(query_type, date_type, date_range, list_target, for_
                                                         team_id=team_id).extra(
                 select=select).values(date_type).annotate(avg=Avg(for_who))
 
-        if query_type == "query_individuals":
+        if query_type == "query_individuals":  # 组织个人数据
             user = list_target.__getitem__(i)
             user_id = user.user_id
             list_data = ["member_" + str(i) + ""]
@@ -62,7 +62,7 @@ def organize_happiness_data(query_type, date_type, date_range, list_target, for_
                                                         user_id=user_id).extra(
                 select=select).values(date_type).annotate(avg=Avg(for_who))
 
-        if query_type is None or query_type == "":
+        if query_type is None or query_type == "":  # 按类型查询
             list_data = ["whole"]
             list_queryset = TblHappiness.objects.filter(date__range=date_range).extra(
                 select=select).values(date_type).annotate(avg=Avg(for_who))
@@ -95,7 +95,7 @@ def organize_happiness_data(query_type, date_type, date_range, list_target, for_
     return list_happiness
 
 
-def save_happiness(own, team, user_id):
+def save_happiness(own, team, user_id):  # 保存心情数据
     user = TblUser.objects.get(user_id=user_id)
     team_id = user.team_id
     happiness = TblHappiness()
@@ -104,7 +104,7 @@ def save_happiness(own, team, user_id):
     happiness.team_id = team_id
     happiness.idvl_hpns = own
     happiness.team_hpns = team
-    time_now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+    time_now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))  # 格式化时间
     happiness.date = time_now
     happiness.save()
     if user.first_time_status == 0 and user.second_time_status == 0:
@@ -114,15 +114,15 @@ def save_happiness(own, team, user_id):
     user.save()
 
 
-def save_happiness_level(happiness_level):
-    happiness = happiness_level.split("&")
+def save_happiness_level(happiness_level):  # 保存心情数据
+    happiness = happiness_level.split("&")  # 分割数据
     user_id = happiness[0]
     idvl = happiness[1]
     team = happiness[2]
     save_happiness(idvl, team, user_id)
 
 
-def query_team_happiness(request):
+def query_team_happiness(request):  # 查询心情数据
     try:
         user_id = request.GET.get("user_id")
         date_range = date_filter(request)
@@ -131,7 +131,7 @@ def query_team_happiness(request):
         print("Error info:----------------", e)
 
 
-def date_filter(request):
+def date_filter(request):  # 过滤查询
     if 'year_from' and 'month_from' and 'day_from' and \
             'year_to' and 'month_to' and 'day_to' in request.GET:
         y = request.GET['year_from']
@@ -149,13 +149,13 @@ def date_filter(request):
         print("error time range!")
 
 
-def export_csv():
+def export_csv():  # 导出数据
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="happiness.csv"'
     writer = csv.writer(response)
     happness_list = TblHappiness.objects.all()
 
-    for i in range(0, len(happness_list)):
+    for i in range(0, len(happness_list)):  # 写入每行数据
         happiness = happness_list.__getitem__(i)
         writer.writerow(['member;'])
         writer.writerow(['team_id:'])

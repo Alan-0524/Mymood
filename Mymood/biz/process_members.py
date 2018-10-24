@@ -7,19 +7,19 @@ import random
 import datetime, time
 
 
-def switch_members(request):
+def switch_members(request):  # 切换用户
     try:
         user_id = request.POST.get("user_id")
         team_id = request.POST.get("team_id")
         user = TblUser.objects.get(user_id=user_id)
-        origin_team_id = user.team_id
+        origin_team_id = user.team_id  # 原始team_id
         user.team_id = team_id
         user.save()
         if team_id == "99999":
             assign_time(origin_team_id)
         else:
-            assign_time(team_id)
-            assign_time(origin_team_id)
+            assign_time(team_id)  # 重新分配推送时间
+            assign_time(origin_team_id)  # 重新分配推送时间
     except Exception as e:
         print("Error info:----------------", e)
         return "error"
@@ -31,12 +31,12 @@ def assign_time(team_id):
         team = TblTeam.objects.get(team_id=team_id)
         start = int(team.wt_start)
         end = int(team.wt_end)
-        difference = end - start
+        difference = end - start  # 时间差
         list_user = TblUser.objects.filter(team_id=team_id)
         total = len(list_user)
-        format = "%H:%M:%S"
-        start = str(start)+":00:00"
-        if total > 0:
+        format = "%H:%M:%S"  # 格式化
+        start = str(start) + ":00:00"
+        if total > 0:  # 自动分配推送时间
             interval = difference / total * 0.5 * 3600
             for i in range(0, total):
                 user = list_user.__getitem__(i)
@@ -51,10 +51,10 @@ def assign_time(team_id):
                 user.save()
 
 
-def query_members_in_teams(request):
+def query_members_in_teams(request):  # 动态查询所有members
     list_query_teams = TblTeam.objects.all()
     text = str("")
-    for i in range(0, len(list_query_teams)):
+    for i in range(0, len(list_query_teams)):  # 组织成为html
         team = list_query_teams.__getitem__(i)  # Get all objects
         text = text + "<thead><tr><th>#</th><th></th><th>" + team.name + "</th><th>Push time 1</th><th>Push time 2</th></tr></thead><tbody>"
 
@@ -68,7 +68,7 @@ def query_members_in_teams(request):
     return html_text
 
 
-def query_member(psid):
+def query_member(psid):  # 查询
     user_list = TblUser.objects.filter(user_id=str(psid))
     if len(user_list) > 0:
         return True
@@ -77,9 +77,9 @@ def query_member(psid):
         return False
 
 
-def create_members(user_id, user_name, email):
+def create_members(user_id, user_name, email):  # 插件member
     try:
-        if check_user_id(user_id) == "1":
+        if check_user_id(user_id) == "1":  # 判断是新建还是修改
             return "User already exists"
         elif check_user_name(user_name) == "1":
             return "Username already exists"
@@ -104,8 +104,8 @@ def create_members(user_id, user_name, email):
 
 
 def create_researcher(request):
-    user_name = request.POST.get("user_name")
-    if check_user_name(user_name) == "1":
+    user_name = request.POST.get("user_name")  # 创建 researchs
+    if check_user_name(user_name) == "1":  # 判断是否已存在
         return "exists"
     else:
         user = TblUser()
@@ -120,7 +120,7 @@ def create_researcher(request):
         return "success"
 
 
-def check_user_name(user_name):
+def check_user_name(user_name):  # 判断是否已存在用户名
     user = TblUser.objects.filter(user_name=user_name)
     if len(user) > 0:
         return "1"

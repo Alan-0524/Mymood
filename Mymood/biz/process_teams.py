@@ -12,7 +12,7 @@ def query_all_teams(request):
     return team_list
 
 
-def create_teams(request):
+def create_teams(request):  # 创建team
     try:
 
         name = request.POST.get("name")
@@ -36,7 +36,7 @@ def create_teams(request):
                 return "Team name already exists"
         team.name = name
         team.team_size = int(team_size)
-        if len(wt_start) == 1:
+        if len(wt_start) == 1:  # 开始结束时间转换成字符串
             wt_start = "0" + wt_start
         team.wt_start = str(wt_start)
         if len(wt_end) == 1:
@@ -54,7 +54,7 @@ def create_teams(request):
 def get_team(request):
     try:
         id = request.POST.get("id")
-        team = TblTeam.objects.get(id=id)
+        team = TblTeam.objects.get(id=id)  # 根据ID查询
         data = {"name": team.name, "team_size": team.team_size, "wt_start": team.wt_start, "wt_end": team.wt_end,
                 "week_push": team.week_push}
         return data
@@ -66,7 +66,7 @@ def delete_team(request):
     try:
         id = request.POST.get("id")
         team = TblTeam.objects.get(id=id)
-        users = TblUser.objects.filter(team_id=team.team_id)
+        users = TblUser.objects.filter(team_id=team.team_id)  # 根据teamId 查询
         if len(users) != 0:
             return "There are members in this group, you cannot delete this group."
         else:
@@ -76,7 +76,7 @@ def delete_team(request):
         return "error"
 
 
-def check_team_name_2(name):
+def check_team_name_2(name):  # 查询team 是否已存在
     team = TblTeam.objects.filter(name=name)
     if len(team) > 0:
         return "1"
@@ -84,7 +84,7 @@ def check_team_name_2(name):
         return "0"
 
 
-def check_team_name(request):
+def check_team_name(request):  # 查询team 是否已存在
     team_name = request.POST.get("team_name")
     team = TblTeam.objects.filter(name=team_name)
     if team.exists():
@@ -93,7 +93,7 @@ def check_team_name(request):
         return False
 
 
-def query_teams_html(request):
+def query_teams_html(request):  # 动态查询teams
     list_query_teams = TblTeam.objects.all()
     text = str("")
     for i in range(0, len(list_query_teams)):
@@ -103,7 +103,7 @@ def query_teams_html(request):
     return html_text
 
 
-def load_teams(request):
+def load_teams(request):  # 动态加载teams
     text = str("")
     team_list = TblTeam.objects.filter(~Q(team_id='99999'))
     for i in range(0, len(team_list)):
