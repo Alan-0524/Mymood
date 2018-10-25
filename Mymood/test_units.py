@@ -18,15 +18,15 @@ import certifi
 # print(result.strftime(format))
 
 
-http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
-apiUrl = 'https://www.messenger-mywebhook.herokuapp.com/index.js'
-message = {}
-params = {'message': message}
-data = json.dumps(params)
-headers = {'Content-Type': 'application/json'}  # json pattern
-
-response = http.request('POST', apiUrl, body=data, headers=headers)
-print(response.status)
+# http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
+# apiUrl = 'https://www.messenger-mywebhook.herokuapp.com/index.js'
+# message = {}
+# params = {'message': message}
+# data = json.dumps(params)
+# headers = {'Content-Type': 'application/json'}  # json pattern
+#
+# response = http.request('POST', apiUrl, body=data, headers=headers)
+# print(response.status)
 # print(str(datetime.now().time())>'15:33:47')
 
 
