@@ -49,8 +49,11 @@ class Command(BaseCommand):
                             user.second_time_status = "0"
                             user.save()
                             print("------stop pushing notifications at " + str(now) + "------")
+                messenger_utility.keep_live()
             else:
+                messenger_utility.keep_live()
                 print("------" + str(now) + "------Task has exceeded the time range")
+
         schedule.every(180).seconds.do(push_notification)
         # schedule.every(10).seconds.do(job)
         # schedule.every().hour.do(job)

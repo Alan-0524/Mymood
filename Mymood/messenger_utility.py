@@ -70,13 +70,21 @@ def push_register(id):
     response = http.request('POST', apiUrl, body=data, headers=headers)
     print(response.status)
 
+
+def keep_live():
+    http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
+    apiUrl = 'https://messenger-mywebhook.herokuapp.com/webhook?hub.verify_token=EAAE358wDWxQBANcfxlUa3tfs7DPhsrrtJN8Q8AWvE7tvq3RdErlFyfHDKY8SMZBHR4YTK8fJkxW054ZAKDDfgXVkXzb0VPvj9gg2ZBs7rBI8k6Yt263vaxGMlBmsxks5oWfkiT7w2Uh5LiCeAll3lYfvpT7oFedMTiHaQMp7l60yVjJvhZAc&hub.mode=subscribe'
+    response = http.request('GET', apiUrl)
+    print("------Continuous activation service------" + str(response.status))  # successful，200 is successful
+
+
 # a = '18:00'
 # b = '17:35:39.586544'
 # c = '08:00'
 #
 # print(a>b>c)
 # an long
-
+# keep_live()
 # push_notifications("2334765856551775")
 # push_notifications_team("2334765856551775")
 # # xiao ming
