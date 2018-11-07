@@ -25,7 +25,7 @@ SECRET_KEY = 'ne+fa9)jmq=let5yo*15mngi2f^ei-sq9!&-z@i71618@bx$*z'
 DEBUG = True
 
 # Application definition
-
+# timed task (copy this code to Procfile):clock: python manage.py timed_task
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
